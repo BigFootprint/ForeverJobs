@@ -27,13 +27,16 @@
     UIViewController *trainningController = [[TrainningViewController alloc] init];
     trainningController.tabBarItem.title = @"训练营";
     trainningController.view.backgroundColor = [UIColor whiteColor];
+    trainningController.tabBarItem.image = [UIImage imageNamed:@"home"];
     
     UIViewController *onepieceController = [[OnePieceViewController alloc] init];
     onepieceController.tabBarItem.title = @"One Piece";
     onepieceController.tabBarItem.badgeValue = @"New";
+    onepieceController.tabBarItem.image = [UIImage imageNamed:@"onepiece"];
     
     UIViewController *settingsController = [[SettingsViewController alloc] init];
     settingsController.tabBarItem.title = @"设置";
+    settingsController.tabBarItem.image = [UIImage imageNamed:@"settings"];
     
     tabBarController.viewControllers = @[trainningController, onepieceController, settingsController];
     UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:tabBarController];

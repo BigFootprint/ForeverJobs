@@ -7,7 +7,7 @@
 //
 
 #import "TrainningViewController.h"
-#import "UIButtonViewController.h"
+#import "JobsConstants.h"
 
 @interface TrainningViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -43,11 +43,6 @@
     _tableView.delegate = self;
     _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0); // 设置端距，这里表示separator离左边和右边均80像素
     [self.view addSubview:_tableView];
-}
-
--(void)buttonClick{
-    UIButtonViewController *nextController = [[UIButtonViewController alloc] init];
-    [self.tabBarController.navigationController pushViewController:nextController animated:YES];
 }
 
 #pragma mark - 数据源方法
@@ -89,33 +84,28 @@
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.opaque = NO;
     headerLabel.textAlignment = NSTextAlignmentCenter;
-    headerLabel.textColor = [UIColor colorWithRed:(54.0 / 255.0) green:(100.0 / 255.0) blue:(139.0 / 255.0) alpha:1.0];
+    headerLabel.textColor = [UIColor blackColor];
+    headerLabel.backgroundColor = ANDROID_BLUE;
+    headerLabel.layer.cornerRadius = 5;
     headerLabel.highlightedTextColor = [UIColor blackColor];
     headerLabel.font = [UIFont boldSystemFontOfSize:20];
     headerLabel.frame = CGRectMake(0, 0, screenSize.height, 40);
     
-    NSString *headerText = [[NSString alloc]initWithFormat:@"%@  %@  %@", @"====", _dataGroup[section], @"===="];
+    NSString *headerText = [[NSString alloc]initWithFormat:@"%@  %@  %@", @"》> = -", _dataGroup[section], @"- = <《"];
     [headerLabel setText:headerText];
     return headerLabel;
 }
 
 #pragma mark 点击行
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *content = _data[indexPath.section][indexPath.row];
     NSLog(@"%@", _data[indexPath.section][indexPath.row]);
-    switch (indexPath.section) {
-        case 0:
-            switch (indexPath.row) {
-                case 0:{// UIButton
-                        UIButtonViewController *buttonVc = [[UIButtonViewController alloc] init];
-                        [self.tabBarController.navigationController pushViewController:buttonVc animated:YES];
-                    }
-                    break;
-                default:
-                    break;
-            }
-            break;
-        default:
-            break;
+    NSString *controllerName = [[NSString alloc] initWithFormat:@"%@%@", content, @"ViewController"];
+    Class cls = NSClassFromString(controllerName);
+    if(cls){
+        UIViewController *buttonVc = [cls new];
+        buttonVc.title = [[NSString alloc] initWithFormat:@"%@%@", content, @"·学习"];
+        [self.tabBarController.navigationController pushViewController:buttonVc animated:YES];
     }
 }
 

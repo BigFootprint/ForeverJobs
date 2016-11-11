@@ -11,11 +11,14 @@
 		144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BA1DD20ECE002183FC /* AppDelegate.m */; };
 		144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BD1DD20ECE002183FC /* TrainningViewController.m */; };
 		144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906C01DD20ECE002183FC /* OnePieceViewController.m */; };
-		144906C41DD20ECE002183FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144906C21DD20ECE002183FC /* Main.storyboard */; };
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* SettingsViewController.m */; };
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
 		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
+		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
+		14CBE0AB1DD60ED900F6DB7F /* JobsConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AA1DD60ED900F6DB7F /* JobsConstants.m */; };
+		14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */; };
+		14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,6 @@
 		144906BD1DD20ECE002183FC /* TrainningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainningViewController.m; sourceTree = "<group>"; };
 		144906BF1DD20ECE002183FC /* OnePieceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnePieceViewController.h; sourceTree = "<group>"; };
 		144906C01DD20ECE002183FC /* OnePieceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnePieceViewController.m; sourceTree = "<group>"; };
-		144906C31DD20ECE002183FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		144906C51DD20ECE002183FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		144906CA1DD20ECE002183FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144906D01DD21192002183FC /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 		14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
 		14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
 		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelViewController.h; sourceTree = "<group>"; };
+		14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelViewController.m; sourceTree = "<group>"; };
+		14CBE0A91DD60ED900F6DB7F /* JobsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsConstants.h; sourceTree = "<group>"; };
+		14CBE0AA1DD60ED900F6DB7F /* JobsConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsConstants.m; sourceTree = "<group>"; };
+		14CBE0AC1DD6116B00F6DB7F /* UIAlertViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewViewController.h; sourceTree = "<group>"; };
+		14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewViewController.m; sourceTree = "<group>"; };
+		14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewViewController.h; sourceTree = "<group>"; };
+		14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 		144906B51DD20ECE002183FC /* MyP */ = {
 			isa = PBXGroup;
 			children = (
+				14CBE0A81DD60E9300F6DB7F /* Constants */,
 				14CBE09F1DD4C81D00F6DB7F /* Trainning */,
 				14CBE09B1DD4BF1B00F6DB7F /* Utils */,
 				14CBE09A1DD4B2AB00F6DB7F /* Entity */,
@@ -78,7 +89,6 @@
 				144906C01DD20ECE002183FC /* OnePieceViewController.m */,
 				144906D01DD21192002183FC /* SettingsViewController.h */,
 				144906D11DD21192002183FC /* SettingsViewController.m */,
-				144906C21DD20ECE002183FC /* Main.storyboard */,
 				144906C51DD20ECE002183FC /* Assets.xcassets */,
 				144906CA1DD20ECE002183FC /* Info.plist */,
 				14CBE0A31DD5AA2E00F6DB7F /* data.plist */,
@@ -114,8 +124,23 @@
 			children = (
 				14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */,
 				14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */,
+				14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */,
+				14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */,
+				14CBE0AC1DD6116B00F6DB7F /* UIAlertViewViewController.h */,
+				14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */,
+				14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */,
+				14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */,
 			);
 			name = Trainning;
+			sourceTree = "<group>";
+		};
+		14CBE0A81DD60E9300F6DB7F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				14CBE0A91DD60ED900F6DB7F /* JobsConstants.h */,
+				14CBE0AA1DD60ED900F6DB7F /* JobsConstants.m */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +203,6 @@
 			files = (
 				14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */,
 				144906C61DD20ECE002183FC /* Assets.xcassets in Resources */,
-				144906C41DD20ECE002183FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,27 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */,
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
+				14CBE0AB1DD60ED900F6DB7F /* JobsConstants.m in Sources */,
 				14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */,
 				144906D21DD21192002183FC /* SettingsViewController.m in Sources */,
 				144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */,
+				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
+				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		144906C21DD20ECE002183FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				144906C31DD20ECE002183FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		144906CB1DD20ECE002183FC /* Debug */ = {
