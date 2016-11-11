@@ -14,6 +14,7 @@
 			<string>UILabel</string>
 			<string>UIImageView</string>
 			<string>UITableView</string>
+			<string>UIWebView</string>
 			<string>UIAlertView</string>
 			<string>UITextField</string>
 			<string>UIPickerView</string>
