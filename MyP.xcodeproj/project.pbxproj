@@ -15,6 +15,7 @@
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* SettingsViewController.m */; };
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
+		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		144906D11DD21192002183FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
 		14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
+		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				144906C21DD20ECE002183FC /* Main.storyboard */,
 				144906C51DD20ECE002183FC /* Assets.xcassets */,
 				144906CA1DD20ECE002183FC /* Info.plist */,
+				14CBE0A31DD5AA2E00F6DB7F /* data.plist */,
 				144906B61DD20ECE002183FC /* Supporting Files */,
 			);
 			path = MyP;
@@ -173,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */,
 				144906C61DD20ECE002183FC /* Assets.xcassets in Resources */,
 				144906C41DD20ECE002183FC /* Main.storyboard in Resources */,
 			);

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>knowledgegroup</key>
+	<array>
+		<string>View</string>
+		<string>基础</string>
+	</array>
+	<key>knowledge</key>
+	<array>
+		<array>
+			<string>UIButton</string>
+			<string>UILabel</string>
+			<string>UIImageView</string>
+			<string>UITableView</string>
+			<string>UIAlertView</string>
+			<string>UITextField</string>
+			<string>UIPickerView</string>
+			<string>UIDatePicker</string>
+		</array>
+		<array>
+			<string>存储</string>
+			<string>GCD</string>
+		</array>
+	</array>
+</dict>
+</plist>

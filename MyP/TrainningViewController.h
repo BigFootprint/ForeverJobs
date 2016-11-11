@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrainningViewController : UIViewController
+@interface TrainningViewController : UIViewController 
 
 @end
 
