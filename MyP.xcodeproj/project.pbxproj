@@ -18,6 +18,7 @@
 		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
 		14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */; };
 		14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */; };
+		14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewViewController.h; sourceTree = "<group>"; };
 		14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewViewController.m; sourceTree = "<group>"; };
 		14CBE0B21DD613C400F6DB7F /* JobsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsConstants.h; sourceTree = "<group>"; };
+		14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldViewController.h; sourceTree = "<group>"; };
+		14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */,
 				14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */,
 				14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */,
+				14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */,
+				14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */,
 			);
 			name = Trainning;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */,
 				144906D21DD21192002183FC /* SettingsViewController.m in Sources */,
 				144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */,
+				14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */,
 				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,

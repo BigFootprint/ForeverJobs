@@ -17,6 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // 图片读取
+    //初始化
+    UIImageView  *imageView=[[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
+    //第一种：
+    //[imageView setImage:[UIImage imageNamed:@"1.jpeg"]];
+    
+    //第二种：
+    //NSString *filePath=[[NSBundle mainBundle] pathForResource:@"1" ofType:@"jpeg"];
+    //UIImage *images=[UIImage imageWithContentsOfFile:filePath];
+    //[imageView setImage:images];
+    
+    //第三种：
+    //NSData *data=[NSData dataWithContentsOfFile:filePath];
+    //UIImage *image2=[UIImage imageWithData:data];
+    //[imageView setImage:image2];
 }
 
 - (void)didReceiveMemoryWarning {
