@@ -16,7 +16,7 @@
 
 -(void)initView;
 -(NSArray *)getKnowledgeArray;
-+(int)getStatusHeight;
+-(Class)getClassForTopic:(NSString *)topic;
 @end
 
 @implementation TrainningViewController
@@ -58,10 +58,19 @@
 }
 
 #pragma mark返回每行的单元格
+// TODO 建立每一行的对象类，避免多次调用 getClassForTopic 方法
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //NSIndexPath是一个结构体，记录了组和行信息
     UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.textLabel.text=_data[indexPath.section][indexPath.row];
+    NSString *content = _data[indexPath.section][indexPath.row];
+    cell.textLabel.text = content;
+    if([self getClassForTopic:content]){
+        cell.textLabel.textColor = ANDROID_BLUE;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else{
+        cell.textLabel.textColor = [UIColor blackColor];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
@@ -100,8 +109,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *content = _data[indexPath.section][indexPath.row];
     NSLog(@"%@", _data[indexPath.section][indexPath.row]);
-    NSString *controllerName = [[NSString alloc] initWithFormat:@"%@%@", content, @"ViewController"];
-    Class cls = NSClassFromString(controllerName);
+    Class cls = [self getClassForTopic:content];
     if(cls){
         UIViewController *buttonVc = [cls new];
         buttonVc.title = [[NSString alloc] initWithFormat:@"%@%@", content, @"·学习"];
@@ -109,9 +117,9 @@
     }
 }
 
-+(int)getStatusHeight{
-CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
-    return rectStatus.size.height;
+-(Class)getClassForTopic:(NSString *)topic{
+    NSString *controllerName = [[NSString alloc] initWithFormat:@"%@%@", topic, @"ViewController"];
+    return NSClassFromString(controllerName);
 }
 
 -(NSArray *)getKnowledgeArray{

@@ -19,6 +19,8 @@
 		14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */; };
 		14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */; };
 		14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */; };
+		14F30D071DD7F68600AF336C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F30D061DD7F68600AF336C /* DataViewController.m */; };
+		14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,9 @@
 		14CBE0B21DD613C400F6DB7F /* JobsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsConstants.h; sourceTree = "<group>"; };
 		14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldViewController.h; sourceTree = "<group>"; };
 		14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
+		14F30D051DD7F68600AF336C /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		14F30D061DD7F68600AF336C /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 			children = (
 				144906B51DD20ECE002183FC /* MyP */,
 				144906B41DD20ECE002183FC /* Products */,
+				14F30D081DD82CD800AF336C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +85,9 @@
 		144906B51DD20ECE002183FC /* MyP */ = {
 			isa = PBXGroup;
 			children = (
+				14F30D041DD7F66500AF336C /* Basic */,
 				14CBE0A81DD60E9300F6DB7F /* Constants */,
 				14CBE09F1DD4C81D00F6DB7F /* Trainning */,
-				14CBE09B1DD4BF1B00F6DB7F /* Utils */,
-				14CBE09A1DD4B2AB00F6DB7F /* Entity */,
 				144906B91DD20ECE002183FC /* AppDelegate.h */,
 				144906BA1DD20ECE002183FC /* AppDelegate.m */,
 				144906BC1DD20ECE002183FC /* TrainningViewController.h */,
@@ -104,20 +110,6 @@
 				144906B71DD20ECE002183FC /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		14CBE09A1DD4B2AB00F6DB7F /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Entity;
-			sourceTree = "<group>";
-		};
-		14CBE09B1DD4BF1B00F6DB7F /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		14CBE09F1DD4C81D00F6DB7F /* Trainning */ = {
@@ -143,6 +135,23 @@
 				14CBE0B21DD613C400F6DB7F /* JobsConstants.h */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		14F30D041DD7F66500AF336C /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				14F30D051DD7F68600AF336C /* DataViewController.h */,
+				14F30D061DD7F68600AF336C /* DataViewController.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		14F30D081DD82CD800AF336C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +233,7 @@
 				14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */,
 				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
+				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
