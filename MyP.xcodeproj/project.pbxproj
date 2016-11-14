@@ -68,6 +68,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1437ABF51DD98EB30074393B /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */,
+				14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */,
+				14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */,
+				14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */,
+				14CBE0AC1DD6116B00F6DB7F /* UIAlertViewViewController.h */,
+				14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */,
+				14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */,
+				14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */,
+				14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */,
+				14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */,
+			);
+			name = UIComponent;
+			sourceTree = "<group>";
+		};
 		144906AA1DD20ECE002183FC = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +105,6 @@
 		144906B51DD20ECE002183FC /* MyP */ = {
 			isa = PBXGroup;
 			children = (
-				14F30D041DD7F66500AF336C /* Basic */,
 				14CBE0A81DD60E9300F6DB7F /* Constants */,
 				14CBE09F1DD4C81D00F6DB7F /* Trainning */,
 				144906B91DD20ECE002183FC /* AppDelegate.h */,
@@ -118,16 +134,8 @@
 		14CBE09F1DD4C81D00F6DB7F /* Trainning */ = {
 			isa = PBXGroup;
 			children = (
-				14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */,
-				14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */,
-				14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */,
-				14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */,
-				14CBE0AC1DD6116B00F6DB7F /* UIAlertViewViewController.h */,
-				14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */,
-				14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */,
-				14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */,
-				14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */,
-				14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */,
+				1437ABF51DD98EB30074393B /* UIComponent */,
+				14F30D041DD7F66500AF336C /* Basic */,
 			);
 			name = Trainning;
 			sourceTree = "<group>";
