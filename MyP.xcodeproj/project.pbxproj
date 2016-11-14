@@ -18,7 +18,7 @@
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
 		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
 		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
-		14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */; };
+		14CBE0AE1DD6116B00F6DB7F /* UIAlertControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AD1DD6116B00F6DB7F /* UIAlertControllerViewController.m */; };
 		14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */; };
 		14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */; };
 		14F30D071DD7F68600AF336C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F30D061DD7F68600AF336C /* DataViewController.m */; };
@@ -49,8 +49,8 @@
 		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelViewController.h; sourceTree = "<group>"; };
 		14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelViewController.m; sourceTree = "<group>"; };
-		14CBE0AC1DD6116B00F6DB7F /* UIAlertViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewViewController.h; sourceTree = "<group>"; };
-		14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewViewController.m; sourceTree = "<group>"; };
+		14CBE0AC1DD6116B00F6DB7F /* UIAlertControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertControllerViewController.h; sourceTree = "<group>"; };
+		14CBE0AD1DD6116B00F6DB7F /* UIAlertControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertControllerViewController.m; sourceTree = "<group>"; };
 		14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewViewController.h; sourceTree = "<group>"; };
 		14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewViewController.m; sourceTree = "<group>"; };
 		14CBE0B21DD613C400F6DB7F /* JobsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsConstants.h; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 				14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */,
 				14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */,
 				14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */,
-				14CBE0AC1DD6116B00F6DB7F /* UIAlertViewViewController.h */,
-				14CBE0AD1DD6116B00F6DB7F /* UIAlertViewViewController.m */,
+				14CBE0AC1DD6116B00F6DB7F /* UIAlertControllerViewController.h */,
+				14CBE0AD1DD6116B00F6DB7F /* UIAlertControllerViewController.m */,
 				14CBE0AF1DD6117C00F6DB7F /* UIImageViewViewController.h */,
 				14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */,
 				14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */,
@@ -310,7 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */,
-				14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */,
+				14CBE0AE1DD6116B00F6DB7F /* UIAlertControllerViewController.m in Sources */,
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
 				1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */,

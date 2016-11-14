@@ -93,7 +93,7 @@
     [self.view addSubview:imageView];
     UILabel *textLabel = [[UILabel alloc] init];
     [textLabel setFont:[UIFont fontWithName:@"Arial" size:20]];
-    textLabel.text = @"看看看看看，有个人在布局， 有个人在布局，有个人在布局";
+    textLabel.text = @"【Masonry非常强大！】看看看看看，有个人在布局， 有个人在布局，有个人在布局";
     [self.view addSubview:textLabel];
     
     [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
