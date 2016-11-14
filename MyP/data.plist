@@ -10,6 +10,7 @@
 	<key>knowledge</key>
 	<array>
 		<array>
+			<string>Layout</string>
 			<string>UIButton</string>
 			<string>UILabel</string>
 			<string>UIImageView</string>

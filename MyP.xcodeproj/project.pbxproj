@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF31DD88F6F0074393B /* ThreadViewController.m */; };
+		1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF71DD98F4D0074393B /* LayoutViewController.m */; };
 		144906B81DD20ECE002183FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906B71DD20ECE002183FC /* main.m */; };
 		144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BA1DD20ECE002183FC /* AppDelegate.m */; };
 		144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BD1DD20ECE002183FC /* TrainningViewController.m */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		1437ABF21DD88F6F0074393B /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
 		1437ABF31DD88F6F0074393B /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
+		1437ABF61DD98F4D0074393B /* LayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutViewController.h; sourceTree = "<group>"; };
+		1437ABF71DD98F4D0074393B /* LayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutViewController.m; sourceTree = "<group>"; };
 		144906B31DD20ECE002183FC /* MyP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144906B71DD20ECE002183FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		144906B91DD20ECE002183FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */,
 				14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */,
 				14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */,
+				1437ABF61DD98F4D0074393B /* LayoutViewController.h */,
+				1437ABF71DD98F4D0074393B /* LayoutViewController.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */,
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
+				1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */,
 				14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */,
 				144906D21DD21192002183FC /* SettingsViewController.m in Sources */,
 				144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */,
