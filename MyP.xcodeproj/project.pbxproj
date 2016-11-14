@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF31DD88F6F0074393B /* ThreadViewController.m */; };
 		144906B81DD20ECE002183FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906B71DD20ECE002183FC /* main.m */; };
 		144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BA1DD20ECE002183FC /* AppDelegate.m */; };
 		144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BD1DD20ECE002183FC /* TrainningViewController.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1437ABF21DD88F6F0074393B /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
+		1437ABF31DD88F6F0074393B /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
 		144906B31DD20ECE002183FC /* MyP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144906B71DD20ECE002183FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		144906B91DD20ECE002183FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				14F30D051DD7F68600AF336C /* DataViewController.h */,
 				14F30D061DD7F68600AF336C /* DataViewController.m */,
+				1437ABF21DD88F6F0074393B /* ThreadViewController.h */,
+				1437ABF31DD88F6F0074393B /* ThreadViewController.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */,
 				14CBE0AE1DD6116B00F6DB7F /* UIAlertViewViewController.m in Sources */,
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
