@@ -48,6 +48,8 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];
     
+    //【判断是否是主线程以及调度到主线程】http://stackoverflow.com/questions/11582223/ios-ensure-execution-on-main-thread
+    
     //
     NSInvocationOperation *operationA = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(generateTask:) object:nil];
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
