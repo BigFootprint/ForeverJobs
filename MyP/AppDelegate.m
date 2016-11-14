@@ -40,6 +40,7 @@
     
     tabBarController.viewControllers = @[trainningController, onepieceController, settingsController];
     UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+    //rootNav.navigationBar.barTintColor = [UIColor redColor];
     
     self.window = window;
     window.rootViewController = rootNav;

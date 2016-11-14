@@ -23,9 +23,11 @@
 		14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */; };
 		14F30D071DD7F68600AF336C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F30D061DD7F68600AF336C /* DataViewController.m */; };
 		14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */; };
+		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.release.xcconfig"; sourceTree = "<group>"; };
 		1437ABF21DD88F6F0074393B /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
 		1437ABF31DD88F6F0074393B /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
 		1437ABF61DD98F4D0074393B /* LayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutViewController.h; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		14F30D051DD7F68600AF336C /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		14F30D061DD7F68600AF336C /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */,
+				64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,7 @@
 				144906B51DD20ECE002183FC /* MyP */,
 				144906B41DD20ECE002183FC /* Products */,
 				14F30D081DD82CD800AF336C /* Frameworks */,
+				751161EB7510C048F6624B9B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,8 +174,18 @@
 			isa = PBXGroup;
 			children = (
 				14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */,
+				293DDF684CC7E26523D68AFB /* libPods-MyP.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		751161EB7510C048F6624B9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */,
+				0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 144906CD1DD20ECE002183FC /* Build configuration list for PBXNativeTarget "MyP" */;
 			buildPhases = (
+				8C76EA97CF78867EC72786A2 /* [CP] Check Pods Manifest.lock */,
 				144906AF1DD20ECE002183FC /* Sources */,
 				144906B01DD20ECE002183FC /* Frameworks */,
 				144906B11DD20ECE002183FC /* Resources */,
+				07C9C733F91E4B68BA11DB23 /* [CP] Embed Pods Frameworks */,
+				090E967CEA4300D7CF95AA25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +255,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07C9C733F91E4B68BA11DB23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyP/Pods-MyP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		090E967CEA4300D7CF95AA25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyP/Pods-MyP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C76EA97CF78867EC72786A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		144906AF1DD20ECE002183FC /* Sources */ = {
@@ -349,6 +416,7 @@
 		};
 		144906CE1DD20ECE002183FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M9H22SZSJS;
@@ -361,6 +429,7 @@
 		};
 		144906CF1DD20ECE002183FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M9H22SZSJS;

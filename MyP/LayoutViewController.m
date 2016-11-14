@@ -8,6 +8,7 @@
 
 #import "LayoutViewController.h"
 #import "JobsConstants.h"
+#import "Masonry.h"
 
 @interface LayoutViewController ()
 
@@ -77,6 +78,36 @@
     
     NSLayoutConstraint *yellowWidth = [NSLayoutConstraint constraintWithItem:yellowView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:kNilOptions multiplier:1.0f constant:50.0];
     [self.view addConstraint:yellowWidth];
+    
+    // Masonry 布局， 非常方便！
+    UIView *orangeView = [[UIView alloc]init];
+    [orangeView setBackgroundColor:[UIColor orangeColor]];
+    [self.view addSubview:orangeView];
+    [orangeView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.right.equalTo(self.view).with.offset(-20);
+        make.bottom.equalTo(self.view).with.offset(-20);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+    }];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"second"]];
+    [self.view addSubview:imageView];
+    UILabel *textLabel = [[UILabel alloc] init];
+    [textLabel setFont:[UIFont fontWithName:@"Arial" size:20]];
+    textLabel.text = @"看看看看看，有个人在布局， 有个人在布局，有个人在布局";
+    [self.view addSubview:textLabel];
+    
+    [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.mas_centerX).offset(10);
+        make.centerY.mas_equalTo(self.view.mas_centerY);
+        make.left.mas_equalTo(imageView.mas_right);
+        make.right.mas_equalTo(self.view.mas_right).offset(-15);
+    }];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(textLabel);
+        make.right.mas_equalTo(textLabel.mas_left);
+        make.left.mas_equalTo(self.view.mas_left).offset(15);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
