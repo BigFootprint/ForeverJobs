@@ -8,6 +8,7 @@
 
 #import "UIButtonViewController.h"
 #import "JobsConstants.h"
+#import "UIButton+GA.h"
 
 @interface UIButtonViewController ()
 -(void)clickA;
@@ -30,6 +31,7 @@
     [testButtonA addTarget:self action:@selector(clickA) forControlEvents:UIControlEventTouchUpInside];
     testButtonA.showsTouchWhenHighlighted = YES; //显示一个亮点
     [testButtonA setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [testButtonA setGaLabel:@"GA了个喵！"];
     
     UIButton *testButtonB = [UIButton buttonWithType:UIButtonTypeContactAdd];
     testButtonB.frame = CGRectMake(0, 0, 200, 50);
@@ -74,9 +76,7 @@
 
 -(void)clickA{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"UIButton学习" message:@"你点击了我！" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"Dialog-好的");
-    }];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
 }

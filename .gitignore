@@ -18,4 +18,3 @@ DerivedData
 *.xccheckout
 node_modules/
 xcshareddata/
-MyP/*
