@@ -87,7 +87,9 @@
     // TODO NSThread
     [NSThread detachNewThreadSelector:@selector(generateTask:) toTarget:self withObject:@"NSThread"];
     
-    // 关于选择哪一个的问题：https://cocoacasts.com/choosing-between-nsoperation-and-grand-central-dispatch/
+    // 关于选择哪一个的问题：
+    // 1) https://cocoacasts.com/choosing-between-nsoperation-and-grand-central-dispatch/
+    // 2) http://stackoverflow.com/questions/10373331/nsoperation-vs-grand-central-dispatch
 }
 
 -(void)generateTask:(NSString *)data{

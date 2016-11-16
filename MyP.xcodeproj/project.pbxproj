@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141B288D1DDCA9B100216782 /* SystemServiceViewController.m */; };
 		1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF31DD88F6F0074393B /* ThreadViewController.m */; };
 		1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF71DD98F4D0074393B /* LayoutViewController.m */; };
 		1437ABFB1DDAB4FB0074393B /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABFA1DDAB4FB0074393B /* NetworkViewController.m */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.release.xcconfig"; sourceTree = "<group>"; };
+		141B288C1DDCA9B100216782 /* SystemServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServiceViewController.h; sourceTree = "<group>"; };
+		141B288D1DDCA9B100216782 /* SystemServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServiceViewController.m; sourceTree = "<group>"; };
 		1437ABF21DD88F6F0074393B /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
 		1437ABF31DD88F6F0074393B /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
 		1437ABF61DD98F4D0074393B /* LayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutViewController.h; sourceTree = "<group>"; };
@@ -85,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		141B288B1DDCA99700216782 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				141B288C1DDCA9B100216782 /* SystemServiceViewController.h */,
+				141B288D1DDCA9B100216782 /* SystemServiceViewController.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		1437ABF51DD98EB30074393B /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 		144906B51DD20ECE002183FC /* MyP */ = {
 			isa = PBXGroup;
 			children = (
+				141B288B1DDCA99700216782 /* Other */,
 				1437ABFF1DDB07060074393B /* OnePiece */,
 				14CBE0A81DD60E9300F6DB7F /* Constants */,
 				14CBE09F1DD4C81D00F6DB7F /* Trainning */,
@@ -353,6 +366,7 @@
 				14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */,
 				1437ABFB1DDAB4FB0074393B /* NetworkViewController.m in Sources */,
 				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
+				141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
 				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
