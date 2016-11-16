@@ -51,7 +51,7 @@
     //【判断是否是主线程以及调度到主线程】http://stackoverflow.com/questions/11582223/ios-ensure-execution-on-main-thread
     
     //
-    NSInvocationOperation *operationA = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(generateTask:) object:nil];
+    NSInvocationOperation *operationA = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(generateTask:) object:@"NSInvocationOperation"];
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
     [queue addOperation:operationA];
     
@@ -77,21 +77,25 @@
     [operationB setCompletionBlock:^{
         NSLog(@"OperationB Completed");
     }];
+    
     // 监听一个 Operation 完成
     [queue addOperation:operationB];
     [queue addOperation:[[MyNonConcurrentOperation alloc] initWithData:nil]];
     
-    // TODO GCD
+    // TODO GCD - 在Network中已玩，GCD远比那里面的强大。
     
     // TODO NSThread
+    [NSThread detachNewThreadSelector:@selector(generateTask:) toTarget:self withObject:@"NSThread"];
+    
+    // 关于选择哪一个的问题：https://cocoacasts.com/choosing-between-nsoperation-and-grand-central-dispatch/
 }
 
 -(void)generateTask:(NSString *)data{
-    NSLog(@"I am sleeping.");
+    NSLog(@"[%@]I am sleeping.", data);
     // 沉睡4s
     NSDate *date=[NSDate dateWithTimeIntervalSinceNow:4.0];
     [NSThread sleepUntilDate:date];
-    NSLog(@"I am waked.");
+    NSLog(@"[%@]I am waked.", data);
 }
 
 - (void)didReceiveMemoryWarning {
