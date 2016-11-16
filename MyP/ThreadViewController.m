@@ -80,6 +80,10 @@
     // 监听一个 Operation 完成
     [queue addOperation:operationB];
     [queue addOperation:[[MyNonConcurrentOperation alloc] initWithData:nil]];
+    
+    // TODO GCD
+    
+    // TODO NSThread
 }
 
 -(void)generateTask:(NSString *)data{

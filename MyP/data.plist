@@ -6,6 +6,7 @@
 	<array>
 		<string>View</string>
 		<string>基础</string>
+		<string>Other</string>
 	</array>
 	<key>knowledge</key>
 	<array>
@@ -26,6 +27,13 @@
 			<string>Thread</string>
 			<string>Animation</string>
 			<string>Network</string>
+			<string>Gesture</string>
+			<string>KVOC</string>
+		</array>
+		<array>
+			<string>SystemService</string>
+			<string>Keyboard</string>
+			<string>Media</string>
 		</array>
 	</array>
 </dict>

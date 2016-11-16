@@ -54,6 +54,10 @@
     
     _networkQueue = dispatch_queue_create("com.footprint.MyP.Network", DISPATCH_QUEUE_CONCURRENT);
     _mainQueue = dispatch_get_main_queue();
+    
+    // TODO AFNetworking
+    
+    // TODO CFNetwork
 }
 
 -(void)senRequest:(id)button{
