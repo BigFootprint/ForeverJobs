@@ -67,20 +67,20 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
     [nsUserDefaultsButton setTitle:@"NSUserDefaults" forState:UIControlStateNormal];
     [nsUserDefaultsButton addTarget:self action:@selector(persistViaNSUserDefaults) forControlEvents:UIControlEventTouchUpInside];
     [nsUserDefaultsButton setBackgroundColor:[UIColor orangeColor]];
-    [nsUserDefaultsButton setTitleColor:ANDROID_BLUE forState:UIControlStateNormal];
+    [nsUserDefaultsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     UIButton *plistButton = [[UIButton alloc] initWithFrame:CGRectMake(screenSize.width/2 + 5, startHeight, screenSize.width/2 - 10, 40)];
     [plistButton setTitle:@"plist" forState:UIControlStateNormal];
     [plistButton addTarget:self action:@selector(persistViaPlist) forControlEvents:UIControlEventTouchUpInside];
     [plistButton setBackgroundColor:[UIColor orangeColor]];
-    [plistButton setTitleColor:ANDROID_BLUE forState:UIControlStateNormal];
+    [plistButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     startHeight += (40 + 5);
     UIButton *SQLiteButton = [[UIButton alloc] initWithFrame:CGRectMake(5, startHeight, screenSize.width/2 - 10, 40)];
     [SQLiteButton setTitle:@"SQLite" forState:UIControlStateNormal];
     [SQLiteButton addTarget:self action:@selector(persistViaSQLite) forControlEvents:UIControlEventTouchUpInside];
     [SQLiteButton setBackgroundColor:[UIColor orangeColor]];
-    [SQLiteButton setTitleColor:ANDROID_BLUE forState:UIControlStateNormal];
+    [SQLiteButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     UIButton *coreDataButton = [[UIButton alloc] initWithFrame:CGRectMake(screenSize.width/2 + 5, startHeight, screenSize.width/2 - 10, 40)];
     [coreDataButton setTitle:@"CoreData" forState:UIControlStateNormal];
@@ -92,7 +92,7 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
     [nsKeyedArchiverButton setTitle:@"NSKeyedArchiver" forState:UIControlStateNormal];
     [nsKeyedArchiverButton addTarget:self action:@selector(persistViaNSKeyArchiver) forControlEvents:UIControlEventTouchUpInside];
     [nsKeyedArchiverButton setBackgroundColor:[UIColor orangeColor]];
-    [nsKeyedArchiverButton setTitleColor:ANDROID_BLUE forState:UIControlStateNormal];
+    [nsKeyedArchiverButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     [self.view addSubview:contentLabel];
     [self.view addSubview:nsUserDefaultsButton];
