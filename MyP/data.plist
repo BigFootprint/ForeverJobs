@@ -34,7 +34,8 @@
 			<string>SystemService</string>
 			<string>Keyboard</string>
 			<string>Media</string>
-			<string>Camera</string>
+			<string>CameraA</string>
+			<string>CameraB</string>
 		</array>
 	</array>
 </dict>
