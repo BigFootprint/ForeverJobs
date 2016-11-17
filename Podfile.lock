@@ -1,4 +1,25 @@
 PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - libextobjc (0.4.5):
     - libextobjc/EXTADT (= 0.4.5)
     - libextobjc/EXTConcreteProtocol (= 0.4.5)
@@ -37,13 +58,15 @@ PODS:
   - Masonry (0.6.4)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.6.3)
   - libextobjc (~> 0.4.5)
   - Masonry (~> 0.6.4)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5ea4cdd7896e454db1287a642a9c044608033141
   libextobjc: 379354aac08aafd6b3aa9784f95b36e8c2d5bde4
   Masonry: f3a557bf919b1414d9f3d53b85829602522f7b7b
 
-PODFILE CHECKSUM: 43d76f63a3001218bf969b680b39fe3db9706e09
+PODFILE CHECKSUM: 14ba18ac3a75ba56faefcdf7fdf12125f020a68c
 
 COCOAPODS: 1.1.1

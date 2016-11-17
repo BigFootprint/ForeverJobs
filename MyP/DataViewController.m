@@ -221,8 +221,10 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
 }
 
 -(void)showAlterView:(NSString *)content{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"存储内容" message:content delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alertView show];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"存储内容" message:content preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "UIImageViewViewController.h"
+#import "JobsConstants.h"
 
 @interface UIImageViewViewController ()
 
@@ -17,9 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.view setBackgroundColor:ANDROID_BLUE];
     // 图片读取
     //初始化
-    UIImageView  *imageView=[[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
+    // UIImageView  *imageView=[[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
     //第一种：
     //[imageView setImage:[UIImage imageNamed:@"1.jpeg"]];
     
