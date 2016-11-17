@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141122D21DDDC79800BFEA3E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141122D11DDDC79800BFEA3E /* CameraViewController.m */; };
 		141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141B288D1DDCA9B100216782 /* SystemServiceViewController.m */; };
 		1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF31DD88F6F0074393B /* ThreadViewController.m */; };
 		1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF71DD98F4D0074393B /* LayoutViewController.m */; };
@@ -32,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.release.xcconfig"; sourceTree = "<group>"; };
+		141122D01DDDC79800BFEA3E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		141122D11DDDC79800BFEA3E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		141B288C1DDCA9B100216782 /* SystemServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServiceViewController.h; sourceTree = "<group>"; };
 		141B288D1DDCA9B100216782 /* SystemServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServiceViewController.m; sourceTree = "<group>"; };
 		1437ABF21DD88F6F0074393B /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 			children = (
 				141B288C1DDCA9B100216782 /* SystemServiceViewController.h */,
 				141B288D1DDCA9B100216782 /* SystemServiceViewController.m */,
+				141122D01DDDC79800BFEA3E /* CameraViewController.h */,
+				141122D11DDDC79800BFEA3E /* CameraViewController.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
 				141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
+				141122D21DDDC79800BFEA3E /* CameraViewController.m in Sources */,
 				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
 			);
