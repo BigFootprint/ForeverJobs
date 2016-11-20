@@ -28,7 +28,6 @@
 			<string>Animation</string>
 			<string>Network</string>
 			<string>Gesture</string>
-			<string>KVOC</string>
 		</array>
 		<array>
 			<string>SystemService</string>
