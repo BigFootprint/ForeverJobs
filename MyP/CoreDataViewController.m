@@ -51,6 +51,10 @@
     [self establishCoreData];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.title = @"CoreData·学习";
+}
+
 -(void)startSaveAndSelect:(id)button{
     [self insertCoreData];
     [self updateCoreData];

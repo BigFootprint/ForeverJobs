@@ -9,6 +9,7 @@
 #import "DataViewController.h"
 #import "JobsConstants.h"
 #import "sqlite3.h"
+#import "CoreDataViewController.h"
 
 static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjklzxcvbnm,./l;'[]\\=-!@#$%^&*()_+{}|:\"<>?";
 
@@ -37,6 +38,7 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
 -(NSString *)persistViaPlist;
 -(NSString *)persistViaNSKeyArchiver;
 -(NSString *)persistViaSQLite;
+-(void)persistViaCoreData;
 
 -(void)showAlterView:(NSString *)content;
 
@@ -84,7 +86,7 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
     
     UIButton *coreDataButton = [[UIButton alloc] initWithFrame:CGRectMake(screenSize.width/2 + 5, startHeight, screenSize.width/2 - 10, 40)];
     [coreDataButton setTitle:@"CoreData" forState:UIControlStateNormal];
-    [coreDataButton addTarget:self action:@selector(persistViaNSUserDefaults) forControlEvents:UIControlEventTouchUpInside];
+    [coreDataButton addTarget:self action:@selector(persistViaCoreData) forControlEvents:UIControlEventTouchUpInside];
     [coreDataButton setBackgroundColor:[UIColor orangeColor]];
     
     startHeight += (40 + 5);
@@ -100,6 +102,10 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
     [self.view addSubview:SQLiteButton];
     [self.view addSubview:coreDataButton];
     [self.view addSubview:nsKeyedArchiverButton];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.title = @"Data·学习";
 }
 
 /**
@@ -218,6 +224,11 @@ static NSString *const dataContent = @"我要存储1234567890qwertyuiopasdfghjkl
     
     [self showAlterView:content];
     return content;
+}
+
+-(void)persistViaCoreData{
+    CoreDataViewController *coreDataController = [[CoreDataViewController alloc] init];
+    [self.navigationController pushViewController:coreDataController animated:YES];
 }
 
 -(void)showAlterView:(NSString *)content{
