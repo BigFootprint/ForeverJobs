@@ -27,6 +27,8 @@
 		14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */; };
 		14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */; };
 		14F1C63A1DE1B2E100B91388 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C6391DE1B2E100B91388 /* AnimationViewController.m */; };
+		14F1C64C1DE319B000B91388 /* School.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C64B1DE319B000B91388 /* School.xcdatamodel */; };
+		14F1C64F1DE319CF00B91388 /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C64E1DE319CF00B91388 /* CoreDataViewController.m */; };
 		14F30D071DD7F68600AF336C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F30D061DD7F68600AF336C /* DataViewController.m */; };
 		14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
@@ -74,6 +76,9 @@
 		14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
 		14F1C6381DE1B2E100B91388 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		14F1C6391DE1B2E100B91388 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		14F1C64B1DE319B000B91388 /* School.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = School.xcdatamodel; path = ../../../../../../Desktop/School.xcdatamodel; sourceTree = "<group>"; };
+		14F1C64D1DE319CF00B91388 /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		14F1C64E1DE319CF00B91388 /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
 		14F30D051DD7F68600AF336C /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		14F30D061DD7F68600AF336C /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -209,9 +214,18 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		14F1C64A1DE3197600B91388 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				14F1C64B1DE319B000B91388 /* School.xcdatamodel */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		14F30D041DD7F66500AF336C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				14F1C64A1DE3197600B91388 /* data */,
 				14F30D051DD7F68600AF336C /* DataViewController.h */,
 				14F30D061DD7F68600AF336C /* DataViewController.m */,
 				1437ABF21DD88F6F0074393B /* ThreadViewController.h */,
@@ -220,6 +234,8 @@
 				1437ABFA1DDAB4FB0074393B /* NetworkViewController.m */,
 				14F1C6381DE1B2E100B91388 /* AnimationViewController.h */,
 				14F1C6391DE1B2E100B91388 /* AnimationViewController.m */,
+				14F1C64D1DE319CF00B91388 /* CoreDataViewController.h */,
+				14F1C64E1DE319CF00B91388 /* CoreDataViewController.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -381,7 +397,9 @@
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
 				141122D21DDDC79800BFEA3E /* CameraAViewController.m in Sources */,
 				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
+				14F1C64C1DE319B000B91388 /* School.xcdatamodel in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
+				14F1C64F1DE319CF00B91388 /* CoreDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

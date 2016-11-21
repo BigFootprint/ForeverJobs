@@ -20,8 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];
-    
-    Teacher
 }
 
 - (void)didReceiveMemoryWarning {
