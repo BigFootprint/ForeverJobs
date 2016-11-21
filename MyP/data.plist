@@ -24,6 +24,7 @@
 		</array>
 		<array>
 			<string>Data</string>
+			<string>CoreData</string>
 			<string>Thread</string>
 			<string>Animation</string>
 			<string>Network</string>
