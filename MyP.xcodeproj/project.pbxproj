@@ -20,6 +20,7 @@
 		144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906C01DD20ECE002183FC /* OnePieceViewController.m */; };
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* SettingsViewController.m */; };
+		14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */; };
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
 		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
 		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
@@ -64,6 +65,8 @@
 		144906CA1DD20ECE002183FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144906D01DD21192002183FC /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		144906D11DD21192002183FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
+		14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewViewController.m; sourceTree = "<group>"; };
 		14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
 		14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
 		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */,
 				1437ABF61DD98F4D0074393B /* LayoutViewController.h */,
 				1437ABF71DD98F4D0074393B /* LayoutViewController.m */,
+				14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */,
+				14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
 				14F1C66C1DE3231D00B91388 /* School.xcdatamodeld in Sources */,
+				14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */,
 				14F1C63A1DE1B2E100B91388 /* AnimationViewController.m in Sources */,
 				1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */,
 				1437AC061DDB09850074393B /* UIButton+GA.m in Sources */,
@@ -457,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -497,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
