@@ -1,0 +1,30 @@
+<html>
+    <meta charset="utf-8" />
+    <head>
+        <script>
+            function callNative(id){
+                var list = [1,2,3];
+                var dict = {"name":"阳君", "qq":"937447974", "list":list};
+                window.webkit.messageHandlers.MyP_jsCallOC.postMessage(dict);
+            }
+        
+            function callNative2(id){
+                var list = [1,2,3];
+                var dict = {"name":"阳君", "qq":"937447974", "list":list};
+                window.webkit.messageHandlers.MyP_jsCallOC_2.postMessage(dict);
+            }
+        
+            function ocCall(id){
+                document.getElementById("hint").innerHTML=id;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <button type="button" onclick="callNative(this)">点击我调用Native代码</button>
+        <br>
+        <button type="button" onclick="callNative2(this)">点击我也调用Native代码</button>
+        <br>
+        <p id="hint"></p>
+    </body>
+</html>

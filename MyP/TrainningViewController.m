@@ -108,6 +108,12 @@
 #pragma mark 点击行
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *content = _data[indexPath.section][indexPath.row];
+    
+    if([content isEqualToString:@"WKWebView"]){
+        [self.tabBarController setSelectedIndex:1];
+        return;
+    }
+    
     NSLog(@"%@", _data[indexPath.section][indexPath.row]);
     Class cls = [self getClassForTopic:content];
     if(cls){

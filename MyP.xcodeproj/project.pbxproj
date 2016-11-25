@@ -21,6 +21,7 @@
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* SettingsViewController.m */; };
 		14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */; };
+		14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC84881DE818CC0008FEE7 /* onepiece.html */; };
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
 		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
 		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
@@ -67,6 +68,7 @@
 		144906D11DD21192002183FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
 		14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewViewController.m; sourceTree = "<group>"; };
+		14AC84881DE818CC0008FEE7 /* onepiece.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = onepiece.html; sourceTree = "<group>"; };
 		14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
 		14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
 		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		144906B51DD20ECE002183FC /* MyP */ = {
 			isa = PBXGroup;
 			children = (
+				14AC84871DE8185F0008FEE7 /* Res */,
 				141B288B1DDCA99700216782 /* Other */,
 				1437ABFF1DDB07060074393B /* OnePiece */,
 				14CBE0A81DD60E9300F6DB7F /* Constants */,
@@ -192,7 +195,6 @@
 				144906C01DD20ECE002183FC /* OnePieceViewController.m */,
 				144906D01DD21192002183FC /* SettingsViewController.h */,
 				144906D11DD21192002183FC /* SettingsViewController.m */,
-				144906C51DD20ECE002183FC /* Assets.xcassets */,
 				144906CA1DD20ECE002183FC /* Info.plist */,
 				14CBE0A31DD5AA2E00F6DB7F /* data.plist */,
 				144906B61DD20ECE002183FC /* Supporting Files */,
@@ -206,6 +208,15 @@
 				144906B71DD20ECE002183FC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14AC84871DE8185F0008FEE7 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				144906C51DD20ECE002183FC /* Assets.xcassets */,
+				14AC84881DE818CC0008FEE7 /* onepiece.html */,
+			);
+			name = Res;
 			sourceTree = "<group>";
 		};
 		14CBE09F1DD4C81D00F6DB7F /* Trainning */ = {
@@ -336,6 +347,7 @@
 			files = (
 				14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */,
 				144906C61DD20ECE002183FC /* Assets.xcassets in Resources */,
+				14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
