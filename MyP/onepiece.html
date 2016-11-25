@@ -14,6 +14,10 @@
                 window.webkit.messageHandlers.MyP_jsCallOC_2.postMessage(dict);
             }
         
+            function showAlert(id){
+                alert("H5弹框啦！");
+            }
+        
             function ocCall(id){
                 document.getElementById("hint").innerHTML=id;
             }
@@ -24,6 +28,8 @@
         <button type="button" onclick="callNative(this)">点击我调用Native代码</button>
         <br>
         <button type="button" onclick="callNative2(this)">点击我也调用Native代码</button>
+        <br>
+        <button type="button" onclick="showAlert(this)">点击我弹框</button>
         <br>
         <p id="hint"></p>
     </body>
