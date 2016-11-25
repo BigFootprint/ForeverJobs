@@ -16,6 +16,7 @@
 			<string>UILabel</string>
 			<string>UIImageView</string>
 			<string>UITableView</string>
+			<string>UIWebView</string>
 			<string>WKWebView</string>
 			<string>UIAlertController</string>
 			<string>UITextField</string>

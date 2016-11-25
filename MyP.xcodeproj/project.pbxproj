@@ -22,6 +22,8 @@
 		144906D21DD21192002183FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* SettingsViewController.m */; };
 		14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */; };
 		14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC84881DE818CC0008FEE7 /* onepiece.html */; };
+		14AC848C1DE843EB0008FEE7 /* UIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */; };
+		14AC848E1DE8532B0008FEE7 /* webviewstudy.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC848D1DE8532B0008FEE7 /* webviewstudy.html */; };
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
 		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
 		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
@@ -69,6 +71,9 @@
 		14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
 		14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewViewController.m; sourceTree = "<group>"; };
 		14AC84881DE818CC0008FEE7 /* onepiece.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = onepiece.html; sourceTree = "<group>"; };
+		14AC848A1DE843EB0008FEE7 /* UIWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewViewController.h; sourceTree = "<group>"; };
+		14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewViewController.m; sourceTree = "<group>"; };
+		14AC848D1DE8532B0008FEE7 /* webviewstudy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webviewstudy.html; sourceTree = "<group>"; };
 		14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
 		14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
 		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -138,6 +143,8 @@
 				1437ABF71DD98F4D0074393B /* LayoutViewController.m */,
 				14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */,
 				14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */,
+				14AC848A1DE843EB0008FEE7 /* UIWebViewViewController.h */,
+				14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 			children = (
 				144906C51DD20ECE002183FC /* Assets.xcassets */,
 				14AC84881DE818CC0008FEE7 /* onepiece.html */,
+				14AC848D1DE8532B0008FEE7 /* webviewstudy.html */,
 			);
 			name = Res;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 			files = (
 				14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */,
 				144906C61DD20ECE002183FC /* Assets.xcassets in Resources */,
+				14AC848E1DE8532B0008FEE7 /* webviewstudy.html in Resources */,
 				14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +419,7 @@
 				14F1C67E1DE325E500B91388 /* Teacher+CoreDataProperties.m in Sources */,
 				14CBE0AE1DD6116B00F6DB7F /* UIAlertControllerViewController.m in Sources */,
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
+				14AC848C1DE843EB0008FEE7 /* UIWebViewViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
 				14F1C66C1DE3231D00B91388 /* School.xcdatamodeld in Sources */,
 				14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */,
