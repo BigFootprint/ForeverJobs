@@ -22,6 +22,7 @@
 			<string>UITextField</string>
 			<string>UIPickerView</string>
 			<string>UIDatePicker</string>
+			<string>UIScrollView</string>
 		</array>
 		<array>
 			<string>Data</string>

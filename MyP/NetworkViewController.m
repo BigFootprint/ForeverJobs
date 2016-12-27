@@ -104,22 +104,19 @@
     // 启动系统风火轮
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSString *domainStr = @"http://httpbin.org/headers";
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     //以get的形式提交，只需要将上面的请求地址给GET做参数就可以
-    [manager GET:domainStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [session GET:domainStr parameters:NULL progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 隐藏系统风火轮
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
         //json解析
-        NSString *response = [NSString stringWithFormat:@"%@", [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil]];
-        self.responseLable.text = response;
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        //NSString *response = [NSString stringWithFormat:@"%@", [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil]];
+        // AFNetworking 3.0 已经转换好了
+        self.responseLable.text = [NSString stringWithFormat:@"%@", responseObject];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         // 解析失败隐藏系统风火轮(可以打印error.userInfo查看错误信息)
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
     }];
 }
 

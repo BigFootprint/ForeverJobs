@@ -14,14 +14,41 @@
 
 @implementation SettingsViewController
 
+-(void)loadView{
+    [super loadView];
+    NSLog(@"VCLifeCycle-loadView");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"VCLifeCycle-viewDidLoad");
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"VCLifeCycle-viewWillAppear");
     self.tabBarController.navigationItem.title = @"设置";
+}
+
+-(void)viewWillLayoutSubviews{
+    NSLog(@"VCLifeCycle-viewWillLayoutSubviews");
+}
+
+-(void)viewDidLayoutSubviews{
+    NSLog(@"VCLifeCycle-viewDidLayoutSubviews");
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    NSLog(@"VCLifeCycle-viewDidAppear");
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    NSLog(@"VCLifeCycle-viewWillDisappear");
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    NSLog(@"VCLifeCycle-viewDidDisappear");
 }
 
 - (void)didReceiveMemoryWarning {

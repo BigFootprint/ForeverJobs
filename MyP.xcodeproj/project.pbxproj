@@ -24,6 +24,7 @@
 		14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC84881DE818CC0008FEE7 /* onepiece.html */; };
 		14AC848C1DE843EB0008FEE7 /* UIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */; };
 		14AC848E1DE8532B0008FEE7 /* webviewstudy.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC848D1DE8532B0008FEE7 /* webviewstudy.html */; };
+		14AC84911DE85BDF0008FEE7 /* UIPickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84901DE85BDF0008FEE7 /* UIPickerViewViewController.m */; };
 		14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */; };
 		14CBE0A41DD5AA2E00F6DB7F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CBE0A31DD5AA2E00F6DB7F /* data.plist */; };
 		14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0A61DD60A5300F6DB7F /* UILabelViewController.m */; };
@@ -37,6 +38,7 @@
 		14F1C67E1DE325E500B91388 /* Teacher+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C67C1DE325E500B91388 /* Teacher+CoreDataProperties.m */; };
 		14F30D071DD7F68600AF336C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F30D061DD7F68600AF336C /* DataViewController.m */; };
 		14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */; };
+		14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED01E1260C900BA318A /* UIScrollViewViewController.m */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		14AC848A1DE843EB0008FEE7 /* UIWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewViewController.h; sourceTree = "<group>"; };
 		14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewViewController.m; sourceTree = "<group>"; };
 		14AC848D1DE8532B0008FEE7 /* webviewstudy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webviewstudy.html; sourceTree = "<group>"; };
+		14AC848F1DE85BDF0008FEE7 /* UIPickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerViewViewController.h; sourceTree = "<group>"; };
+		14AC84901DE85BDF0008FEE7 /* UIPickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewViewController.m; sourceTree = "<group>"; };
 		14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
 		14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
 		14CBE0A31DD5AA2E00F6DB7F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		14F30D051DD7F68600AF336C /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		14F30D061DD7F68600AF336C /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		14F54ECF1E1260C900BA318A /* UIScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewViewController.h; sourceTree = "<group>"; };
+		14F54ED01E1260C900BA318A /* UIScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewViewController.m; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +151,10 @@
 				14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */,
 				14AC848A1DE843EB0008FEE7 /* UIWebViewViewController.h */,
 				14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */,
+				14AC848F1DE85BDF0008FEE7 /* UIPickerViewViewController.h */,
+				14AC84901DE85BDF0008FEE7 /* UIPickerViewViewController.m */,
+				14F54ECF1E1260C900BA318A /* UIScrollViewViewController.h */,
+				14F54ED01E1260C900BA318A /* UIScrollViewViewController.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -427,9 +437,11 @@
 				1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */,
 				1437AC061DDB09850074393B /* UIButton+GA.m in Sources */,
 				1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */,
+				14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */,
 				14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */,
 				144906D21DD21192002183FC /* SettingsViewController.m in Sources */,
 				144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */,
+				14AC84911DE85BDF0008FEE7 /* UIPickerViewViewController.m in Sources */,
 				14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */,
 				1437ABFB1DDAB4FB0074393B /* NetworkViewController.m in Sources */,
 				14F1C67D1DE325E500B91388 /* Teacher+CoreDataClass.m in Sources */,
