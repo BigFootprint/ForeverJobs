@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TrainningViewController.h"
 #import "OnePieceViewController.h"
-#import "SettingsViewController.h"
+#import "ActionViewController.h"
 
 @interface AppDelegate ()
 
@@ -34,11 +34,11 @@
     onepieceController.tabBarItem.badgeValue = @"New";
     onepieceController.tabBarItem.image = [UIImage imageNamed:@"onepiece"];
     
-    UIViewController *settingsController = [[SettingsViewController alloc] init];
-    settingsController.tabBarItem.title = @"设置";
-    settingsController.tabBarItem.image = [UIImage imageNamed:@"settings"];
+    UIViewController *actionController = [[ActionViewController alloc] init];
+    actionController.tabBarItem.title = @"练手";
+    actionController.tabBarItem.image = [UIImage imageNamed:@"settings"];
     
-    tabBarController.viewControllers = @[trainningController, onepieceController, settingsController];
+    tabBarController.viewControllers = @[trainningController, onepieceController, actionController];
     UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:tabBarController];
     //rootNav.navigationBar.barTintColor = [UIColor redColor];
     
