@@ -29,6 +29,8 @@
 @synthesize pageHeight;
 
 - (void)viewDidLoad {
+    // 训练知识点：1）翻页滚动；2）缩放（简单）
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];
