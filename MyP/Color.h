@@ -10,5 +10,6 @@
 #define Color_h
 
 #define MAIN_BACKGROUND [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1]
+#define HYI_RED [UIColor colorWithRed:0xDF/255.0 green:0X30/255.0 blue:0X31/255.0 alpha:1]
 
 #endif /* Color_h */
