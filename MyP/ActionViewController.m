@@ -8,7 +8,7 @@
 
 #import "ActionViewController.h"
 #import "Masonry.h"
-#import "HyiViewController.h"
+#import "HyiMainViewController.h"
 
 @interface ActionViewController ()
 -(void)clickEntry:(id)sender;
@@ -40,7 +40,7 @@
 }
 
 -(void)clickEntry:(id)sender{
-    HyiViewController *hyiController = [[HyiViewController alloc] init];
+    HyiMainViewController *hyiController = [[HyiMainViewController alloc] init];
     [self.navigationController pushViewController:hyiController animated:YES];
 }
 

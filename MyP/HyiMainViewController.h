@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HyiBaseViewController.h"
+#import "HyiBaseTabBarController.h"
 
 /**
  高仿网易主页面
  */
-@interface HyiViewController : HyiBaseViewController
+@interface HyiMainViewController : HyiBaseTabBarController
 
 @end

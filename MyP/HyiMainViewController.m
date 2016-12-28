@@ -6,14 +6,14 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "HyiViewController.h"
+#import "HyiMainViewController.h"
 #import "Masonry.h"
 
-@interface HyiViewController ()
+@interface HyiMainViewController ()
 
 @end
 
-@implementation HyiViewController
+@implementation HyiMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

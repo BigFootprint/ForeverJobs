@@ -39,8 +39,9 @@
 		14F30D071DD7F68600AF336C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F30D061DD7F68600AF336C /* DataViewController.m */; };
 		14F30D0A1DD82CD800AF336C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */; };
 		14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED01E1260C900BA318A /* UIScrollViewViewController.m */; };
-		14F54ED51E128C6400BA318A /* HyiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED41E128C6400BA318A /* HyiViewController.m */; };
+		14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED41E128C6400BA318A /* HyiMainViewController.m */; };
 		14F54EDA1E128FD300BA318A /* HyiBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED91E128FD300BA318A /* HyiBaseViewController.m */; };
+		14F54EDF1E13651B00BA318A /* HyiBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EDE1E13651B00BA318A /* HyiBaseTabBarController.m */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
@@ -106,11 +107,13 @@
 		14F30D091DD82CD800AF336C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		14F54ECF1E1260C900BA318A /* UIScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewViewController.h; sourceTree = "<group>"; };
 		14F54ED01E1260C900BA318A /* UIScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewViewController.m; sourceTree = "<group>"; };
-		14F54ED31E128C6400BA318A /* HyiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiViewController.h; sourceTree = "<group>"; };
-		14F54ED41E128C6400BA318A /* HyiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiViewController.m; sourceTree = "<group>"; };
+		14F54ED31E128C6400BA318A /* HyiMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMainViewController.h; sourceTree = "<group>"; };
+		14F54ED41E128C6400BA318A /* HyiMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMainViewController.m; sourceTree = "<group>"; };
 		14F54ED81E128FD300BA318A /* HyiBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiBaseViewController.h; sourceTree = "<group>"; };
 		14F54ED91E128FD300BA318A /* HyiBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiBaseViewController.m; sourceTree = "<group>"; };
 		14F54EDC1E12913700BA318A /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		14F54EDD1E13651B00BA318A /* HyiBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiBaseTabBarController.h; sourceTree = "<group>"; };
+		14F54EDE1E13651B00BA318A /* HyiBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiBaseTabBarController.m; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,9 +307,13 @@
 		14F54ED21E128BC400BA318A /* Hyi */ = {
 			isa = PBXGroup;
 			children = (
+				14F54EE31E1365FB00BA318A /* Self */,
+				14F54EE21E1365F400BA318A /* Topic */,
+				14F54EE11E1365E900BA318A /* Live */,
+				14F54EE01E1365D800BA318A /* News */,
 				14F54ED61E128FAB00BA318A /* Base */,
-				14F54ED31E128C6400BA318A /* HyiViewController.h */,
-				14F54ED41E128C6400BA318A /* HyiViewController.m */,
+				14F54ED31E128C6400BA318A /* HyiMainViewController.h */,
+				14F54ED41E128C6400BA318A /* HyiMainViewController.m */,
 			);
 			name = Hyi;
 			sourceTree = "<group>";
@@ -317,6 +324,8 @@
 				14F54EDB1E12911800BA318A /* Constants */,
 				14F54ED81E128FD300BA318A /* HyiBaseViewController.h */,
 				14F54ED91E128FD300BA318A /* HyiBaseViewController.m */,
+				14F54EDD1E13651B00BA318A /* HyiBaseTabBarController.h */,
+				14F54EDE1E13651B00BA318A /* HyiBaseTabBarController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -327,6 +336,34 @@
 				14F54EDC1E12913700BA318A /* Color.h */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		14F54EE01E1365D800BA318A /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		14F54EE11E1365E900BA318A /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Live;
+			sourceTree = "<group>";
+		};
+		14F54EE21E1365F400BA318A /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Topic;
+			sourceTree = "<group>";
+		};
+		14F54EE31E1365FB00BA318A /* Self */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Self;
 			sourceTree = "<group>";
 		};
 		751161EB7510C048F6624B9B /* Pods */ = {
@@ -472,7 +509,8 @@
 				14F1C63A1DE1B2E100B91388 /* AnimationViewController.m in Sources */,
 				1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */,
 				1437AC061DDB09850074393B /* UIButton+GA.m in Sources */,
-				14F54ED51E128C6400BA318A /* HyiViewController.m in Sources */,
+				14F54EDF1E13651B00BA318A /* HyiBaseTabBarController.m in Sources */,
+				14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */,
 				1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */,
 				14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */,
 				14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */,
