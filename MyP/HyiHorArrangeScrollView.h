@@ -11,7 +11,7 @@
 #import "HyiHorArrangeScrollViewAdapter.h"
 
 @interface HyiHorArrangeScrollView : UIScrollView
-@property(nonatomic, weak) id<HyiHorArrangeScrollViewAdapter> delegate;
+@property(nonatomic, weak) id<HyiHorArrangeScrollViewAdapter> hyiDataSource;
 
 -(void)setSelectedView:(int)index;
 -(int)getCurrentSelectedIndex;

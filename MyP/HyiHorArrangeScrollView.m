@@ -14,32 +14,35 @@
 @end
 
 @implementation HyiHorArrangeScrollView
-@synthesize delegate;
+@synthesize hyiDataSource;
 @synthesize currentIndex;
 @synthesize positionDic;
 
 -(void)setSelectedView:(int)index{
-    if(delegate == nil)
+    if(hyiDataSource == nil)
         return;
     
-    if(index < [delegate getCount] && index >= 0)
+    if(index < [hyiDataSource getCount] && index >= 0)
         currentIndex = index;
 }
 
 -(int)getCurrentSelectedIndex{
-    if(delegate == nil)
+    if(hyiDataSource == nil)
         return -1;
     
     return 0;
 }
 
--(void)setDelegate:(id<HyiHorArrangeScrollViewAdapter>)dlg {
-    if(dlg == nil)
+-(void)setHyiDataSource:(id<HyiHorArrangeScrollViewAdapter>)dataSource {
+    if(dataSource == nil)
         return;
+    self.showsVerticalScrollIndicator = NO;
+    self.showsHorizontalScrollIndicator = NO;
+    self.pagingEnabled = NO;
     
     // TODO-待整理
     // 第一次这里用的是 self.delegate = dlg，结果是循环调用。
-    delegate = dlg;
+    hyiDataSource = dataSource;
     if(positionDic == nil){
         positionDic = [NSMutableDictionary dictionary];
     }else{
@@ -47,8 +50,9 @@
     }
     
     int position = 0;
-    for(int index = 0; index < [dlg getCount]; index ++){
-        UIView *subView = [dlg getView:index];
+    int count = [dataSource getCount];
+    for(int index = 0; index < count; index ++){
+        UIView *subView = [dataSource getView:index];
         [self addSubview:subView];
         [positionDic setObject:[NSNumber numberWithInt:position] forKey:[NSNumber numberWithInt:index]];
         position += subView.frame.size.width;

@@ -33,11 +33,25 @@
     // 数据
     categoryArr = [[NewsDataSource sharedInstance] getNewsCategory];
     
+    // View
     hyiHorArrangeScrollView = [[HyiHorArrangeScrollView alloc] init];
-    hyiHorArrangeScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 40);
     [hyiHorArrangeScrollView setBackgroundColor:[UIColor blueColor]];
-    hyiHorArrangeScrollView.delegate = self;
+    hyiHorArrangeScrollView.contentSize = CGSizeMake(15, 15);
+    hyiHorArrangeScrollView.hyiDataSource = self;
+    
+    // TODO-待整理
+    // 64 像素偏移问题，UIScrollView 作为第一个元素加入到 self.view 的时候会产生偏移，
+    // 下面文章有解决方案，但是不生效，日狗，添加一个 View 倒是可以解决
+    // https://www.swiftmi.com/topic/329.html
+    UIView *bugFixView = [[UIView alloc] initWithFrame:CGRectMake(0,0,0,0)];
+    [bugFixView setBackgroundColor:[UIColor greenColor]];
+    
+    [self.view addSubview:bugFixView];
     [self.view addSubview:hyiHorArrangeScrollView];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
 }
 
 -(void)initNavigationBar {
@@ -75,6 +89,7 @@
 -(void)viewWillLayoutSubviews {
     [hyiHorArrangeScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(STATUS_BAR_HEIGHT + NAVI_BAR_HEIGHT);
+        make.left.mas_equalTo(self.view.mas_left);
         make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 40));
     }];
 }
@@ -85,7 +100,7 @@
 
 #pragma HyiHorArrangeScrollViewAdapter
 -(int)getCount {
-    return (int)[categoryArr count];
+    return 1;
 }
 
 -(UIView *)getView:(int)index {
@@ -93,7 +108,6 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
     [label setText:nc.categoryName];
     [label setTextColor:HYI_RED];
-    [label sizeToFit];
     [label setBackgroundColor:[UIColor greenColor]];
     return label;
 }
