@@ -36,7 +36,6 @@
     // View
     hyiHorArrangeScrollView = [[HyiHorArrangeScrollView alloc] init];
     [hyiHorArrangeScrollView setBackgroundColor:[UIColor blueColor]];
-    hyiHorArrangeScrollView.contentSize = CGSizeMake(15, 15);
     hyiHorArrangeScrollView.hyiDataSource = self;
     
     // TODO-待整理
@@ -100,12 +99,14 @@
 
 #pragma HyiHorArrangeScrollViewAdapter
 -(int)getCount {
-    return 1;
+    return (int)[categoryArr count];
 }
 
--(UIView *)getView:(int)index {
+-(UIView *)getView:(int)index withOffset:(int)offset {
     NewsCategory *nc = [categoryArr objectAtIndex:index];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
+    NSLog(@"## %@, %d", nc.categoryName, offset);
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(offset, 0, 80, 40)];
+    label.textAlignment = NSTextAlignmentCenter;//居中
     [label setText:nc.categoryName];
     [label setTextColor:HYI_RED];
     [label setBackgroundColor:[UIColor greenColor]];

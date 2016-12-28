@@ -12,7 +12,7 @@
 
 @required
 -(int)getCount;
--(UIView *)getView:(int)index;
+-(UIView *)getView:(int)index withOffset:(int)offset;
 
 @optional
 -(void)selectView:(UIView *)selectedView;

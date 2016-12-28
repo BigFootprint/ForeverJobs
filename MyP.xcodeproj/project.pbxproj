@@ -49,7 +49,6 @@
 		14F54EF31E13ADA600BA318A /* NewsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF21E13ADA600BA318A /* NewsCategory.m */; };
 		14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */; };
 		14F54EFC1E13B8E400BA318A /* NewsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EFB1E13B8E400BA318A /* NewsDataSource.m */; };
-		14F54EFF1E13BE9500BA318A /* HyiHorArrangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EFE1E13BE9500BA318A /* HyiHorArrangeCell.m */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
@@ -137,8 +136,6 @@
 		14F54EF91E13B0F300BA318A /* HyiHorArrangeScrollViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiHorArrangeScrollViewAdapter.h; sourceTree = "<group>"; };
 		14F54EFA1E13B8E400BA318A /* NewsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataSource.h; sourceTree = "<group>"; };
 		14F54EFB1E13B8E400BA318A /* NewsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataSource.m; sourceTree = "<group>"; };
-		14F54EFD1E13BE9500BA318A /* HyiHorArrangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiHorArrangeCell.h; sourceTree = "<group>"; };
-		14F54EFE1E13BE9500BA318A /* HyiHorArrangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiHorArrangeCell.m; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -407,8 +404,6 @@
 				14F54EF61E13AF0100BA318A /* HyiHorArrangeScrollView.h */,
 				14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */,
 				14F54EF91E13B0F300BA318A /* HyiHorArrangeScrollViewAdapter.h */,
-				14F54EFD1E13BE9500BA318A /* HyiHorArrangeCell.h */,
-				14F54EFE1E13BE9500BA318A /* HyiHorArrangeCell.m */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -563,7 +558,6 @@
 				14AC848C1DE843EB0008FEE7 /* UIWebViewViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
 				14F54EEF1E13670E00BA318A /* SelfViewController.m in Sources */,
-				14F54EFF1E13BE9500BA318A /* HyiHorArrangeCell.m in Sources */,
 				14F1C66C1DE3231D00B91388 /* School.xcdatamodeld in Sources */,
 				14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */,
 				14F1C63A1DE1B2E100B91388 /* AnimationViewController.m in Sources */,

@@ -49,14 +49,18 @@
         [positionDic removeAllObjects];
     }
     
-    int position = 0;
+    int offset = 0;
+    int height = 0; // 获取所有 View 中最高的高度
     int count = [dataSource getCount];
     for(int index = 0; index < count; index ++){
-        UIView *subView = [dataSource getView:index];
+        UIView *subView = [dataSource getView:index withOffset:offset];
         [self addSubview:subView];
-        [positionDic setObject:[NSNumber numberWithInt:position] forKey:[NSNumber numberWithInt:index]];
-        position += subView.frame.size.width;
+        if(subView.frame.size.height > height)
+            height = subView.frame.size.height;
+        [positionDic setObject:[NSNumber numberWithInt:offset] forKey:[NSNumber numberWithInt:index]];
+        offset += subView.frame.size.width;
     };
+    self.contentSize = CGSizeMake(offset, height);
 }
 
 -(void)refreshData {
