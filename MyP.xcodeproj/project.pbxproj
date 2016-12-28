@@ -680,7 +680,7 @@
 				144906CC1DD20ECE002183FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		144906CD1DD20ECE002183FC /* Build configuration list for PBXNativeTarget "MyP" */ = {
 			isa = XCConfigurationList;
@@ -689,7 +689,7 @@
 				144906CF1DD20ECE002183FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

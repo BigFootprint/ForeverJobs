@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:MAIN_BACKGROUND];
+    [self initNavigationBar];
+}
+
+-(void)initNavigationBar {
+    
 }
 
 @end

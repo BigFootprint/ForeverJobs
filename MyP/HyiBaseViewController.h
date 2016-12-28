@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HyiBaseViewController : UIViewController
-
+-(void)initNavigationBar;
 @end
