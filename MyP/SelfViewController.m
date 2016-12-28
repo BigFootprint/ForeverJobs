@@ -19,23 +19,4 @@
     // Do any additional setup after loading the view.
 }
 
--(void)initNavigationBar {
-    // 设置返回按钮
-    [self initLeftButton];
-    
-    // 设置中间 View
-    
-    
-    // 设置右边按钮
-    
-}
-
-- (void)initLeftButton {
-    
-}
-
-- (void)viewDidLayoutSubviews {
-    
-}
-
 @end

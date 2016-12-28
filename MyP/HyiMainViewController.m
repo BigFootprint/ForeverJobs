@@ -27,6 +27,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    // TODO-待整理
     // 如果把这句话移到 #viewDidLoad 方法就不生效，self.navigationController 会为 Nil，
     // 此时 Controller 还没被添加到 NaviController 中去
     self.navigationController.navigationBar.barTintColor = HYI_RED;
@@ -59,6 +60,7 @@
     selfController.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_icon_me_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.viewControllers = @[newsController, liveController, topicController, selfController];
+    // TODO-待整理
     // 这种更改方式会导致整个 App 的 Title 字体颜色变化，iOS这个设计真是没sei了
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:HYI_RED} forState:UIControlStateSelected];
 }

@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:MAIN_BACKGROUND];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
     [self initNavigationBar];
 }
 
