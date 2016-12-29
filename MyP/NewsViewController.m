@@ -170,22 +170,13 @@
     [categoryLabel setTextAlignment:NSTextAlignmentCenter];
     [categoryLabel setTextColor:TEXT_DARK_GRAY];
     [categoryLabel setFont:normalFont];
-    [categoryLabel setBackgroundColor:BG_MAIN];
+    [categoryLabel setBackgroundColor:TRANSPARENT];
     return categoryLabel;
 }
 
 -(void)switchSelectView:(UIView *)selectedView withIndex:(int)index withOldView:(UIView *)oldView withOldIndex:(int)oldIndex {
     // TODO-待完善
     // 动画做的有点痛苦
-    if(selectedView != nil){
-        UILabel *selectLabel = (UILabel *)selectedView;
-        selectLabel.textColor = HYI_RED;
-        selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.0, 1.0);
-        [UIView animateWithDuration:0.3 animations:^{
-            selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.25, 1.25);
-        }];
-    }
-    
     if(oldView != nil){
         UILabel *oldLabel = (UILabel *)oldView;
         oldLabel.font = normalFont;
@@ -193,6 +184,15 @@
         oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 1.0, 1.0);
         [UIView animateWithDuration:0.3 animations:^{
             oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 0.8, 0.8);
+        }];
+    }
+    
+    if(selectedView != nil){
+        UILabel *selectLabel = (UILabel *)selectedView;
+        selectLabel.textColor = HYI_RED;
+        selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.0, 1.0);
+        [UIView animateWithDuration:0.3 animations:^{
+            selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.25, 1.25);
         }];
     }
     

@@ -57,11 +57,13 @@
         return;
     
     UIView *selectView = [viewArr objectAtIndex:index].view;
-    if([hyiDataSource respondsToSelector:@selector(switchSelectView:withIndex:withOldView:withOldIndex:)]){
-        [hyiDataSource switchSelectView:selectView withIndex:index withOldView:currentView withOldIndex:currentIndex];
-    }
+    int tempIndex = currentIndex;
+    UIView *tempView = currentView;
     currentIndex = index;
     currentView = selectView;
+    if([hyiDataSource respondsToSelector:@selector(switchSelectView:withIndex:withOldView:withOldIndex:)]){
+        [hyiDataSource switchSelectView:selectView withIndex:index withOldView:tempView withOldIndex:tempIndex];
+    }
 }
 
 -(int)getCurrentSelectedIndex{
