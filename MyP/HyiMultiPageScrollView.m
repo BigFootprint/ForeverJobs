@@ -143,6 +143,16 @@
 
 - (void)didReceiveMemoryWarning {
     // 内存不足
+    if([_tagViewDic count] <= 3)
+        return; // 无须释放，否则左右滑动会出问题
+    
+    // 只保留当前 View 和前后两者的 View
+    for(int index = 0; index < [hyiDataSource getPageCount]; index ++){
+        if(index < currentIndex - 1 || index > currentIndex + 1){
+            NSString *tag = [hyiDataSource getPageTagAtIndex:index];
+            [_tagViewDic removeObjectForKey:tag];
+        }
+    }
 }
 
 #pragma mark UIScrollViewDelegate

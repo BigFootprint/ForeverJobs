@@ -213,4 +213,8 @@
 -(NSString *)getPageTagAtIndex:(int)index {
     return [categoryArr objectAtIndex:index].categoryName;
 }
+
+-(void)didReceiveMemoryWarning {
+    [contentScrollView didReceiveMemoryWarning];
+}
 @end
