@@ -19,7 +19,8 @@
 @property(nonatomic, strong) UIImageView *centerView;
 @property(nonatomic, strong) HyiHorArrangeScrollView *hyiHorArrangeScrollView;
 @property(nonatomic, strong) NSArray<NewsCategory *> *categoryArr;
-
+@property(nonatomic, strong) UIFont *normalFont;
+@property(nonatomic, strong) UIFont *selectFont;
 @end
 
 @implementation NewsViewController
@@ -27,11 +28,15 @@
 @synthesize centerView;
 @synthesize hyiHorArrangeScrollView;
 @synthesize categoryArr;
+@synthesize normalFont;
+@synthesize selectFont;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
     // 数据
     categoryArr = [[NewsDataSource sharedInstance] getNewsCategory];
+    normalFont = [UIFont fontWithName:@"Arial" size:16];
+    selectFont = [UIFont fontWithName:@"Arial" size:20];
     
     // View
     hyiHorArrangeScrollView = [[HyiHorArrangeScrollView alloc] init];
@@ -103,15 +108,30 @@
 
 -(UIView *)getView:(int)index withOffset:(int)offset {
     NewsCategory *nc = [categoryArr objectAtIndex:index];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(offset, 0, 80, 40)];
-    label.textAlignment = NSTextAlignmentCenter;//居中
-    [label setText:nc.categoryName];
-    [label setTextColor:HYI_RED];
-    [label setBackgroundColor:[UIColor greenColor]];
-    return label;
+    int fontSize = 16;
+    CGSize textSize =[nc.categoryName sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}];
+    int textActualWidth = textSize.width + 30;// 两边留白
+    
+    UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(offset, 0, textActualWidth, 40)];
+    [categoryLabel setText:nc.categoryName];
+    [categoryLabel setTextAlignment:NSTextAlignmentCenter];
+    [categoryLabel setTextColor:TEXT_DARK_GRAY];
+    [categoryLabel setFont:normalFont];
+    [categoryLabel setBackgroundColor:BG_MAIN];
+    return categoryLabel;
 }
 
--(void)selectView:(UIView *)selectedView {
+-(void)switchSelectView:(UIView *)selectedView withIndex:(int)index withOldView:(UIView *)oldView withOldIndex:(int)oldIndex {
+    if(selectedView != nil){
+        UILabel *selectLabel = (UILabel *)selectedView;
+        selectLabel.font = selectFont;
+        selectLabel.textColor = HYI_RED;
+    }
     
+    if(oldView != nil){
+        UILabel *oldLabel = (UILabel *)oldView;
+        oldLabel.font = normalFont;
+        oldLabel.textColor = TEXT_DARK_GRAY;
+    }
 }
 @end

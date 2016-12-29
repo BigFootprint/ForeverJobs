@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:MAIN_BACKGROUND];
+    [self.view setBackgroundColor:BG_MAIN];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

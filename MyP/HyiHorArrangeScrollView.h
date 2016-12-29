@@ -17,3 +17,10 @@
 -(int)getCurrentSelectedIndex;
 -(void)refreshData;
 @end
+
+@interface ViewInfo : NSObject
+@property(nonatomic, strong) UIView *view;
+@property(nonatomic) int position;
+
+-(id)initWithView:(UIView *)view andPosition:(int)position;
+@end

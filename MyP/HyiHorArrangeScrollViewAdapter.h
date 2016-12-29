@@ -15,6 +15,5 @@
 -(UIView *)getView:(int)index withOffset:(int)offset;
 
 @optional
--(void)selectView:(UIView *)selectedView;
-
+-(void)switchSelectView:(UIView *)selectedView withIndex:(int)index withOldView:(UIView *)oldView withOldIndex:(int)oldIndex;
 @end
