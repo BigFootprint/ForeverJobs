@@ -140,6 +140,7 @@
 		14F54F081E14FBA700BA318A /* HyiMultiPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollView.h; sourceTree = "<group>"; };
 		14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMultiPageScrollView.m; sourceTree = "<group>"; };
 		14F54F0B1E14FFA900BA318A /* HyiMultiPageScrollViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollViewDataSource.h; sourceTree = "<group>"; };
+		14F54F0C1E152C0000BA318A /* HyiMultiPageScrollViewDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollViewDataDelegate.h; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -412,6 +413,7 @@
 				14F54F081E14FBA700BA318A /* HyiMultiPageScrollView.h */,
 				14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */,
 				14F54F0B1E14FFA900BA318A /* HyiMultiPageScrollViewDataSource.h */,
+				14F54F0C1E152C0000BA318A /* HyiMultiPageScrollViewDataDelegate.h */,
 			);
 			name = Widget;
 			sourceTree = "<group>";

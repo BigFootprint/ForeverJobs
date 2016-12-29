@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HyiMultiPageScrollViewDataSource.h"
+#import "HyiMultiPageScrollViewDataDelegate.h"
 
 typedef NS_ENUM(NSUInteger, HyiMultiPageViewPosition) {
     LEFT = 0,
@@ -17,6 +18,7 @@ typedef NS_ENUM(NSUInteger, HyiMultiPageViewPosition) {
 
 @interface HyiMultiPageScrollView : UIScrollView
 @property (nonatomic, weak) id<HyiMultiPageScrollViewDataSource> hyiDataSource;
+@property (nonatomic, weak) id<HyiMultiPageScrollViewDataDelegate> hyiDelegate;
 // 根据 Index 刷新页面
 -(void)refreshViewByIndex:(int)index;
 // 根据 Index 展示页面

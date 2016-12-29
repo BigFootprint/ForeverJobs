@@ -11,12 +11,13 @@
 #import "HyiHorArrangeScrollViewAdapter.h"
 #import "HyiMultiPageScrollView.h"
 #import "HyiMultiPageScrollViewDataSource.h"
+#import "HyiMultiPageScrollViewDataDelegate.h"
 #import "Masonry.h"
 #import "JobsConstants.h"
 #import "NewsDataSource.h"
 #import "Color.h"
 
-@interface NewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource>
+@interface NewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
 @property(nonatomic, strong) UIBarButtonItem *leftItem;
 @property(nonatomic, strong) UIImageView *centerView;
 @property(nonatomic, strong) HyiHorArrangeScrollView *hyiHorArrangeScrollView;
@@ -101,6 +102,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     self.contentScrollView.hyiDataSource = self;
+    self.contentScrollView.hyiDelegate = self;
 }
 
 -(void)initNavigationBar {
@@ -193,6 +195,8 @@
             oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 0.8, 0.8);
         }];
     }
+    
+    [contentScrollView displayViewByIndex:index];
 }
 
 #pragma mark HyiMultiPageScrollViewDataSource
@@ -212,6 +216,11 @@
 
 -(NSString *)getPageTagAtIndex:(int)index {
     return [categoryArr objectAtIndex:index].categoryName;
+}
+
+#pragma mark HyiMultiPageScrollViewDataDelegate
+-(void)select:(int)index {
+    [hyiHorArrangeScrollView setSelectedView:index];
 }
 
 -(void)didReceiveMemoryWarning {

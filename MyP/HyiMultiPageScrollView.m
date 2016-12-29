@@ -20,6 +20,7 @@
 @implementation HyiMultiPageScrollView
 @synthesize currentIndex;
 @synthesize hyiDataSource;
+@synthesize hyiDelegate;
 
 -(id)init {
     self = [super init];
@@ -80,6 +81,9 @@
         [self scrollTo:CENTER];
     }
     currentIndex = index;
+    if(hyiDelegate != nil){
+        [hyiDelegate select:currentIndex];
+    }
 }
 
 // 滚动到中间页面
