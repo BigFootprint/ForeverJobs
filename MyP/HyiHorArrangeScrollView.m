@@ -38,12 +38,30 @@
 @synthesize viewArr;
 @synthesize currentView;
 
+-(id)init{
+    self = [super init];
+    if(self){
+        positionDic = [NSMutableDictionary dictionary];
+        viewArr = [NSMutableArray array];
+        currentIndex = -1;
+        tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
+    }
+    return self;
+}
+
 -(void)setSelectedView:(int)index{
     if(hyiDataSource == nil)
         return;
     
-    if(index < [hyiDataSource getCount] && index >= 0)
-        currentIndex = index;
+    if(index >= [hyiDataSource getCount] || index < 0)
+        return;
+    
+    UIView *selectView = [viewArr objectAtIndex:index].view;
+    if([hyiDataSource respondsToSelector:@selector(switchSelectView:withIndex:withOldView:withOldIndex:)]){
+        [hyiDataSource switchSelectView:selectView withIndex:index withOldView:currentView withOldIndex:currentIndex];
+    }
+    currentIndex = index;
+    currentView = selectView;
 }
 
 -(int)getCurrentSelectedIndex{
@@ -54,21 +72,8 @@
 }
 
 -(void)initContext {
-    if(positionDic == nil){
-        positionDic = [NSMutableDictionary dictionary];
-    }else{
-        [positionDic removeAllObjects];
-    }
-    
-    if(viewArr == nil){
-        viewArr = [NSMutableArray array];
-    }else{
-        [viewArr removeAllObjects];
-    }
-    
-    if(tapGesture == nil){
-        tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
-    }
+    [positionDic removeAllObjects];
+    [viewArr removeAllObjects];
 }
 
 // Tap 事件处理
@@ -80,14 +85,12 @@
     if(index == currentIndex)
         return;
     
-    UIView *selectView = [viewArr objectAtIndex:index].view;
-    if([hyiDataSource respondsToSelector:@selector(switchSelectView:withIndex:withOldView:withOldIndex:)]){
-        [hyiDataSource switchSelectView:selectView withIndex:index withOldView:currentView withOldIndex:currentIndex];
-    }
-    currentIndex = index;
-    currentView = selectView;
+    [self setSelectedView:index];
 }
 
+/**
+ * 通过 x 轴上的偏移量查找 View 的下标。
+ */
 -(int)findIndexByOffset:(int)offset{
     for(int index = 0; index < [viewArr count] - 1; index ++){
         if(offset > [viewArr objectAtIndex:index].position && offset < [viewArr objectAtIndex:(index + 1)].position){
@@ -129,6 +132,8 @@
         offset += subView.frame.size.width;
     };
     self.contentSize = CGSizeMake(offset, height);
+    // 默认选中第0个
+    [self setSelectedView:0];
 }
 
 -(void)refreshData {

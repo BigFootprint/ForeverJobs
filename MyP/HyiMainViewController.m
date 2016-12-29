@@ -31,6 +31,13 @@
     // 如果把这句话移到 #viewDidLoad 方法就不生效，self.navigationController 会为 Nil，
     // 此时 Controller 还没被添加到 NaviController 中去
     self.navigationController.navigationBar.barTintColor = HYI_RED;
+    self.navigationController.navigationBar.translucent = NO;
+    [[self selectedViewController] viewWillAppear:animated];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    // 解决一个Bug：子View收不到 viewDidAppear 消息
+    [[self selectedViewController] viewDidAppear:animated];
 }
 
 -(void)initTabBar {

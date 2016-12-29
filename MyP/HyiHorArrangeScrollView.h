@@ -12,9 +12,11 @@
 
 @interface HyiHorArrangeScrollView : UIScrollView
 @property(nonatomic, weak) id<HyiHorArrangeScrollViewAdapter> hyiDataSource;
-
+// 设置选中的 View 下标
 -(void)setSelectedView:(int)index;
+// 获取当前选中的 View 的下标
 -(int)getCurrentSelectedIndex;
+// 刷新数据
 -(void)refreshData;
 @end
 

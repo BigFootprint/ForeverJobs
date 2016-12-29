@@ -14,5 +14,6 @@
 //#define ANDROID_BLUE [UIColor grayColor]
 #define STATUS_BAR_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height)
 #define NAVI_BAR_HEIGHT 44
+#define TAB_BAR_HEIGHT 49
 
 #endif /* JobsConstantss_h */

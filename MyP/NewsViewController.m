@@ -9,18 +9,23 @@
 #import "NewsViewController.h"
 #import "HyiHorArrangeScrollView.h"
 #import "HyiHorArrangeScrollViewAdapter.h"
+#import "HyiMultiPageScrollView.h"
+#import "HyiMultiPageScrollViewDataSource.h"
 #import "Masonry.h"
 #import "JobsConstants.h"
 #import "NewsDataSource.h"
 #import "Color.h"
 
-@interface NewsViewController () <HyiHorArrangeScrollViewAdapter>
+@interface NewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource>
 @property(nonatomic, strong) UIBarButtonItem *leftItem;
 @property(nonatomic, strong) UIImageView *centerView;
 @property(nonatomic, strong) HyiHorArrangeScrollView *hyiHorArrangeScrollView;
 @property(nonatomic, strong) NSArray<NewsCategory *> *categoryArr;
 @property(nonatomic, strong) UIFont *normalFont;
 @property(nonatomic, strong) UIFont *selectFont;
+@property(nonatomic, strong) UIButton *channelAddButton;
+@property(nonatomic) BOOL isChannelAdding;
+@property(nonatomic, strong) HyiMultiPageScrollView *contentScrollView;
 @end
 
 @implementation NewsViewController
@@ -30,6 +35,8 @@
 @synthesize categoryArr;
 @synthesize normalFont;
 @synthesize selectFont;
+@synthesize channelAddButton;
+@synthesize contentScrollView;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -37,10 +44,21 @@
     categoryArr = [[NewsDataSource sharedInstance] getNewsCategory];
     normalFont = [UIFont fontWithName:@"Arial" size:16];
     selectFont = [UIFont fontWithName:@"Arial" size:20];
+    self.isChannelAdding = NO;
     
     // View
     hyiHorArrangeScrollView = [[HyiHorArrangeScrollView alloc] init];
     hyiHorArrangeScrollView.hyiDataSource = self;
+    
+    channelAddButton = [[UIButton alloc] init];
+    [channelAddButton setImageEdgeInsets:UIEdgeInsetsMake(6, 6, 6, 6)];
+    // TODO-待整理，两个方法的区别
+    // 千万不要写成 setBackgroundImage 啊，不然 ImageEdgeInsets 不生效
+    [channelAddButton setImage:[UIImage imageNamed:@"home_channel_bar_add"] forState:UIControlStateNormal];
+    [channelAddButton addTarget:self action:@selector(addChannel:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // 获取显示区域
+    contentScrollView = [[HyiMultiPageScrollView alloc] init];
     
     // TODO-待整理
     // 64 像素偏移问题，UIScrollView 作为第一个元素加入到 self.view 的时候会产生偏移，
@@ -48,13 +66,41 @@
     // https://www.swiftmi.com/topic/329.html
     UIView *bugFixView = [[UIView alloc] initWithFrame:CGRectMake(0,0,0,0)];
     [bugFixView setBackgroundColor:[UIColor greenColor]];
-    
+
     [self.view addSubview:bugFixView];
     [self.view addSubview:hyiHorArrangeScrollView];
+    [self.view addSubview:channelAddButton];
+    [self.view addSubview:contentScrollView];
+}
+
+-(void)viewDidLayoutSubviews {
+    [channelAddButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        // TODO-待整理
+        // 如果完全移除 ScrollView 以外的 View，是需要加 offset
+        // make.top.mas_equalTo(self.view.mas_top).offset(STATUS_BAR_HEIGHT + NAVI_BAR_HEIGHT);
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+        make.top.mas_equalTo(self.view.mas_top);
+        make.right.mas_equalTo(self.view.mas_right);
+    }];
+    
+    [hyiHorArrangeScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        // make.top.mas_equalTo(self.view.mas_top).offset(STATUS_BAR_HEIGHT + NAVI_BAR_HEIGHT);
+        make.top.mas_equalTo(self.view.mas_top);
+        make.left.mas_equalTo(self.view.mas_left);
+        make.height.mas_equalTo(40);
+        make.right.mas_equalTo(channelAddButton.mas_left);
+    }];
+    
+    [contentScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        CGRect viewRect = self.view.bounds;
+        make.size.mas_equalTo(CGSizeMake(viewRect.size.width, viewRect.size.height - TAB_BAR_HEIGHT - 40));
+        make.top.mas_equalTo(hyiHorArrangeScrollView.mas_bottom);
+        make.left.mas_equalTo(self.view.mas_left);
+    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    
+    self.contentScrollView.hyiDataSource = self;
 }
 
 -(void)initNavigationBar {
@@ -89,19 +135,24 @@
     self.tabBarController.navigationItem.titleView = centerView;
 }
 
--(void)viewWillLayoutSubviews {
-    [hyiHorArrangeScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_top).offset(STATUS_BAR_HEIGHT + NAVI_BAR_HEIGHT);
-        make.left.mas_equalTo(self.view.mas_left);
-        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 40));
-    }];
-}
-
 - (void)liveButtonClicked:(id)sender {
     [self.tabBarController setSelectedIndex:1];
 }
 
-#pragma HyiHorArrangeScrollViewAdapter
+- (void)addChannel:(id)sender {
+    [UIView animateWithDuration:0.3 animations:^{
+        if(!self.isChannelAdding){
+            channelAddButton.transform = CGAffineTransformMakeRotation(M_PI / 4);
+        }else{
+            channelAddButton.transform = CGAffineTransformMakeRotation(0);
+        }
+        self.isChannelAdding = !self.isChannelAdding;
+    } completion:^(BOOL finished) {
+        // NIL
+    }];
+}
+
+#pragma mark HyiHorArrangeScrollViewAdapter
 -(int)getCount {
     return (int)[categoryArr count];
 }
@@ -122,16 +173,44 @@
 }
 
 -(void)switchSelectView:(UIView *)selectedView withIndex:(int)index withOldView:(UIView *)oldView withOldIndex:(int)oldIndex {
+    // TODO-待完善
+    // 动画做的有点痛苦
     if(selectedView != nil){
         UILabel *selectLabel = (UILabel *)selectedView;
-        selectLabel.font = selectFont;
         selectLabel.textColor = HYI_RED;
+        selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.0, 1.0);
+        [UIView animateWithDuration:0.3 animations:^{
+            selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.25, 1.25);
+        }];
     }
     
     if(oldView != nil){
         UILabel *oldLabel = (UILabel *)oldView;
         oldLabel.font = normalFont;
         oldLabel.textColor = TEXT_DARK_GRAY;
+        oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 1.0, 1.0);
+        [UIView animateWithDuration:0.3 animations:^{
+            oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 0.8, 0.8);
+        }];
     }
+}
+
+#pragma mark HyiMultiPageScrollViewDataSource
+-(int)getPageCount {
+    return (int)[categoryArr count];
+}
+
+-(UIView *)getPageViewByTag:(NSString *)tag {
+    UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    [categoryLabel setText:tag];
+    [categoryLabel setTextAlignment:NSTextAlignmentCenter];
+    [categoryLabel setTextColor:TEXT_DARK_GRAY];
+    [categoryLabel setFont:normalFont];
+    [categoryLabel setBackgroundColor:BG_MAIN];
+    return categoryLabel;
+}
+
+-(NSString *)getPageTagAtIndex:(int)index {
+    return [categoryArr objectAtIndex:index].categoryName;
 }
 @end

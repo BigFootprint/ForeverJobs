@@ -49,6 +49,7 @@
 		14F54EF31E13ADA600BA318A /* NewsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF21E13ADA600BA318A /* NewsCategory.m */; };
 		14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */; };
 		14F54EFC1E13B8E400BA318A /* NewsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EFB1E13B8E400BA318A /* NewsDataSource.m */; };
+		14F54F0A1E14FBA700BA318A /* HyiMultiPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,9 @@
 		14F54EF91E13B0F300BA318A /* HyiHorArrangeScrollViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiHorArrangeScrollViewAdapter.h; sourceTree = "<group>"; };
 		14F54EFA1E13B8E400BA318A /* NewsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataSource.h; sourceTree = "<group>"; };
 		14F54EFB1E13B8E400BA318A /* NewsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataSource.m; sourceTree = "<group>"; };
+		14F54F081E14FBA700BA318A /* HyiMultiPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollView.h; sourceTree = "<group>"; };
+		14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMultiPageScrollView.m; sourceTree = "<group>"; };
+		14F54F0B1E14FFA900BA318A /* HyiMultiPageScrollViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollViewDataSource.h; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -365,6 +369,7 @@
 		14F54EE01E1365D800BA318A /* News */ = {
 			isa = PBXGroup;
 			children = (
+				14F54F071E14DD7400BA318A /* Cell */,
 				14F54EE41E1366E400BA318A /* NewsViewController.h */,
 				14F54EE51E1366E400BA318A /* NewsViewController.m */,
 			);
@@ -404,6 +409,9 @@
 				14F54EF61E13AF0100BA318A /* HyiHorArrangeScrollView.h */,
 				14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */,
 				14F54EF91E13B0F300BA318A /* HyiHorArrangeScrollViewAdapter.h */,
+				14F54F081E14FBA700BA318A /* HyiMultiPageScrollView.h */,
+				14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */,
+				14F54F0B1E14FFA900BA318A /* HyiMultiPageScrollViewDataSource.h */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -417,6 +425,13 @@
 				14F54EFB1E13B8E400BA318A /* NewsDataSource.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		14F54F071E14DD7400BA318A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		751161EB7510C048F6624B9B /* Pods */ = {
@@ -551,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F54F0A1E14FBA700BA318A /* HyiMultiPageScrollView.m in Sources */,
 				1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */,
 				14F1C67E1DE325E500B91388 /* Teacher+CoreDataProperties.m in Sources */,
 				14CBE0AE1DD6116B00F6DB7F /* UIAlertControllerViewController.m in Sources */,
