@@ -35,7 +35,6 @@
     
     // View
     hyiHorArrangeScrollView = [[HyiHorArrangeScrollView alloc] init];
-    [hyiHorArrangeScrollView setBackgroundColor:[UIColor blueColor]];
     hyiHorArrangeScrollView.hyiDataSource = self;
     
     // TODO-待整理
@@ -104,7 +103,6 @@
 
 -(UIView *)getView:(int)index withOffset:(int)offset {
     NewsCategory *nc = [categoryArr objectAtIndex:index];
-    NSLog(@"## %@, %d", nc.categoryName, offset);
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(offset, 0, 80, 40)];
     label.textAlignment = NSTextAlignmentCenter;//居中
     [label setText:nc.categoryName];

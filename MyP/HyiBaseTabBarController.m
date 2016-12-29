@@ -18,6 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:MAIN_BACKGROUND];
+    [self.view setBackgroundColor:BG_MAIN];
 }
 @end
