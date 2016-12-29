@@ -8,14 +8,6 @@
 
 #import "HyiHorArrangeScrollView.h"
 
-@interface HyiHorArrangeScrollView ()
-@property(nonatomic, readonly) NSMutableDictionary *positionDic;
-@property(nonatomic, readonly) NSMutableArray<ViewInfo *> *viewArr;
-@property(nonatomic, strong) UITapGestureRecognizer *tapGesture;
-@property(nonatomic, weak) UIView *currentView;
-@property(nonatomic) int currentIndex;
-@end
-
 @implementation ViewInfo
 @synthesize view;
 @synthesize position;
@@ -28,6 +20,14 @@
     }
     return self;
 }
+@end
+
+@interface HyiHorArrangeScrollView ()
+@property(nonatomic, readonly) NSMutableDictionary *positionDic;
+@property(nonatomic, readonly) NSMutableArray<ViewInfo *> *viewArr;
+@property(nonatomic, strong) UITapGestureRecognizer *tapGesture;
+@property(nonatomic, weak) UIView *currentView;
+@property(nonatomic) int currentIndex;
 @end
 
 @implementation HyiHorArrangeScrollView
