@@ -2,35 +2,29 @@
 //  NewsDataSource.m
 //  MyP
 //
-//  Created by 李全民 on 16/12/28.
+//  Created by 李全民 on 16/12/29.
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
 #import "NewsDataSource.h"
+#ifndef NewsDataSource_PAGE_DATASOURCE_SIZE
+#define PAGE_DATASOURCE_SIZE 15 //每页展示 15 个
+#endif
+
+@interface NewsDataSource ()
+@property (nonatomic) int pageIndex;
+@end
 
 @implementation NewsDataSource
-static NewsDataSource *dataSource;
-static NSArray *categoryArr;
+@synthesize pageIndex;
 
-+(NewsDataSource *) sharedInstance{
-    static dispatch_once_t onceToken ;
-    dispatch_once(&onceToken, ^{
-        dataSource = [[super allocWithZone:NULL] init] ;
-        
-        categoryArr = @[@"头条", @"要闻", @"轻松一刻", @"科技", @"手机", @"视频", @"历史", @"漫画", @"汽车",
-                        @"娱乐", @"热点", @"体育", @"直播", @"房产", @"股票", @"健康", @"美女", @"数码"];
-    }) ;
-    
-    return dataSource ;
+// 加载更多数据
+-(void)loadMoreData {
+
 }
 
--(NSArray<NewsCategory *> *)getNewsCategory{
-    NSMutableArray *arr = [NSMutableArray array];
-    for(int index = 0; index < [categoryArr count]; index ++){
-        NewsCategory *c = [[NewsCategory alloc] init];
-        c.categoryName = [categoryArr objectAtIndex:index];
-        [arr addObject:c];
-    }
-    return arr;
+// 刷新数据
+-(void)refreshData {
+
 }
 @end

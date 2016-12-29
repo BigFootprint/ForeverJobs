@@ -14,7 +14,7 @@
 #import "HyiMultiPageScrollViewDataDelegate.h"
 #import "Masonry.h"
 #import "JobsConstants.h"
-#import "NewsDataSource.h"
+#import "NewsChannelDataSource.h"
 #import "Color.h"
 
 @interface NewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
@@ -46,7 +46,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     // 数据
-    categoryArr = [[NewsDataSource sharedInstance] getNewsCategory];
+    categoryArr = [[NewsChannelDataSource sharedInstance] getNewsCategory];
     normalFont = [UIFont fontWithName:@"Arial" size:16];
     selectFont = [UIFont fontWithName:@"Arial" size:20];
     self.isChannelAdding = NO;
