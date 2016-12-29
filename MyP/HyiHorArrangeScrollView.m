@@ -65,6 +65,11 @@
         [hyiDataSource switchSelectView:selectView withIndex:index withOldView:tempView withOldIndex:tempIndex];
     }
     
+    [self adjustSelectedViewPosition];
+}
+
+// 调整被选中项的位置，使它一直显示在屏幕上，尽可能的显示在组件的中间
+-(void)adjustSelectedViewPosition {
     ViewInfo *info = [viewArr objectAtIndex:currentIndex];
     int centerOffset = info.position + [info.view bounds].size.width / 2;
     int viewHalfWidth = [self bounds].size.width / 2;
