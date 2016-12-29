@@ -14,12 +14,17 @@
 @property(nonatomic, strong) UIView *centerView;
 @property(nonatomic, strong) UIView *lastView;
 @property(nonatomic, strong) NSMutableDictionary *tagViewDic;
+@property(nonatomic) int currentIndex;
 @end
 
 @implementation HyiMultiPageScrollView
+@synthesize currentIndex;
+@synthesize hyiDataSource;
+
 -(id)init {
     self = [super init];
     if(self){
+        self.currentIndex = -1;
         self.tagViewDic = [NSMutableDictionary dictionary];
     }
     return self;
@@ -31,6 +36,7 @@
     self.showsHorizontalScrollIndicator = NO;
     self.bounces = YES;
     self.pagingEnabled = YES;
+    self.delegate = self;
 
     // 添加容器 View
     CGRect rect = self.bounds;
@@ -51,54 +57,87 @@
 }
 
 -(void)displayViewByIndex:(int)index {
+    if(hyiDataSource == nil || currentIndex == index)
+        return;
     
+    if(index < 0 || index >= [hyiDataSource getPageCount]) // index 非法
+        return;
+    
+    if(index == 0){//显示第 0 页
+        [self addSubViewByIndex:0 withPosition:LEFT];
+        [self addSubViewByIndex:1 withPosition:CENTER];
+        [self addSubViewByIndex:2 withPosition:RIGHT];
+        [self scrollTo:LEFT];
+    }else if(index == [hyiDataSource getPageCount] - 1){//显示最后一页
+        [self addSubViewByIndex:index - 2 withPosition:LEFT];
+        [self addSubViewByIndex:index - 1 withPosition:CENTER];
+        [self addSubViewByIndex:index withPosition:RIGHT];
+        [self scrollTo:RIGHT];
+    }else{
+        [self addSubViewByIndex:index - 1 withPosition:LEFT];
+        [self addSubViewByIndex:index withPosition:CENTER];
+        [self addSubViewByIndex:index + 1 withPosition:RIGHT];
+        [self scrollTo:CENTER];
+    }
+    currentIndex = index;
 }
 
 // 滚动到中间页面
--(void)scrollToCenter{
-    CGRect rect = self.bounds;
-    [self setContentOffset:CGPointMake(rect.size.width, 0)];
-}
-
-// 滚动到第一个页面
--(void)scrollToFirst{
-    [self setContentOffset:CGPointMake(0, 0)];
-}
-
-// 滚动到最后一个页面
--(void)scrollToLast {
-    CGRect rect = self.bounds;
-    [self setContentOffset:CGPointMake(rect.size.width * 2, 0)];
+-(void)scrollTo:(HyiMultiPageViewPosition)position{
+    int pageWidth = self.bounds.size.width;
+    int scrollOffset = 0;
+    switch (position) {
+        case CENTER:
+            scrollOffset = pageWidth;
+            break;
+        case RIGHT:
+            scrollOffset = pageWidth * 2;
+            break;
+        default:
+            break;
+    }
+    [self setContentOffset:CGPointMake(scrollOffset, 0)];
 }
 
 -(void)setHyiDataSource:(id<HyiMultiPageScrollViewDataSource>)ds {
-    if(ds == nil || [ds getPageCount] < 3 || ds == _hyiDataSource)
+    if(ds == nil || [ds getPageCount] < 3 || ds == hyiDataSource)
         return;
     
-    _hyiDataSource = ds;
+    hyiDataSource = ds;
     [self initView];
-    [self addSubViewByIndex:0 withPosition:LEFT];
-    [self addSubViewByIndex:1 withPosition:CENTER];
-    [self addSubViewByIndex:2 withPosition:RIGHT];
+    [self displayViewByIndex:0];
 }
 
 -(void)addSubViewByIndex:(int)index withPosition:(HyiMultiPageViewPosition)position{
     NSString *tag = [self.hyiDataSource getPageTagAtIndex:index];
-    UIView *view = [self.hyiDataSource getPageViewByTag:tag];
+    UIView *view = [_tagViewDic objectForKey:tag];
+    if(view == nil)
+        view = [self.hyiDataSource getPageViewByTag:tag];
+    
     [self.tagViewDic setValue:view forKey:tag];
     
     switch (position) {
         case LEFT:
+            [self clearSubViews:self.firstView];
             [self.firstView addSubview:view];
             break;
         case CENTER:
+            [self clearSubViews:self.centerView];
             [self.centerView addSubview:view];
             break;
         case RIGHT:
+            [self clearSubViews:self.lastView];
             [self.lastView addSubview:view];
             break;
         default:
             break;
+    }
+}
+
+-(void)clearSubViews:(UIView *)view {
+    NSArray<UIView *> *arr = [view subviews];
+    for(int index = 0; index < [arr count]; index ++){
+        [[arr objectAtIndex:index] removeFromSuperview];
     }
 }
 
@@ -108,6 +147,12 @@
 
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
+    int offsetX = [scrollView contentOffset].x;
+    int pageWidth = self.bounds.size.width;
+    if(offsetX < 1){ //防止误差
+        [self displayViewByIndex:(currentIndex - 1)];
+    }else if(offsetX > pageWidth + 1){
+        [self displayViewByIndex:(currentIndex + 1)];
+    }
 }
 @end
