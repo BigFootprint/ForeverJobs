@@ -163,10 +163,17 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     int offsetX = [scrollView contentOffset].x;
     int pageWidth = self.bounds.size.width;
-    if(offsetX < 1){ //防止误差
+    int DEVIATION_VALVE = 1;
+    
+    // 这种写法可能比较难理解，几个 else 不属于同一个范围，后面两周考虑的是特殊情况
+    if(offsetX < DEVIATION_VALVE) {
         [self displayViewByIndex:(currentIndex - 1)];
-    }else if(offsetX > pageWidth + 1){
+    }else if(offsetX > pageWidth + DEVIATION_VALVE) {
         [self displayViewByIndex:(currentIndex + 1)];
+    }else if(currentIndex == 0) {
+        [self displayViewByIndex:currentIndex + 1];
+    }else if(currentIndex == [hyiDataSource getPageCount] - 1) {
+        [self displayViewByIndex:currentIndex - 1];
     }
 }
 @end
