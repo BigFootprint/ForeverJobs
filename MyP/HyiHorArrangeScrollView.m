@@ -64,6 +64,21 @@
     if([hyiDataSource respondsToSelector:@selector(switchSelectView:withIndex:withOldView:withOldIndex:)]){
         [hyiDataSource switchSelectView:selectView withIndex:index withOldView:tempView withOldIndex:tempIndex];
     }
+    
+    ViewInfo *info = [viewArr objectAtIndex:currentIndex];
+    int centerOffset = info.position + [info.view bounds].size.width / 2;
+    int viewHalfWidth = [self bounds].size.width / 2;
+    int offset = centerOffset - viewHalfWidth >= 0 ? centerOffset - viewHalfWidth : 0;
+    
+    if(offset + [self bounds].size.width > self.contentSize.width){
+        offset = self.contentSize.width - [self bounds].size.width;
+    }
+    // TODO-待解决
+    // 页面刚打开的时候，viewHalfWidth 为0，需要仔细研究一下 View 的这些属性什么时候生效
+    if(viewHalfWidth == 0){
+        offset = 0;
+    }
+    [self setContentOffset:CGPointMake(offset, 0) animated:YES];
 }
 
 -(int)getCurrentSelectedIndex{
