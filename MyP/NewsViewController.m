@@ -27,6 +27,8 @@
 @property(nonatomic, strong) UIButton *channelAddButton;
 @property(nonatomic) BOOL isChannelAdding;
 @property(nonatomic, strong) HyiMultiPageScrollView *contentScrollView;
+@property(nonatomic) int mainContentWidth;
+@property(nonatomic) int mainContentHeight;
 @end
 
 @implementation NewsViewController
@@ -38,6 +40,8 @@
 @synthesize selectFont;
 @synthesize channelAddButton;
 @synthesize contentScrollView;
+@synthesize mainContentWidth;
+@synthesize mainContentHeight;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -92,9 +96,11 @@
         make.right.mas_equalTo(channelAddButton.mas_left);
     }];
     
+    CGRect viewRect = self.view.bounds;
+    mainContentWidth = viewRect.size.width;
+    mainContentHeight = viewRect.size.height - TAB_BAR_HEIGHT - 40;
     [contentScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        CGRect viewRect = self.view.bounds;
-        make.size.mas_equalTo(CGSizeMake(viewRect.size.width, viewRect.size.height - TAB_BAR_HEIGHT - 40));
+        make.size.mas_equalTo(CGSizeMake(mainContentWidth, mainContentHeight));
         make.top.mas_equalTo(hyiHorArrangeScrollView.mas_bottom);
         make.left.mas_equalTo(self.view.mas_left);
     }];
@@ -205,7 +211,7 @@
 }
 
 -(UIView *)getPageViewByTag:(NSString *)tag {
-    UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, mainContentWidth, mainContentHeight)];
     [categoryLabel setText:tag];
     [categoryLabel setTextAlignment:NSTextAlignmentCenter];
     [categoryLabel setTextColor:TEXT_DARK_GRAY];

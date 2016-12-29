@@ -9,7 +9,8 @@
 #import "HyiMultiPageScrollView.h"
 @interface HyiMultiPageScrollView ()<UIScrollViewDelegate>
 // 下面是三个容器
-// TODO：少于三个的情况还没有考虑
+// TODO-待完善
+// 少于三个的情况还没有考虑
 @property(nonatomic, strong) UIView *firstView;
 @property(nonatomic, strong) UIView *centerView;
 @property(nonatomic, strong) UIView *lastView;
@@ -47,9 +48,6 @@
     [self addSubview:self.firstView];
     [self addSubview:self.centerView];
     [self addSubview:self.lastView];
-    [self.firstView setBackgroundColor:[UIColor redColor]];
-    [self.centerView setBackgroundColor:[UIColor yellowColor]];
-    [self.lastView setBackgroundColor:[UIColor orangeColor]];
     self.contentSize = CGSizeMake(rect.size.width * 3, rect.size.height);
 }
 
