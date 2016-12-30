@@ -14,8 +14,11 @@
 @property (nonatomic, copy) NSArray<HyiNews *> *dataArr; // 存放实际数据
 
 // 加载更多数据，Block
--(void)loadMoreData;
+-(void)loadMoreData:(void (^)(NSArray<HyiNews *> *data))callbaclBlock;
 
 // 刷新数据，Block
--(void)refreshData;
+-(void)refreshData:(void (^)(NSArray<HyiNews *> *data))callbackBlock;
+
+// 数据是否已经加载完成
+-(BOOL)isEnd;
 @end
