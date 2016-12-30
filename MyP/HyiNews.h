@@ -25,3 +25,8 @@ typedef NS_ENUM(NSUInteger, HyiNewsType) {
 @property (nonatomic) int commentCount;
 @property (nonatomic) NSString *tip;
 @end
+
+@interface HyiImageFlipperNews : HyiNews
+@property (nonatomic) NSArray<NSString *> *imageArr;
+@property (nonatomic) NSString *newsTitle;
+@end

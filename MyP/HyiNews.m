@@ -22,3 +22,14 @@
     return self;
 }
 @end
+
+@implementation HyiImageFlipperNews
+-(id)init {
+    self = [super init];
+    if(self){
+        // 不加 self. 无法引用到 newsType，报变量私有错误
+        self.newsType = HyiNewsImageFlipper;
+    }
+    return self;
+}
+@end

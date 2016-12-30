@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HyiNewsCellDataSource.h"
 
 @class HyiNews;
 
-@interface HyiImageFlipperNewsCell : UITableViewCell
-@property(nonatomic, strong) HyiNews *news;
+@interface HyiImageFlipperNewsCell : UITableViewCell<HyiNewsCellDataSource>
+
 @end

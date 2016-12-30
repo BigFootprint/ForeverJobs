@@ -25,6 +25,12 @@
 -(void)fullfillDataArr {
     dataArray = [NSMutableArray array];
     
+    // 滑动图片视图
+    HyiImageFlipperNews *news_1 = [[HyiImageFlipperNews alloc] init];
+    news_1.imageArr = @[];
+    news_1.newsTitle = @"台风“洛坦”袭菲律宾 致6人死18人失踪";
+    [dataArray addObject:news_1];
+    
     // 正常视图
     HyiNormalNews *news = [[HyiNormalNews alloc] init];
     news.imageUrl = @"http://img.mp.itc.cn/upload/20161201/1bb244cdbe504f229dc874e0c57cf63d_th.jpeg";

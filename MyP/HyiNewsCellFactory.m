@@ -8,12 +8,15 @@
 
 #import "HyiNewsCellFactory.h"
 #import "HyiNormalNewsCell.h"
+#import "HyiImageFlipperNewsCell.h"
 
 @implementation HyiNewsCellFactory
 +(UITableViewCell<HyiNewsCellDataSource> *)getCellForNewsType:(HyiNewsType)newsType InTableView:(UITableView *)tableView{
     switch(newsType){
         case HyiNewsNormal:
             return [HyiNormalNewsCell cellWithTableView:tableView];
+        case HyiNewsImageFlipper:
+            return [HyiImageFlipperNewsCell cellWithTableView:tableView];
         default:
             break;
     }
