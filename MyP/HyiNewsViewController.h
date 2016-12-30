@@ -1,5 +1,5 @@
 //
-//  LiveViewController.h
+//  NewsViewController.h
 //  MyP
 //
 //  Created by 李全民 on 16/12/28.
@@ -8,6 +8,6 @@
 
 #import "HyiBaseViewController.h"
 
-@interface LiveViewController : HyiBaseViewController
+@interface HyiNewsViewController : HyiBaseViewController
 
 @end

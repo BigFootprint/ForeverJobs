@@ -42,19 +42,19 @@
 		14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED41E128C6400BA318A /* HyiMainViewController.m */; };
 		14F54EDA1E128FD300BA318A /* HyiBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54ED91E128FD300BA318A /* HyiBaseViewController.m */; };
 		14F54EDF1E13651B00BA318A /* HyiBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EDE1E13651B00BA318A /* HyiBaseTabBarController.m */; };
-		14F54EE61E1366E400BA318A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EE51E1366E400BA318A /* NewsViewController.m */; };
-		14F54EE91E1366F700BA318A /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EE81E1366F700BA318A /* LiveViewController.m */; };
-		14F54EEC1E13670400BA318A /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EEB1E13670400BA318A /* TopicViewController.m */; };
-		14F54EEF1E13670E00BA318A /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EEE1E13670E00BA318A /* SelfViewController.m */; };
-		14F54EF31E13ADA600BA318A /* NewsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF21E13ADA600BA318A /* NewsCategory.m */; };
+		14F54EE61E1366E400BA318A /* HyiNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EE51E1366E400BA318A /* HyiNewsViewController.m */; };
+		14F54EE91E1366F700BA318A /* HyiLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EE81E1366F700BA318A /* HyiLiveViewController.m */; };
+		14F54EEC1E13670400BA318A /* HyiTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EEB1E13670400BA318A /* HyiTopicViewController.m */; };
+		14F54EEF1E13670E00BA318A /* HyiSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EEE1E13670E00BA318A /* HyiSelfViewController.m */; };
+		14F54EF31E13ADA600BA318A /* HyiNewsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF21E13ADA600BA318A /* HyiNewsCategory.m */; };
 		14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */; };
-		14F54EFC1E13B8E400BA318A /* NewsChannelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EFB1E13B8E400BA318A /* NewsChannelDataSource.m */; };
+		14F54EFC1E13B8E400BA318A /* HyiNewsChannelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54EFB1E13B8E400BA318A /* HyiNewsChannelDataSource.m */; };
 		14F54F0A1E14FBA700BA318A /* HyiMultiPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */; };
 		14F54F121E154D7E00BA318A /* HyiNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F111E154D7E00BA318A /* HyiNews.m */; };
-		14F54F161E154FDC00BA318A /* NewsCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F151E154FDC00BA318A /* NewsCellFactory.m */; };
+		14F54F161E154FDC00BA318A /* HyiNewsCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F151E154FDC00BA318A /* HyiNewsCellFactory.m */; };
 		14F54F191E15501500BA318A /* HyiImageFlipperNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F181E15501500BA318A /* HyiImageFlipperNewsCell.m */; };
 		14F54F1C1E1550F300BA318A /* HyiNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */; };
-		14F54F1F1E15657500BA318A /* NewsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F1E1E15657500BA318A /* NewsDataSource.m */; };
+		14F54F1F1E15657500BA318A /* HyiNewsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F1E1E15657500BA318A /* HyiNewsDataSource.m */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
@@ -127,35 +127,35 @@
 		14F54EDC1E12913700BA318A /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		14F54EDD1E13651B00BA318A /* HyiBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiBaseTabBarController.h; sourceTree = "<group>"; };
 		14F54EDE1E13651B00BA318A /* HyiBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiBaseTabBarController.m; sourceTree = "<group>"; };
-		14F54EE41E1366E400BA318A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		14F54EE51E1366E400BA318A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; usesTabs = 0; };
-		14F54EE71E1366F700BA318A /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
-		14F54EE81E1366F700BA318A /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
-		14F54EEA1E13670400BA318A /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
-		14F54EEB1E13670400BA318A /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
-		14F54EED1E13670E00BA318A /* SelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfViewController.h; sourceTree = "<group>"; };
-		14F54EEE1E13670E00BA318A /* SelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfViewController.m; sourceTree = "<group>"; };
-		14F54EF11E13ADA600BA318A /* NewsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCategory.h; sourceTree = "<group>"; };
-		14F54EF21E13ADA600BA318A /* NewsCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCategory.m; sourceTree = "<group>"; };
+		14F54EE41E1366E400BA318A /* HyiNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsViewController.h; sourceTree = "<group>"; };
+		14F54EE51E1366E400BA318A /* HyiNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsViewController.m; sourceTree = "<group>"; usesTabs = 0; };
+		14F54EE71E1366F700BA318A /* HyiLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiLiveViewController.h; sourceTree = "<group>"; };
+		14F54EE81E1366F700BA318A /* HyiLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiLiveViewController.m; sourceTree = "<group>"; };
+		14F54EEA1E13670400BA318A /* HyiTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiTopicViewController.h; sourceTree = "<group>"; };
+		14F54EEB1E13670400BA318A /* HyiTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiTopicViewController.m; sourceTree = "<group>"; };
+		14F54EED1E13670E00BA318A /* HyiSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiSelfViewController.h; sourceTree = "<group>"; };
+		14F54EEE1E13670E00BA318A /* HyiSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiSelfViewController.m; sourceTree = "<group>"; };
+		14F54EF11E13ADA600BA318A /* HyiNewsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsCategory.h; sourceTree = "<group>"; };
+		14F54EF21E13ADA600BA318A /* HyiNewsCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsCategory.m; sourceTree = "<group>"; };
 		14F54EF61E13AF0100BA318A /* HyiHorArrangeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiHorArrangeScrollView.h; sourceTree = "<group>"; };
 		14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiHorArrangeScrollView.m; sourceTree = "<group>"; };
 		14F54EF91E13B0F300BA318A /* HyiHorArrangeScrollViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiHorArrangeScrollViewAdapter.h; sourceTree = "<group>"; };
-		14F54EFA1E13B8E400BA318A /* NewsChannelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsChannelDataSource.h; sourceTree = "<group>"; };
-		14F54EFB1E13B8E400BA318A /* NewsChannelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsChannelDataSource.m; sourceTree = "<group>"; };
+		14F54EFA1E13B8E400BA318A /* HyiNewsChannelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsChannelDataSource.h; sourceTree = "<group>"; };
+		14F54EFB1E13B8E400BA318A /* HyiNewsChannelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsChannelDataSource.m; sourceTree = "<group>"; };
 		14F54F081E14FBA700BA318A /* HyiMultiPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollView.h; sourceTree = "<group>"; };
 		14F54F091E14FBA700BA318A /* HyiMultiPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMultiPageScrollView.m; sourceTree = "<group>"; };
 		14F54F0B1E14FFA900BA318A /* HyiMultiPageScrollViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollViewDataSource.h; sourceTree = "<group>"; };
 		14F54F0C1E152C0000BA318A /* HyiMultiPageScrollViewDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiPageScrollViewDataDelegate.h; sourceTree = "<group>"; };
 		14F54F101E154D7E00BA318A /* HyiNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNews.h; sourceTree = "<group>"; };
 		14F54F111E154D7E00BA318A /* HyiNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNews.m; sourceTree = "<group>"; };
-		14F54F141E154FDC00BA318A /* NewsCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCellFactory.h; sourceTree = "<group>"; };
-		14F54F151E154FDC00BA318A /* NewsCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCellFactory.m; sourceTree = "<group>"; };
+		14F54F141E154FDC00BA318A /* HyiNewsCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsCellFactory.h; sourceTree = "<group>"; };
+		14F54F151E154FDC00BA318A /* HyiNewsCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsCellFactory.m; sourceTree = "<group>"; };
 		14F54F171E15501500BA318A /* HyiImageFlipperNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiImageFlipperNewsCell.h; sourceTree = "<group>"; };
 		14F54F181E15501500BA318A /* HyiImageFlipperNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiImageFlipperNewsCell.m; sourceTree = "<group>"; };
 		14F54F1A1E1550F300BA318A /* HyiNewsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsTableView.h; sourceTree = "<group>"; };
 		14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsTableView.m; sourceTree = "<group>"; };
-		14F54F1D1E15657500BA318A /* NewsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataSource.h; sourceTree = "<group>"; };
-		14F54F1E1E15657500BA318A /* NewsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataSource.m; sourceTree = "<group>"; };
+		14F54F1D1E15657500BA318A /* HyiNewsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsDataSource.h; sourceTree = "<group>"; };
+		14F54F1E1E15657500BA318A /* HyiNewsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsDataSource.m; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -386,8 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				14F54F071E14DD7400BA318A /* Cell */,
-				14F54EE41E1366E400BA318A /* NewsViewController.h */,
-				14F54EE51E1366E400BA318A /* NewsViewController.m */,
+				14F54EE41E1366E400BA318A /* HyiNewsViewController.h */,
+				14F54EE51E1366E400BA318A /* HyiNewsViewController.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -395,8 +395,8 @@
 		14F54EE11E1365E900BA318A /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				14F54EE71E1366F700BA318A /* LiveViewController.h */,
-				14F54EE81E1366F700BA318A /* LiveViewController.m */,
+				14F54EE71E1366F700BA318A /* HyiLiveViewController.h */,
+				14F54EE81E1366F700BA318A /* HyiLiveViewController.m */,
 			);
 			name = Live;
 			sourceTree = "<group>";
@@ -404,8 +404,8 @@
 		14F54EE21E1365F400BA318A /* Topic */ = {
 			isa = PBXGroup;
 			children = (
-				14F54EEA1E13670400BA318A /* TopicViewController.h */,
-				14F54EEB1E13670400BA318A /* TopicViewController.m */,
+				14F54EEA1E13670400BA318A /* HyiTopicViewController.h */,
+				14F54EEB1E13670400BA318A /* HyiTopicViewController.m */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -413,8 +413,8 @@
 		14F54EE31E1365FB00BA318A /* Self */ = {
 			isa = PBXGroup;
 			children = (
-				14F54EED1E13670E00BA318A /* SelfViewController.h */,
-				14F54EEE1E13670E00BA318A /* SelfViewController.m */,
+				14F54EED1E13670E00BA318A /* HyiSelfViewController.h */,
+				14F54EEE1E13670E00BA318A /* HyiSelfViewController.m */,
 			);
 			name = Self;
 			sourceTree = "<group>";
@@ -437,14 +437,14 @@
 		14F54EF51E13AE9A00BA318A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				14F54EF11E13ADA600BA318A /* NewsCategory.h */,
-				14F54EF21E13ADA600BA318A /* NewsCategory.m */,
-				14F54EFA1E13B8E400BA318A /* NewsChannelDataSource.h */,
-				14F54EFB1E13B8E400BA318A /* NewsChannelDataSource.m */,
+				14F54EF11E13ADA600BA318A /* HyiNewsCategory.h */,
+				14F54EF21E13ADA600BA318A /* HyiNewsCategory.m */,
+				14F54EFA1E13B8E400BA318A /* HyiNewsChannelDataSource.h */,
+				14F54EFB1E13B8E400BA318A /* HyiNewsChannelDataSource.m */,
 				14F54F101E154D7E00BA318A /* HyiNews.h */,
 				14F54F111E154D7E00BA318A /* HyiNews.m */,
-				14F54F1D1E15657500BA318A /* NewsDataSource.h */,
-				14F54F1E1E15657500BA318A /* NewsDataSource.m */,
+				14F54F1D1E15657500BA318A /* HyiNewsDataSource.h */,
+				14F54F1E1E15657500BA318A /* HyiNewsDataSource.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -461,8 +461,8 @@
 		14F54F131E154FBC00BA318A /* NewsCell */ = {
 			isa = PBXGroup;
 			children = (
-				14F54F141E154FDC00BA318A /* NewsCellFactory.h */,
-				14F54F151E154FDC00BA318A /* NewsCellFactory.m */,
+				14F54F141E154FDC00BA318A /* HyiNewsCellFactory.h */,
+				14F54F151E154FDC00BA318A /* HyiNewsCellFactory.m */,
 				14F54F171E15501500BA318A /* HyiImageFlipperNewsCell.h */,
 				14F54F181E15501500BA318A /* HyiImageFlipperNewsCell.m */,
 			);
@@ -603,14 +603,14 @@
 			files = (
 				14F54F0A1E14FBA700BA318A /* HyiMultiPageScrollView.m in Sources */,
 				1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */,
-				14F54F1F1E15657500BA318A /* NewsDataSource.m in Sources */,
+				14F54F1F1E15657500BA318A /* HyiNewsDataSource.m in Sources */,
 				14F54F121E154D7E00BA318A /* HyiNews.m in Sources */,
 				14F1C67E1DE325E500B91388 /* Teacher+CoreDataProperties.m in Sources */,
 				14CBE0AE1DD6116B00F6DB7F /* UIAlertControllerViewController.m in Sources */,
 				144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */,
 				14AC848C1DE843EB0008FEE7 /* UIWebViewViewController.m in Sources */,
 				144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */,
-				14F54EEF1E13670E00BA318A /* SelfViewController.m in Sources */,
+				14F54EEF1E13670E00BA318A /* HyiSelfViewController.m in Sources */,
 				14F54F1C1E1550F300BA318A /* HyiNewsTableView.m in Sources */,
 				14F1C66C1DE3231D00B91388 /* School.xcdatamodeld in Sources */,
 				14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */,
@@ -619,7 +619,7 @@
 				1437AC061DDB09850074393B /* UIButton+GA.m in Sources */,
 				14F54EDF1E13651B00BA318A /* HyiBaseTabBarController.m in Sources */,
 				14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */,
-				14F54EE61E1366E400BA318A /* NewsViewController.m in Sources */,
+				14F54EE61E1366E400BA318A /* HyiNewsViewController.m in Sources */,
 				14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */,
 				1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */,
 				14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */,
@@ -630,19 +630,19 @@
 				14AC84911DE85BDF0008FEE7 /* UIPickerViewViewController.m in Sources */,
 				14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */,
 				1437ABFB1DDAB4FB0074393B /* NetworkViewController.m in Sources */,
-				14F54EEC1E13670400BA318A /* TopicViewController.m in Sources */,
+				14F54EEC1E13670400BA318A /* HyiTopicViewController.m in Sources */,
 				14F1C67D1DE325E500B91388 /* Teacher+CoreDataClass.m in Sources */,
 				14F54F191E15501500BA318A /* HyiImageFlipperNewsCell.m in Sources */,
 				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
 				141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */,
-				14F54EFC1E13B8E400BA318A /* NewsChannelDataSource.m in Sources */,
+				14F54EFC1E13B8E400BA318A /* HyiNewsChannelDataSource.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
-				14F54F161E154FDC00BA318A /* NewsCellFactory.m in Sources */,
+				14F54F161E154FDC00BA318A /* HyiNewsCellFactory.m in Sources */,
 				141122D21DDDC79800BFEA3E /* CameraAViewController.m in Sources */,
 				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
-				14F54EF31E13ADA600BA318A /* NewsCategory.m in Sources */,
-				14F54EE91E1366F700BA318A /* LiveViewController.m in Sources */,
+				14F54EF31E13ADA600BA318A /* HyiNewsCategory.m in Sources */,
+				14F54EE91E1366F700BA318A /* HyiLiveViewController.m in Sources */,
 				14F1C64F1DE319CF00B91388 /* CoreDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

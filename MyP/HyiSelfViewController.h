@@ -1,5 +1,5 @@
 //
-//  TopicViewController.h
+//  SelfViewController.h
 //  MyP
 //
 //  Created by 李全民 on 16/12/28.
@@ -8,6 +8,6 @@
 
 #import "HyiBaseViewController.h"
 
-@interface TopicViewController : HyiBaseViewController
+@interface HyiSelfViewController : HyiBaseViewController
 
 @end

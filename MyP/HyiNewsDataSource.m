@@ -6,18 +6,18 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "NewsDataSource.h"
+#import "HyiNewsDataSource.h"
 
 
 #ifndef NewsDataSource_PAGE_DATASOURCE_SIZE
 #define PAGE_DATASOURCE_SIZE 15 //每页展示 15 个
 #endif
 
-@interface NewsDataSource ()
+@interface HyiNewsDataSource ()
 @property (nonatomic) int pageIndex;
 @end
 
-@implementation NewsDataSource
+@implementation HyiNewsDataSource
 @synthesize pageIndex;
 @synthesize dataArr;
 

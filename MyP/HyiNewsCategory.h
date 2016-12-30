@@ -9,6 +9,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NewsCategory : NSObject
+@interface HyiNewsCategory : NSObject
 @property(nonatomic, copy) NSString *categoryName;
 @end

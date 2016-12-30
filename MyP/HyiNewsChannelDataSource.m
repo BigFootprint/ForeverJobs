@@ -6,13 +6,13 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "NewsChannelDataSource.h"
+#import "HyiNewsChannelDataSource.h"
 
-@implementation NewsChannelDataSource
-static NewsChannelDataSource *dataSource;
+@implementation HyiNewsChannelDataSource
+static HyiNewsChannelDataSource *dataSource;
 static NSArray *categoryArr;
 
-+(NewsChannelDataSource *) sharedInstance{
++(HyiNewsChannelDataSource *) sharedInstance{
     static dispatch_once_t onceToken ;
     dispatch_once(&onceToken, ^{
         dataSource = [[super allocWithZone:NULL] init] ;
@@ -24,10 +24,10 @@ static NSArray *categoryArr;
     return dataSource ;
 }
 
--(NSArray<NewsCategory *> *)getNewsCategory{
+-(NSArray<HyiNewsCategory *> *)getNewsCategory{
     NSMutableArray *arr = [NSMutableArray array];
     for(int index = 0; index < [categoryArr count]; index ++){
-        NewsCategory *c = [[NewsCategory alloc] init];
+        HyiNewsCategory *c = [[HyiNewsCategory alloc] init];
         c.categoryName = [categoryArr objectAtIndex:index];
         [arr addObject:c];
     }

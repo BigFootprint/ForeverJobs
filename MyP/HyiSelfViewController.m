@@ -6,13 +6,13 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "SelfViewController.h"
+#import "HyiSelfViewController.h"
 
-@interface SelfViewController ()
+@interface HyiSelfViewController ()
 
 @end
 
-@implementation SelfViewController
+@implementation HyiSelfViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

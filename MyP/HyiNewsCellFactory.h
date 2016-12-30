@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NewsCellFactory : NSObject
+@interface HyiNewsCellFactory : NSObject
 
 @end

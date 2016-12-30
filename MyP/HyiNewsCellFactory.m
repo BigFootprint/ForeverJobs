@@ -6,8 +6,8 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "NewsCellFactory.h"
+#import "HyiNewsCellFactory.h"
 
-@implementation NewsCellFactory
+@implementation HyiNewsCellFactory
 
 @end

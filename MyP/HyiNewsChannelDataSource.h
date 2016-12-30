@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NewsCategory.h"
+#import "HyiNewsCategory.h"
 
-@interface NewsChannelDataSource : NSObject
-+(NewsChannelDataSource *) sharedInstance;
+@interface HyiNewsChannelDataSource : NSObject
++(HyiNewsChannelDataSource *) sharedInstance;
 
--(NSArray<NewsCategory *> *)getNewsCategory;
+-(NSArray<HyiNewsCategory *> *)getNewsCategory;
 @end

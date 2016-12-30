@@ -6,7 +6,7 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "NewsViewController.h"
+#import "HyiNewsViewController.h"
 #import "HyiHorArrangeScrollView.h"
 #import "HyiHorArrangeScrollViewAdapter.h"
 #import "HyiMultiPageScrollView.h"
@@ -14,14 +14,14 @@
 #import "HyiMultiPageScrollViewDataDelegate.h"
 #import "Masonry.h"
 #import "JobsConstants.h"
-#import "NewsChannelDataSource.h"
+#import "HyiNewsChannelDataSource.h"
 #import "Color.h"
 
-@interface NewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
+@interface HyiNewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
 @property(nonatomic, strong) UIBarButtonItem *leftItem;
 @property(nonatomic, strong) UIImageView *centerView;
 @property(nonatomic, strong) HyiHorArrangeScrollView *hyiHorArrangeScrollView;
-@property(nonatomic, strong) NSArray<NewsCategory *> *categoryArr;
+@property(nonatomic, strong) NSArray<HyiNewsCategory *> *categoryArr;
 @property(nonatomic, strong) UIFont *normalFont;
 @property(nonatomic, strong) UIFont *selectFont;
 @property(nonatomic, strong) UIButton *channelAddButton;
@@ -31,7 +31,7 @@
 @property(nonatomic) int mainContentHeight;
 @end
 
-@implementation NewsViewController
+@implementation HyiNewsViewController
 @synthesize leftItem;
 @synthesize centerView;
 @synthesize hyiHorArrangeScrollView;
@@ -46,7 +46,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     // 数据
-    categoryArr = [[NewsChannelDataSource sharedInstance] getNewsCategory];
+    categoryArr = [[HyiNewsChannelDataSource sharedInstance] getNewsCategory];
     normalFont = [UIFont fontWithName:@"Arial" size:16];
     selectFont = [UIFont fontWithName:@"Arial" size:20];
     self.isChannelAdding = NO;
@@ -166,7 +166,7 @@
 }
 
 -(UIView *)getView:(int)index withOffset:(int)offset {
-    NewsCategory *nc = [categoryArr objectAtIndex:index];
+    HyiNewsCategory *nc = [categoryArr objectAtIndex:index];
     int fontSize = 16;
     CGSize textSize =[nc.categoryName sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}];
     int textActualWidth = textSize.width + 30;// 两边留白

@@ -6,13 +6,13 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "TopicViewController.h"
+#import "HyiTopicViewController.h"
 
-@interface TopicViewController ()
+@interface HyiTopicViewController ()
 
 @end
 
-@implementation TopicViewController
+@implementation HyiTopicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

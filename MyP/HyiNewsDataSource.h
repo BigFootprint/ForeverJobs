@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class HyiNews;
 
-@interface NewsDataSource : NSObject
+@interface HyiNewsDataSource : NSObject
 //@property (nonatomic, copy) NSString *url; // 实际开发中应该是一个客户端接口 Url
 @property (nonatomic, copy) NSArray<HyiNews *> *dataArr; // 存放实际数据
 

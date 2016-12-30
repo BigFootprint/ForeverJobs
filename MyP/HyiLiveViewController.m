@@ -6,13 +6,13 @@
 //  Copyright © 2016年 李全民. All rights reserved.
 //
 
-#import "LiveViewController.h"
+#import "HyiLiveViewController.h"
 
-@interface LiveViewController ()
+@interface HyiLiveViewController ()
 
 @end
 
-@implementation LiveViewController
+@implementation HyiLiveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
