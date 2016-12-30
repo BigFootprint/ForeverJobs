@@ -56,8 +56,8 @@
     [super viewDidLoad];
     // 数据
     categoryArr = [[HyiNewsChannelDataSource sharedInstance] getNewsCategory];
-    normalFont = [UIFont fontWithName:@"Arial" size:16];
-    selectFont = [UIFont fontWithName:@"Arial" size:20];
+    normalFont = [UIFont fontWithName:@"Arial" size:14];
+    selectFont = [UIFont fontWithName:@"Arial" size:18];
     self.isChannelAdding = NO;
     
     // View
@@ -195,7 +195,7 @@
     HyiNewsCategory *nc = [categoryArr objectAtIndex:index];
     int fontSize = 16;
     CGSize textSize =[nc.categoryName sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}];
-    int textActualWidth = textSize.width + 30;// 两边留白
+    int textActualWidth = textSize.width + 28;// 两边留白
     
     UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(offset, 0, textActualWidth, 40)];
     [categoryLabel setText:nc.categoryName];
@@ -215,7 +215,7 @@
         oldLabel.textColor = TEXT_DARK_GRAY;
         oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 1.0, 1.0);
         [UIView animateWithDuration:0.3 animations:^{
-            oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 0.8, 0.8);
+            oldLabel.transform = CGAffineTransformScale(oldLabel.transform, 14.0/18.0, 14.0/18.0);
         }];
     }
     
@@ -224,7 +224,7 @@
         selectLabel.textColor = HYI_RED;
         selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.0, 1.0);
         [UIView animateWithDuration:0.3 animations:^{
-            selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 1.25, 1.25);
+            selectLabel.transform = CGAffineTransformScale(selectLabel.transform, 18.0/14.0, 18.0/14.0);
         }];
     }
     
