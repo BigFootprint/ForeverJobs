@@ -10,6 +10,7 @@
 #import "HyiNews.h"
 #import "HyiNewsCellFactory.h"
 #import "HyiNewsCellDataSource.h"
+#import "HyiNewsDataSource.h"
 
 @interface HyiNewsTableView ()<UITableViewDataSource>
 @property(nonatomic) NSArray<HyiNews *> *dataArr;
@@ -27,6 +28,16 @@
     return self;
 }
 
+-(void)loadMoreData {
+    if(hyiNewsDataSource){
+        [hyiNewsDataSource loadMoreData:^(NSArray<HyiNews *> *data) {
+            dataArr = data;
+            // 刷新数据
+            [self reloadData];
+        }];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(dataArr == nil)
         return 0;
@@ -42,4 +53,6 @@
     }
     return cell;
 }
+
+
 @end

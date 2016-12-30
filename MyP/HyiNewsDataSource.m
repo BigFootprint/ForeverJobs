@@ -32,7 +32,9 @@
         __weak typeof(self) weakSelf_B = strongSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
             __strong typeof(weakSelf_B) strongSelf_B = weakSelf_B;
-            pageIndex ++;
+            if(![self isEnd])
+                pageIndex ++;
+            
             if(callbaclBlock){
                 callbaclBlock([strongSelf_B getDataByIndex:pageIndex]);
             }
