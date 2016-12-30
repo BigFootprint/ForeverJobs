@@ -23,6 +23,6 @@ typedef NS_ENUM(NSUInteger, HyiMultiPageViewPosition) {
 -(void)refreshViewByIndex:(int)index;
 // 根据 Index 展示页面
 -(void)displayViewByIndex:(int)index;
-// 内存告警
+// 内存告警, 释放非必要引用的 View
 - (void)didReceiveMemoryWarning;
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol HyiMultiPageScrollViewDataDelegate <NSObject>
--(void)select:(int)index;
+-(void)select:(int)index withView:(UIView *)view;
 @end

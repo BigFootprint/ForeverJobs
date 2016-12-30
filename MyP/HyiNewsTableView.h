@@ -11,6 +11,12 @@
 
 @interface HyiNewsTableView : UITableView
 @property (nonatomic, strong) HyiNewsDataSource *hyiNewsDataSource;
+// 加载更多数据
 -(void)loadMoreData;
+
+// 刷新数据
 -(void)refreshData;
+
+// View 将显示
+-(void)viewDidAppear;
 @end

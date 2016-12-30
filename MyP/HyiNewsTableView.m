@@ -71,6 +71,10 @@
     }
 }
 
+-(void)viewDidAppear {
+    [self.mj_header beginRefreshing];
+}
+
 # pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;

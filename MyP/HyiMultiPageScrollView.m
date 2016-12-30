@@ -79,8 +79,9 @@
         [self scrollTo:CENTER];
     }
     currentIndex = index;
-    if(hyiDelegate != nil){
-        [hyiDelegate select:currentIndex];
+    if(hyiDelegate != nil && hyiDataSource != nil){
+        NSString *tag = [hyiDataSource getPageTagAtIndex:index];
+        [hyiDelegate select:currentIndex withView:[_tagViewDic objectForKey:tag]];
     }
 }
 

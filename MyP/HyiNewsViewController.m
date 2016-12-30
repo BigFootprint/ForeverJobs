@@ -237,12 +237,6 @@
 }
 
 -(UIView *)getPageViewByTag:(NSString *)tag {
-//    UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, mainContentWidth, mainContentHeight)];
-//    [categoryLabel setText:tag];
-//    [categoryLabel setTextAlignment:NSTextAlignmentCenter];
-//    [categoryLabel setTextColor:TEXT_DARK_GRAY];
-//    [categoryLabel setFont:normalFont];
-//    [categoryLabel setBackgroundColor:BG_MAIN];
     HyiNewsTableView *tableView = [[HyiNewsTableView alloc] initWithFrame:CGRectMake(0, 0, mainContentWidth, mainContentHeight)];
     HyiNewsDataSource *ds = [[HyiNewsDataSource alloc] init];
     ds.dataArr = [[[HyiNewsDataMocker alloc] init] loadMockData];
@@ -256,8 +250,10 @@
 }
 
 #pragma mark HyiMultiPageScrollViewDataDelegate
--(void)select:(int)index {
+-(void)select:(int)index withView:(UIView *)view {
     [hyiHorArrangeScrollView setSelectedView:index];
+    HyiNewsTableView *tabView = (HyiNewsTableView *)view;
+    [tabView viewDidAppear];
 }
 
 -(void)didReceiveMemoryWarning {
