@@ -17,6 +17,8 @@
 #define BG_BLUE [UIColor colorWithRed:0x5B/255.0 green:0x9C/255.0 blue:0xF5/255.0 alpha:1]
 
 #define TEXT_DARK_GRAY [UIColor colorWithRed:0x57/255.0 green:0x57/255.0 blue:0x57/255.0 alpha:1]
+#define TEXT_GRAY [UIColor colorWithRed:0xB4/255.0 green:0xB4/255.0 blue:0xB4/255.0 alpha:1]
+#define TEXT_LIGHT_GRAY [UIColor colorWithRed:0xDC/255.0 green:0xDC/255.0 blue:0xDC/255.0 alpha:1]
 #define TEXT_BLACK [UIColor colorWithRed:0x1A/255.0 green:0x1A/255.0 blue:0x1A/255.0 alpha:1]
 
 #endif /* Color_h */

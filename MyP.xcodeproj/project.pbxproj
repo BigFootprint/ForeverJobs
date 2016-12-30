@@ -395,6 +395,7 @@
 		14F54EE01E1365D800BA318A /* News */ = {
 			isa = PBXGroup;
 			children = (
+				14F54F131E154FBC00BA318A /* NewsCell */,
 				14F54F071E14DD7400BA318A /* CustomView */,
 				14F54EE41E1366E400BA318A /* HyiNewsViewController.h */,
 				14F54EE51E1366E400BA318A /* HyiNewsViewController.m */,
@@ -432,7 +433,6 @@
 		14F54EF41E13AE9400BA318A /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				14F54F131E154FBC00BA318A /* NewsCell */,
 				14F54EF61E13AF0100BA318A /* HyiHorArrangeScrollView.h */,
 				14F54EF71E13AF0100BA318A /* HyiHorArrangeScrollView.m */,
 				14F54EF91E13B0F300BA318A /* HyiHorArrangeScrollViewAdapter.h */,

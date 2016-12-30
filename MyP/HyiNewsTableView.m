@@ -41,15 +41,13 @@
     self.dataSource = self;
     self.delegate =self;
     
-    __weak typeof(self) weakSelf = self;
-    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [weakSelf loadMoreData];
-    }];
-    
-    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        //Call this Block When enter the refresh status automatically
-        [weakSelf refreshData];
-    }];
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    // 用的还不熟悉
+    [header setTitle:@"下拉推荐" forState:MJRefreshStateIdle];
+    [header setTitle:@"松开推荐" forState:MJRefreshStatePulling];
+    [header setTitle:@"推荐中..." forState:MJRefreshStateRefreshing];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.mj_header = header;
 }
 
 -(void)loadMoreData {
@@ -66,6 +64,7 @@
     if(hyiNewsDataSource){
         [hyiNewsDataSource refreshData:^(NSArray<HyiNews *> *data) {
             dataArr = data;
+            [self.mj_header endRefreshing];
             // 刷新数据
             [self reloadData];
         }];

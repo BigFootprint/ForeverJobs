@@ -11,6 +11,9 @@
 
 @protocol HyiNewsCellDataSource <NSObject>
 +(instancetype)cellWithTableView:(UITableView *)tableView;
+// 返回行高
 -(int)getCellHeight;
+
+// 更新数据
 -(void)refreshData:(HyiNews *)news;
 @end

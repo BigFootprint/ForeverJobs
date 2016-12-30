@@ -7,14 +7,15 @@
 //
 
 #import "HyiNormalNewsCell.h"
-#import "Masonry.h"
 #import "HyiNews.h"
+#import "Color.h"
+#import "Masonry.h"
 
 @interface HyiNormalNewsCell ()
 @property(nonatomic) UIImageView *newsImage;
 @property(nonatomic) UILabel *titleLabel;
 @property(nonatomic) UILabel *newsChannelLabel;
-@property(nonatomic) UILabel *commentLabel;
+@property(nonatomic) UIButton *commentButton;
 @property(nonatomic) UILabel *tipLabel;
 @end
 
@@ -33,11 +34,16 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.newsImage = [[UIImageView alloc] initWithFrame:CGRectMake(9, 10, 100, 75)];
-        [self.newsImage setImage:[UIImage imageNamed:@"monkey.jpg"]];
+        self.newsImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 9, 100, 75)];
+        self.newsImage.contentMode = UIViewContentModeScaleAspectFill;
+        self.newsImage.clipsToBounds = YES;
+        [self.newsImage setImage:[UIImage imageNamed:@"ty_a.jpg"]];
         [self.contentView addSubview:self.newsImage];
         
         self.titleLabel = [[UILabel alloc] init];
+        self.titleLabel.font = [UIFont fontWithName:@"Arial" size:18];
+        self.titleLabel.textColor = TEXT_BLACK;
+        self.titleLabel.numberOfLines = 2;
         [self.contentView addSubview:self.titleLabel];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.newsImage.mas_right).offset(15);
@@ -47,10 +53,25 @@
         }];
         
         self.newsChannelLabel = [[UILabel alloc] init];
+        self.newsChannelLabel.font = [UIFont fontWithName:@"Arial" size:12];
+        self.newsChannelLabel.textColor = TEXT_LIGHT_GRAY;
         [self.contentView addSubview:self.newsChannelLabel];
         [self.newsChannelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.newsImage.mas_right).offset(15);
-            make.bottom.mas_equalTo(self.newsImage.mas_bottom).offset(-12);
+            make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-12);
+        }];
+        
+        self.commentButton = [[UIButton alloc] init];
+        self.commentButton.titleLabel.font = [UIFont boldSystemFontOfSize:13];
+        [self.commentButton setTitleColor:TEXT_GRAY forState:UIControlStateNormal];
+        [self.commentButton setBackgroundImage:[UIImage imageNamed:@"contentcell_comment_background"] forState:UIControlStateNormal];
+        // TODO-待整理
+        // 此处不要用 setTitleEdgeInsets，会导致 ... 的问题
+        [self.commentButton setContentEdgeInsets:UIEdgeInsetsMake(3, 5, 3, 5)];
+        [self.contentView addSubview:self.commentButton];
+        [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self.contentView.mas_right).offset(-10);
+            make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-12);
         }];
     }
     return self;
@@ -63,9 +84,11 @@
     HyiNormalNews *normalNews = (HyiNormalNews *)news;
     self.titleLabel.text = normalNews.newsTitle;
     self.newsChannelLabel.text = normalNews.channel;
+    [self.commentButton setTitle:[NSString stringWithFormat:@"%d跟帖", normalNews.commentCount] forState:UIControlStateNormal];
+    [self.commentButton sizeToFit];
 }
 
 -(int)getCellHeight {
-    return 89;
+    return 94;
 }
 @end
