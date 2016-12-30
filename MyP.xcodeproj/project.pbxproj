@@ -55,6 +55,8 @@
 		14F54F191E15501500BA318A /* HyiImageFlipperNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F181E15501500BA318A /* HyiImageFlipperNewsCell.m */; };
 		14F54F1C1E1550F300BA318A /* HyiNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */; };
 		14F54F1F1E15657500BA318A /* HyiNewsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F1E1E15657500BA318A /* HyiNewsDataSource.m */; };
+		14F54F221E15F8F200BA318A /* HyiNewsDataMocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F211E15F8F200BA318A /* HyiNewsDataMocker.m */; };
+		14F54F251E15FD6800BA318A /* HyiNormalNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F54F241E15FD6800BA318A /* HyiNormalNewsCell.m */; };
 		64D04109F6504101F6DD16A3 /* libPods-MyP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 293DDF684CC7E26523D68AFB /* libPods-MyP.a */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +158,11 @@
 		14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsTableView.m; sourceTree = "<group>"; };
 		14F54F1D1E15657500BA318A /* HyiNewsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsDataSource.h; sourceTree = "<group>"; };
 		14F54F1E1E15657500BA318A /* HyiNewsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsDataSource.m; sourceTree = "<group>"; };
+		14F54F201E15F8F200BA318A /* HyiNewsDataMocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsDataMocker.h; sourceTree = "<group>"; };
+		14F54F211E15F8F200BA318A /* HyiNewsDataMocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNewsDataMocker.m; sourceTree = "<group>"; };
+		14F54F231E15FD6800BA318A /* HyiNormalNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNormalNewsCell.h; sourceTree = "<group>"; };
+		14F54F241E15FD6800BA318A /* HyiNormalNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiNormalNewsCell.m; sourceTree = "<group>"; };
+		14F54F2A1E1603DE00BA318A /* HyiNewsCellDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsCellDataSource.h; sourceTree = "<group>"; };
 		293DDF684CC7E26523D68AFB /* libPods-MyP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -445,6 +452,8 @@
 				14F54F111E154D7E00BA318A /* HyiNews.m */,
 				14F54F1D1E15657500BA318A /* HyiNewsDataSource.h */,
 				14F54F1E1E15657500BA318A /* HyiNewsDataSource.m */,
+				14F54F201E15F8F200BA318A /* HyiNewsDataMocker.h */,
+				14F54F211E15F8F200BA318A /* HyiNewsDataMocker.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -465,6 +474,9 @@
 				14F54F151E154FDC00BA318A /* HyiNewsCellFactory.m */,
 				14F54F171E15501500BA318A /* HyiImageFlipperNewsCell.h */,
 				14F54F181E15501500BA318A /* HyiImageFlipperNewsCell.m */,
+				14F54F231E15FD6800BA318A /* HyiNormalNewsCell.h */,
+				14F54F241E15FD6800BA318A /* HyiNormalNewsCell.m */,
+				14F54F2A1E1603DE00BA318A /* HyiNewsCellDataSource.h */,
 			);
 			name = NewsCell;
 			sourceTree = "<group>";
@@ -637,12 +649,14 @@
 				141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */,
 				14F54EFC1E13B8E400BA318A /* HyiNewsChannelDataSource.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
+				14F54F251E15FD6800BA318A /* HyiNormalNewsCell.m in Sources */,
 				14F54F161E154FDC00BA318A /* HyiNewsCellFactory.m in Sources */,
 				141122D21DDDC79800BFEA3E /* CameraAViewController.m in Sources */,
 				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
 				14F54EF31E13ADA600BA318A /* HyiNewsCategory.m in Sources */,
 				14F54EE91E1366F700BA318A /* HyiLiveViewController.m in Sources */,
+				14F54F221E15F8F200BA318A /* HyiNewsDataMocker.m in Sources */,
 				14F1C64F1DE319CF00B91388 /* CoreDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,18 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, HyiNewsType) {
-    HyiNewsImageFlipper = 1 // 图片浏览型，可滑动
+    HyiNewsNormal = 0xCAFE,
+    HyiNewsImageFlipper // 图片浏览型，可滑动
 };
 
 @interface HyiNews : NSObject
+@property (nonatomic) HyiNewsType newsType;
+@end
 
+@interface HyiNormalNews : HyiNews
+@property (nonatomic) NSString *imageUrl;
+@property (nonatomic) NSString *newsTitle;
+@property (nonatomic) NSString *channel;
+@property (nonatomic) int commentCount;
+@property (nonatomic) NSString *tip;
 @end
