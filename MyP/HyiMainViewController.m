@@ -57,8 +57,8 @@
     UIViewController *topicController = [[HyiTopicViewController alloc] init];
     topicController.tabBarItem.title = @"话题";
     topicController.view.backgroundColor = [UIColor whiteColor];
-    topicController.tabBarItem.image = [UIImage imageNamed:@"tabbar_icon_found_normal"];
-    topicController.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_icon_found_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    topicController.tabBarItem.image = [UIImage imageNamed:@"tabbar_icon_bar_normal"];
+    topicController.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_icon_bar_highlight"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     UIViewController *selfController = [[HyiSelfViewController alloc] init];
     selfController.tabBarItem.title = @"我";

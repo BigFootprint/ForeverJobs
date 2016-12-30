@@ -8,4 +8,5 @@ target "MyP" do
 	pod 'Masonry', '~> 0.6.4'
 	pod 'libextobjc', '~> 0.4.5'
 	pod 'AFNetworking', '~> 3.0'
+	pod 'MJRefresh'
 end

@@ -12,4 +12,5 @@
 @interface HyiNewsTableView : UITableView
 @property (nonatomic, strong) HyiNewsDataSource *hyiNewsDataSource;
 -(void)loadMoreData;
+-(void)refreshData;
 @end

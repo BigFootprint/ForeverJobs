@@ -20,6 +20,7 @@
 		144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906C01DD20ECE002183FC /* OnePieceViewController.m */; };
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* ActionViewController.m */; };
+		149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EDBE01E16519A00F55294 /* HyiLiveView.m */; };
 		14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */; };
 		14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC84881DE818CC0008FEE7 /* onepiece.html */; };
 		14AC848C1DE843EB0008FEE7 /* UIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC848B1DE843EB0008FEE7 /* UIWebViewViewController.m */; };
@@ -88,6 +89,8 @@
 		144906CA1DD20ECE002183FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144906D01DD21192002183FC /* ActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
 		144906D11DD21192002183FC /* ActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		149EDBDF1E16519A00F55294 /* HyiLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiLiveView.h; sourceTree = "<group>"; };
+		149EDBE01E16519A00F55294 /* HyiLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiLiveView.m; sourceTree = "<group>"; };
 		14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
 		14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewViewController.m; sourceTree = "<group>"; };
 		14AC84881DE818CC0008FEE7 /* onepiece.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = onepiece.html; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 			children = (
 				14F54F1A1E1550F300BA318A /* HyiNewsTableView.h */,
 				14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */,
+				149EDBDF1E16519A00F55294 /* HyiLiveView.h */,
+				149EDBE01E16519A00F55294 /* HyiLiveView.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -632,6 +637,7 @@
 				14F54EDF1E13651B00BA318A /* HyiBaseTabBarController.m in Sources */,
 				14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */,
 				14F54EE61E1366E400BA318A /* HyiNewsViewController.m in Sources */,
+				149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */,
 				14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */,
 				1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */,
 				14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */,

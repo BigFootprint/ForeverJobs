@@ -16,6 +16,7 @@
 #import "HyiNewsTableView.h"
 #import "HyiNewsDataSource.h"
 #import "HyiNewsDataMocker.h"
+#import "HyiLiveView.h"
 #import "Color.h"
 #import "JobsConstants.h"
 
@@ -24,6 +25,8 @@
 @interface HyiNewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
 @property(nonatomic, strong) UIBarButtonItem *leftItem;
 @property(nonatomic, strong) UIImageView *centerView;
+@property(nonatomic, strong) HyiLiveView *leftView;
+@property(nonatomic, strong) UIBarButtonItem *rightItem;
 @property(nonatomic, strong) HyiHorArrangeScrollView *hyiHorArrangeScrollView;
 @property(nonatomic, strong) NSArray<HyiNewsCategory *> *categoryArr;
 @property(nonatomic, strong) UIFont *normalFont;
@@ -38,6 +41,8 @@
 @implementation HyiNewsViewController
 @synthesize leftItem;
 @synthesize centerView;
+@synthesize leftView;
+@synthesize rightItem;
 @synthesize hyiHorArrangeScrollView;
 @synthesize categoryArr;
 @synthesize normalFont;
@@ -63,7 +68,7 @@
     [channelAddButton setImageEdgeInsets:UIEdgeInsetsMake(6, 6, 6, 6)];
     // TODO-待整理，两个方法的区别
     // 千万不要写成 setBackgroundImage 啊，不然 ImageEdgeInsets 不生效
-    [channelAddButton setImage:[UIImage imageNamed:@"home_channel_bar_add"] forState:UIControlStateNormal];
+    [channelAddButton setImage:[UIImage imageNamed:@"channel_nav_plus"] forState:UIControlStateNormal];
     [channelAddButton addTarget:self action:@selector(addChannel:) forControlEvents:UIControlEventTouchUpInside];
     
     // 获取显示区域
@@ -113,6 +118,11 @@
 -(void)viewDidAppear:(BOOL)animated {
     self.contentScrollView.hyiDataSource = self;
     self.contentScrollView.hyiDelegate = self;
+    
+    [leftView setCount:12];
+    // 开始动画
+    if(leftView != nil)
+        [leftView doAnimation];
 }
 
 -(void)initNavigationBar {
@@ -120,16 +130,17 @@
     // 此处有个Bug:
     // 现在的嵌套格式是 NavigationController 嵌套着一个 TabBarController，NewsViewController
     // 在初次加载的时候不会调用 viewWillAppear 方法。这个问题貌似一直有，后面解决
-    [self initLeftButton];
+    [self initLeftView];
     [self initCenterView];
+    [self initRightView];
 }
 
-- (void)initLeftButton {
-    if(leftItem == nil) {
-        UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-        [leftButton setImage:[UIImage imageNamed:@"share_platform_lofter"] forState:UIControlStateNormal];
-        [leftButton addTarget:self action:@selector(liveButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+- (void)initLeftView {
+    if(leftView == nil) {
+        leftView = [[HyiLiveView alloc] init];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(liveViewClicked:)];
+        [leftView addGestureRecognizer:tap];
+        leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftView];
     }
     
     // TODO-待整理
@@ -140,14 +151,25 @@
 
 -(void)initCenterView {
     if(centerView == nil){
-        centerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 25)];
+        centerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 44, 22)];
         [centerView setImage:[UIImage imageNamed:@"navbar_netease"]];
     }
     
     self.tabBarController.navigationItem.titleView = centerView;
 }
 
-- (void)liveButtonClicked:(id)sender {
+-(void)initRightView {
+    if(rightItem == nil) {
+        UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        [rightButton setImage:[UIImage imageNamed:@"search_icon"] forState:UIControlStateNormal];
+        [rightButton setImage:[UIImage imageNamed:@"search_icon_highlighted"] forState:UIControlStateHighlighted];
+        rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    }
+
+    self.tabBarController.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)liveViewClicked:(id)sender {
     [self.tabBarController setSelectedIndex:1];
 }
 
