@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "HyiNews.h"
+#import "HyiNewsCellDataSource.h"
 
 @interface HyiNewsCellFactory : NSObject
-
++(UITableViewCell<HyiNewsCellDataSource> *)getCellForNewsType:(HyiNewsType)newsType InTableView:(UITableView *)tableView;
 @end

@@ -7,7 +7,16 @@
 //
 
 #import "HyiNewsCellFactory.h"
+#import "HyiNormalNewsCell.h"
 
 @implementation HyiNewsCellFactory
-
++(UITableViewCell<HyiNewsCellDataSource> *)getCellForNewsType:(HyiNewsType)newsType InTableView:(UITableView *)tableView{
+    switch(newsType){
+        case HyiNewsNormal:
+            return [HyiNormalNewsCell cellWithTableView:tableView];
+        default:
+            break;
+    }
+    return nil;
+}
 @end

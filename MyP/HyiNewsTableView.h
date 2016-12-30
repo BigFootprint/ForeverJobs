@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HyiNewsDataSource;
 
 @interface HyiNewsTableView : UITableView
-
+@property (nonatomic, strong) HyiNewsDataSource *hyiNewsDataSource;
 @end

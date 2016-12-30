@@ -392,7 +392,7 @@
 		14F54EE01E1365D800BA318A /* News */ = {
 			isa = PBXGroup;
 			children = (
-				14F54F071E14DD7400BA318A /* Cell */,
+				14F54F071E14DD7400BA318A /* CustomView */,
 				14F54EE41E1366E400BA318A /* HyiNewsViewController.h */,
 				14F54EE51E1366E400BA318A /* HyiNewsViewController.m */,
 			);
@@ -458,13 +458,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		14F54F071E14DD7400BA318A /* Cell */ = {
+		14F54F071E14DD7400BA318A /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
 				14F54F1A1E1550F300BA318A /* HyiNewsTableView.h */,
 				14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */,
 			);
-			name = Cell;
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 		14F54F131E154FBC00BA318A /* NewsCell */ = {
