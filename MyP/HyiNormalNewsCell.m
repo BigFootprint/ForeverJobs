@@ -62,7 +62,7 @@
     
     HyiNormalNews *normalNews = (HyiNormalNews *)news;
     self.titleLabel.text = normalNews.newsTitle;
-    self.newsChannelLabel.text = normalNews.newsTitle;
+    self.newsChannelLabel.text = normalNews.channel;
 }
 
 -(int)getCellHeight {

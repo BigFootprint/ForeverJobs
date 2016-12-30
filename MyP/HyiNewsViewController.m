@@ -225,6 +225,7 @@
     HyiNewsDataSource *ds = [[HyiNewsDataSource alloc] init];
     ds.dataArr = [[[HyiNewsDataMocker alloc] init] loadMockData];
     tableView.hyiNewsDataSource = ds;
+    [tableView loadMoreData];
     return tableView;
 }
 

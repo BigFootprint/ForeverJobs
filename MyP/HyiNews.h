@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, HyiNewsType) {
 
 @interface HyiNews : NSObject
 @property (nonatomic) HyiNewsType newsType;
+@property (nonatomic) int cellHeight;
 @end
 
 @interface HyiNormalNews : HyiNews

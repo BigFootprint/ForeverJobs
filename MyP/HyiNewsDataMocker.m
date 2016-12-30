@@ -10,17 +10,14 @@
 #import "HyiNews.h"
 
 @interface HyiNewsDataMocker ()
-@property(nonatomic) NSMutableArray *dataArray;
+@property(nonatomic, strong) NSMutableArray<HyiNews *> *dataArray;
 @end
 
 @implementation HyiNewsDataMocker
 @synthesize dataArray;
 
 -(NSArray<HyiNews *> *)loadMockData{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self fullfillDataArr];
-    });
+    [self fullfillDataArr];
     return dataArray;
 }
 

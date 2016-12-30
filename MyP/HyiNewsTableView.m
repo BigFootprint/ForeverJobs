@@ -12,7 +12,7 @@
 #import "HyiNewsCellDataSource.h"
 #import "HyiNewsDataSource.h"
 
-@interface HyiNewsTableView ()<UITableViewDataSource>
+@interface HyiNewsTableView ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic) NSArray<HyiNews *> *dataArr;
 @end
 
@@ -24,6 +24,16 @@
     self = [super init];
     if(self){
         self.dataSource = self;
+        self.delegate = self;
+    }
+    return self;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if(self){
+        self.dataSource = self;
+        self.delegate =self;
     }
     return self;
 }
@@ -38,6 +48,10 @@
     }
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(dataArr == nil)
         return 0;
@@ -50,9 +64,13 @@
     UITableViewCell<HyiNewsCellDataSource> *cell = [HyiNewsCellFactory getCellForNewsType:news.newsType InTableView:self];
     if(cell){
         [cell refreshData:news];
+        news.cellHeight = [cell getCellHeight];
     }
     return cell;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HyiNews *news = [dataArr objectAtIndex:[indexPath row]];
+    return news.cellHeight;
+}
 @end
