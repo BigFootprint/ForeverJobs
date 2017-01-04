@@ -24,8 +24,8 @@
 
 @interface HyiNewsViewController () <HyiHorArrangeScrollViewAdapter, HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
 @property(nonatomic, strong) UIBarButtonItem *leftItem;
-@property(nonatomic, strong) UIImageView *centerView;
 @property(nonatomic, strong) HyiLiveView *leftView;
+@property(nonatomic, strong) UIImageView *centerView;
 @property(nonatomic, strong) UIBarButtonItem *rightItem;
 @property(nonatomic, strong) HyiHorArrangeScrollView *hyiHorArrangeScrollView;
 @property(nonatomic, strong) NSArray<HyiNewsCategory *> *categoryArr;

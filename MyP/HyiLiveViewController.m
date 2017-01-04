@@ -9,19 +9,47 @@
 #import "HyiLiveViewController.h"
 
 @interface HyiLiveViewController ()
-
+@property(nonatomic, strong) UIBarButtonItem *rightItem;
 @end
 
 @implementation HyiLiveViewController
+@synthesize rightItem;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+}
+
+-(void)initNavigationBar {
+    self.tabBarController.navigationItem.leftBarButtonItems = nil;
+    self.tabBarController.navigationItem.hidesBackButton = YES;
+    
+    [self initCenterView];
+    [self initRightView];
+}
+
+#pragma mark Navigator
+-(void)initCenterView {
+    
+}
+
+-(void)initRightView {
+    if(rightItem == nil) {
+        UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        [rightButton setImage:[UIImage imageNamed:@"nav_remind_view_icon"] forState:UIControlStateNormal];
+        rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    }
+    
+    self.tabBarController.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 /*
