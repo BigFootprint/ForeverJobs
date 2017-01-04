@@ -125,6 +125,8 @@
         [leftView doAnimation];
 }
 
+#pragma mark Navigator
+
 -(void)initNavigationBar {
     // TODO-待解决
     // 此处有个Bug:
@@ -168,6 +170,8 @@
 
     self.tabBarController.navigationItem.rightBarButtonItem = rightItem;
 }
+
+#pragma mark Click Event
 
 - (void)liveViewClicked:(id)sender {
     [self.tabBarController setSelectedIndex:1];

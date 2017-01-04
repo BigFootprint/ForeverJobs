@@ -7,20 +7,25 @@
 //
 
 #import "HyiImageFlipperNewsCell.h"
+#import "HyiMultiPageScrollView.h"
+#import "HyiMultiPageScrollViewDataSource.h"
+#import "HyiMultiPageScrollViewDataDelegate.h"
 #import "HyiNews.h"
 #import "HyiColor.h"
 #import "HyiSize.h"
 #import "Masonry.h"
 
-@interface HyiImageFlipperNewsCell ()
-@property(nonatomic, strong) UIImageView *contentImageView;//待替换
+@interface HyiImageFlipperNewsCell ()<HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
+@property(nonatomic, strong) HyiMultiPageScrollView *hyiMultiPageScrollView;
 @property(nonatomic, strong) UIView *barView;
 @property(nonatomic, strong) UILabel *titleLabel;
 @property(nonatomic, strong) UIPageControl *control;
+
+@property(nonatomic, strong) HyiImageFlipperNews *dataNews;
 @end
 
 @implementation HyiImageFlipperNewsCell
-@synthesize contentImageView;
+@synthesize hyiMultiPageScrollView;
 @synthesize barView;
 @synthesize titleLabel;
 @synthesize control;
@@ -43,10 +48,8 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, [self getCellHeight])];
-        self.contentImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.contentImageView.clipsToBounds = YES;
-        [self.contentView addSubview:self.contentImageView];
+        self.hyiMultiPageScrollView = [[HyiMultiPageScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, [self getCellHeight])];
+        [self.contentView addSubview:self.hyiMultiPageScrollView];
         
         self.barView = [[UIView alloc] init];
         self.barView.backgroundColor = TRANSPARENT_BLACK;
@@ -74,12 +77,11 @@
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.barView.mas_left).offset(10);
         make.top.mas_equalTo(self.barView.mas_top).offset(7.5f);
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 15));
     }];
     
     [control mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.barView.mas_right).offset(-10);
-        make.top.mas_equalTo(self.barView.mas_top).offset(12);
+        make.top.mas_equalTo(self.barView.mas_top);
     }];
     
     [super updateConstraints];
@@ -92,9 +94,11 @@
     
     HyiImageFlipperNews *imageFlipperNews = (HyiImageFlipperNews *)news;
     self.titleLabel.text = imageFlipperNews.newsTitle;
-    [self.contentImageView setImage:[UIImage imageNamed:@"ty_d.jpg"]];
+    self.control.numberOfPages = [imageFlipperNews.imageArr count];
     
-    control.numberOfPages = 2;
+    self.dataNews = imageFlipperNews;
+    self.hyiMultiPageScrollView.hyiDelegate = self;
+    self.hyiMultiPageScrollView.hyiDataSource = self;
 }
 
 // 返回行高
@@ -102,4 +106,30 @@
     return 185; // 实际可以根据比例 和 屏幕宽度得到高度
 }
 
+#pragma mark - HyiMultiPageScrollViewDataSource
+-(int)getPageCount {
+    return (int)[self.dataNews.imageArr count];
+}
+
+// 根据 Tag 获取 View
+-(UIView *)getPageViewByTag:(NSString *)tag {
+    // TODO-待整理
+    // iOS 中的变量名务必注意，很容易和原生组件的变量名重复，因此必须足够独特
+    UIImageView *flipperImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, [self getCellHeight])];
+    // 实际从网上拉取
+    [flipperImageView setImage:[UIImage imageNamed:tag]];
+    flipperImageView.contentMode = UIViewContentModeScaleAspectFill;
+    flipperImageView.clipsToBounds = YES;
+    return flipperImageView;
+}
+
+// 为页面设置一个Tag，目的是为了可以任意插入新的 View
+-(NSString *)getPageTagAtIndex:(int)index {
+    return [self.dataNews.imageArr objectAtIndex:index];
+}
+
+#pragma mark - HyiMultiPageScrollViewDataDelegate
+-(void)select:(int)index withView:(UIView *)view {
+    [control setCurrentPage:index];
+}
 @end

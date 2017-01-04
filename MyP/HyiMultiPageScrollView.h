@@ -21,8 +21,13 @@ typedef NS_ENUM(NSUInteger, HyiMultiPageViewPosition) {
 @property (nonatomic, weak) id<HyiMultiPageScrollViewDataDelegate> hyiDelegate;
 // 根据 Index 刷新页面
 -(void)refreshViewByIndex:(int)index;
+
+// 通知数据变化
+-(void)notifyDataSetChanged;
+
 // 根据 Index 展示页面
 -(void)displayViewByIndex:(int)index;
+
 // 内存告警, 释放非必要引用的 View
 - (void)didReceiveMemoryWarning;
 @end

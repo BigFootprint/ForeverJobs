@@ -26,7 +26,7 @@
 -(id)init {
     self = [super init];
     if(self){
-        self.currentIndex = -1;
+        [self clearCurrentIndex];
         self.tagViewDic = [NSMutableDictionary dictionary];
     }
     return self;
@@ -40,6 +40,13 @@
     self.pagingEnabled = YES;
     self.delegate = self;
 
+    // 清理容器
+    if(self.firstView != nil){
+        [self.firstView removeFromSuperview];
+        [self.centerView removeFromSuperview];
+        [self.lastView removeFromSuperview];
+    }
+    
     // 添加容器 View
     CGRect rect = self.bounds;
     self.firstView = [[UIView alloc] initWithFrame:rect];
@@ -52,12 +59,34 @@
 }
 
 -(void)refreshViewByIndex:(int)index {
-    
+    NSString *tagAtIndex = [self.hyiDataSource getPageTagAtIndex:index];
+    [self.tagViewDic removeObjectForKey:[self.tagViewDic objectForKey:tagAtIndex]];
+
+    [self clearCurrentIndex];
+    [self displayViewByIndex:index];
+}
+
+-(void)notifyDataSetChanged {
+    [self.tagViewDic removeAllObjects];
+    if(currentIndex >= 0 && currentIndex < [self.hyiDataSource getPageCount]){
+        int tempIndex = currentIndex;
+        [self clearCurrentIndex];
+        [self displayViewByIndex:tempIndex];
+    } else {
+        [self clearCurrentIndex];
+        [self displayViewByIndex:0];
+    }
+}
+
+-(void)clearCurrentIndex {
+    currentIndex = -1;
 }
 
 -(void)displayViewByIndex:(int)index {
-    if(hyiDataSource == nil || currentIndex == index)
+    NSLog(@"%d, %d", index, currentIndex);
+    if(hyiDataSource == nil || currentIndex == index){
         return;
+    }
     
     if(index < 0 || index >= [hyiDataSource getPageCount]) // index 非法
         return;
@@ -108,6 +137,7 @@
     
     hyiDataSource = ds;
     [self initView];
+    [self clearCurrentIndex];
     [self displayViewByIndex:0];
 }
 
@@ -159,6 +189,7 @@
 }
 
 #pragma mark UIScrollViewDelegate
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     int offsetX = [scrollView contentOffset].x;
     int pageWidth = self.bounds.size.width;
