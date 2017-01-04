@@ -34,7 +34,7 @@
     }else{
         news_1.newsTitle = @"台风“洛坦”袭菲律宾 致6人死18人失踪";
     }
-    news_1.imageArr = @[@"ty_a.jpg", @"ty_b.jpg", @"ty_c.jpg", @"ty_d.jpg"];
+    news_1.imageArr = @[@"ty_b.jpg", @"ty_a.jpg", @"ty_c.jpg", @"ty_d.jpg"];
     [dataArray addObject:news_1];
     
     // 正常视图
