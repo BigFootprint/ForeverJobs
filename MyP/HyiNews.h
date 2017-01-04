@@ -30,4 +30,5 @@ typedef NS_ENUM(NSUInteger, HyiNewsType) {
 @interface HyiImageFlipperNews : HyiNews
 @property (nonatomic) NSArray<NSString *> *imageArr;
 @property (nonatomic) NSString *newsTitle;
+@property (nonatomic) BOOL showIcon;
 @end

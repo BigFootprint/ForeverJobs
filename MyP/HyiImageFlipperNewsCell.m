@@ -13,12 +13,15 @@
 #import "HyiNews.h"
 #import "HyiColor.h"
 #import "HyiSize.h"
+
+#import "UIImage+Tint.h"
 #import "Masonry.h"
 
 @interface HyiImageFlipperNewsCell ()<HyiMultiPageScrollViewDataSource, HyiMultiPageScrollViewDataDelegate>
 @property(nonatomic, strong) HyiMultiPageScrollView *hyiMultiPageScrollView;
 @property(nonatomic, strong) UIView *barView;
 @property(nonatomic, strong) UILabel *titleLabel;
+@property(nonatomic, strong) UIImageView *iconImageView;
 @property(nonatomic, strong) UIPageControl *control;
 
 @property(nonatomic, strong) HyiImageFlipperNews *dataNews;
@@ -63,6 +66,11 @@
         
         self.control = [[UIPageControl alloc] init];
         [self.barView addSubview:control];
+        
+        self.iconImageView = [[UIImageView alloc] init];
+        self.iconImageView.bounds = CGRectMake(0, 0, 14, 14);
+        [self.iconImageView setImage:[[UIImage imageNamed:@"cell_tag_photo"] imageWithTintColor:[UIColor whiteColor]]];
+        [self.barView addSubview:self.iconImageView];
     }
     return self;
 }
@@ -80,8 +88,9 @@
     }];
     
     [control mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.barView.mas_right).offset(-10);
-        make.top.mas_equalTo(self.barView.mas_top);
+        make.right.mas_equalTo(self.barView.mas_right).offset(-14);
+        make.top.mas_equalTo(self.barView.mas_top).offset(12);
+        make.size.height.mas_equalTo(6);
     }];
     
     [super updateConstraints];
@@ -92,13 +101,50 @@
     if(news.newsType != HyiNewsImageFlipper)
         return;
     
-    HyiImageFlipperNews *imageFlipperNews = (HyiImageFlipperNews *)news;
-    self.titleLabel.text = imageFlipperNews.newsTitle;
-    self.control.numberOfPages = [imageFlipperNews.imageArr count];
+    self.dataNews = (HyiImageFlipperNews *)news;
+    [self upadteBarView];
     
-    self.dataNews = imageFlipperNews;
     self.hyiMultiPageScrollView.hyiDelegate = self;
     self.hyiMultiPageScrollView.hyiDataSource = self;
+}
+
+-(void)upadteBarView {
+    self.titleLabel.text = _dataNews.newsTitle;
+    self.control.numberOfPages = [_dataNews.imageArr count];
+    
+    // 计算 control 的宽度，假设每一个点的宽度为 10，实际可以进行更加精确的计算
+    int controlWidth = (int)(8 * ([_dataNews.imageArr count] + 2));
+    int controlX = SCREEN_WIDTH - 14 - controlWidth;
+    [control mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.barView.mas_left).offset(controlX);
+        make.top.mas_equalTo(self.barView.mas_top).offset(12);
+        make.size.mas_equalTo(CGSizeMake(controlWidth, 6));
+    }];
+    // 假设 control 和图标之间的间距为 8，图标和文字之间的间距也为 8
+    CGSize titleSize =[_dataNews.newsTitle sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    if(10 + titleSize.width + 8 + 14 + 8 <= controlX){ // 足够放下
+        [_iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.barView.mas_top).offset(10);
+            make.left.mas_equalTo(titleSize.width + 8);
+        }];
+    } else {
+        NSString *title = _dataNews.newsTitle;
+        CGRect textRect = [title boundingRectWithSize:CGSizeMake(controlX - 10 - 8 - 14 - 8, 16)
+                                                 options:NSStringDrawingUsesLineFragmentOrigin| NSStringDrawingUsesFontLeading
+                                              attributes:@{NSFontAttributeName:self.titleLabel.font} // 放置特殊属性
+                                                 context:nil];
+        int iconX = 10 + textRect.size.width + 8;
+        [self.iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.barView.mas_top).offset(10);
+            make.left.mas_equalTo(iconX);
+        }];
+        [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.barView.mas_left).offset(10);
+            make.top.mas_equalTo(self.barView.mas_top).offset(7.5f);
+            make.width.mas_equalTo(controlX - 8 - 14 - 8 - 10); // 10 是 cell 的左边距离
+        }];
+    }
+    NSLog(@"%@", self.titleLabel.text);
 }
 
 // 返回行高

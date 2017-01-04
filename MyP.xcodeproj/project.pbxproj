@@ -14,6 +14,7 @@
 		1437ABFB1DDAB4FB0074393B /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABFA1DDAB4FB0074393B /* NetworkViewController.m */; };
 		1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437AC021DDB072F0074393B /* UIResponder+GA.m */; };
 		1437AC061DDB09850074393B /* UIButton+GA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437AC051DDB09850074393B /* UIButton+GA.m */; };
+		143A13E41E1D02A100D68719 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A13E31E1D02A100D68719 /* UIImage+Tint.m */; };
 		144906B81DD20ECE002183FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906B71DD20ECE002183FC /* main.m */; };
 		144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BA1DD20ECE002183FC /* AppDelegate.m */; };
 		144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BD1DD20ECE002183FC /* TrainningViewController.m */; };
@@ -78,6 +79,8 @@
 		1437AC021DDB072F0074393B /* UIResponder+GA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+GA.m"; sourceTree = "<group>"; };
 		1437AC041DDB09850074393B /* UIButton+GA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GA.h"; sourceTree = "<group>"; };
 		1437AC051DDB09850074393B /* UIButton+GA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GA.m"; sourceTree = "<group>"; };
+		143A13E21E1D02A100D68719 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		143A13E31E1D02A100D68719 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		144906B31DD20ECE002183FC /* MyP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144906B71DD20ECE002183FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		144906B91DD20ECE002183FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -401,7 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				14F54F131E154FBC00BA318A /* NewsCell */,
-				14F54F071E14DD7400BA318A /* CustomView */,
+				14F54F071E14DD7400BA318A /* CustomComponent */,
 				14F54EE41E1366E400BA318A /* HyiNewsViewController.h */,
 				14F54EE51E1366E400BA318A /* HyiNewsViewController.m */,
 			);
@@ -466,15 +469,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		14F54F071E14DD7400BA318A /* CustomView */ = {
+		14F54F071E14DD7400BA318A /* CustomComponent */ = {
 			isa = PBXGroup;
 			children = (
 				14F54F1A1E1550F300BA318A /* HyiNewsTableView.h */,
 				14F54F1B1E1550F300BA318A /* HyiNewsTableView.m */,
 				149EDBDF1E16519A00F55294 /* HyiLiveView.h */,
 				149EDBE01E16519A00F55294 /* HyiLiveView.m */,
+				143A13E21E1D02A100D68719 /* UIImage+Tint.h */,
+				143A13E31E1D02A100D68719 /* UIImage+Tint.m */,
 			);
-			name = CustomView;
+			name = CustomComponent;
 			sourceTree = "<group>";
 		};
 		14F54F131E154FBC00BA318A /* NewsCell */ = {
@@ -661,6 +666,7 @@
 				14F54F191E15501500BA318A /* HyiImageFlipperNewsCell.m in Sources */,
 				14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */,
 				141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */,
+				143A13E41E1D02A100D68719 /* UIImage+Tint.m in Sources */,
 				14F54EFC1E13B8E400BA318A /* HyiNewsChannelDataSource.m in Sources */,
 				14CBE0A71DD60A5300F6DB7F /* UILabelViewController.m in Sources */,
 				14F54F251E15FD6800BA318A /* HyiNormalNewsCell.m in Sources */,
