@@ -15,6 +15,7 @@
 		1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437AC021DDB072F0074393B /* UIResponder+GA.m */; };
 		1437AC061DDB09850074393B /* UIButton+GA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437AC051DDB09850074393B /* UIButton+GA.m */; };
 		143A13E41E1D02A100D68719 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A13E31E1D02A100D68719 /* UIImage+Tint.m */; };
+		143A13E81E1D03AD00D68719 /* HyiRandomUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A13E71E1D03AD00D68719 /* HyiRandomUtils.m */; };
 		144906B81DD20ECE002183FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906B71DD20ECE002183FC /* main.m */; };
 		144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BA1DD20ECE002183FC /* AppDelegate.m */; };
 		144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BD1DD20ECE002183FC /* TrainningViewController.m */; };
@@ -81,6 +82,8 @@
 		1437AC051DDB09850074393B /* UIButton+GA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GA.m"; sourceTree = "<group>"; };
 		143A13E21E1D02A100D68719 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		143A13E31E1D02A100D68719 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		143A13E61E1D03AD00D68719 /* HyiRandomUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiRandomUtils.h; sourceTree = "<group>"; };
+		143A13E71E1D03AD00D68719 /* HyiRandomUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiRandomUtils.m; sourceTree = "<group>"; };
 		144906B31DD20ECE002183FC /* MyP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144906B71DD20ECE002183FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		144906B91DD20ECE002183FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -247,6 +250,15 @@
 			name = GA;
 			sourceTree = "<group>";
 		};
+		143A13E51E1D038B00D68719 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				143A13E61E1D03AD00D68719 /* HyiRandomUtils.h */,
+				143A13E71E1D03AD00D68719 /* HyiRandomUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		144906AA1DD20ECE002183FC = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +378,7 @@
 		14F54ED21E128BC400BA318A /* Hyi */ = {
 			isa = PBXGroup;
 			children = (
+				143A13E51E1D038B00D68719 /* Utils */,
 				14F54EF51E13AE9A00BA318A /* Model */,
 				14F54EF41E13AE9400BA318A /* Widget */,
 				14F54EE31E1365FB00BA318A /* Self */,
@@ -676,6 +689,7 @@
 				144906B81DD20ECE002183FC /* main.m in Sources */,
 				14F54EF31E13ADA600BA318A /* HyiNewsCategory.m in Sources */,
 				14F54EE91E1366F700BA318A /* HyiLiveViewController.m in Sources */,
+				143A13E81E1D03AD00D68719 /* HyiRandomUtils.m in Sources */,
 				14F54F221E15F8F200BA318A /* HyiNewsDataMocker.m in Sources */,
 				14F1C64F1DE319CF00B91388 /* CoreDataViewController.m in Sources */,
 			);
