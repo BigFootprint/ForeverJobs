@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSUInteger, HyiNewsType) {
     HyiNewsNormal = 0xCAFE,
-    HyiNewsImageFlipper // 图片浏览型，可滑动
+    HyiNewsImageFlipper, // 图片浏览型，可滑动
+    HyiNewsMultiImage // 图片浏览型，可滑动
 };
 
 @interface HyiNews : NSObject

@@ -20,6 +20,7 @@
 		144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906C01DD20ECE002183FC /* OnePieceViewController.m */; };
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* ActionViewController.m */; };
+		1464DA321E17B1F50066090F /* HyiMultiImageNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464DA311E17B1F50066090F /* HyiMultiImageNewsCell.m */; };
 		149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EDBE01E16519A00F55294 /* HyiLiveView.m */; };
 		14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */; };
 		14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC84881DE818CC0008FEE7 /* onepiece.html */; };
@@ -89,6 +90,9 @@
 		144906CA1DD20ECE002183FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144906D01DD21192002183FC /* ActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
 		144906D11DD21192002183FC /* ActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		1464DA301E17B1F50066090F /* HyiMultiImageNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiImageNewsCell.h; sourceTree = "<group>"; };
+		1464DA311E17B1F50066090F /* HyiMultiImageNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMultiImageNewsCell.m; sourceTree = "<group>"; };
+		1464DA331E17B3320066090F /* HyiSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyiSize.h; sourceTree = "<group>"; };
 		149EDBDF1E16519A00F55294 /* HyiLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiLiveView.h; sourceTree = "<group>"; };
 		149EDBE01E16519A00F55294 /* HyiLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiLiveView.m; sourceTree = "<group>"; };
 		14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 		14F54ED41E128C6400BA318A /* HyiMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMainViewController.m; sourceTree = "<group>"; };
 		14F54ED81E128FD300BA318A /* HyiBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiBaseViewController.h; sourceTree = "<group>"; };
 		14F54ED91E128FD300BA318A /* HyiBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiBaseViewController.m; sourceTree = "<group>"; };
-		14F54EDC1E12913700BA318A /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		14F54EDC1E12913700BA318A /* HyiColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyiColor.h; sourceTree = "<group>"; };
 		14F54EDD1E13651B00BA318A /* HyiBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiBaseTabBarController.h; sourceTree = "<group>"; };
 		14F54EDE1E13651B00BA318A /* HyiBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiBaseTabBarController.m; sourceTree = "<group>"; };
 		14F54EE41E1366E400BA318A /* HyiNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiNewsViewController.h; sourceTree = "<group>"; };
@@ -387,7 +391,8 @@
 		14F54EDB1E12911800BA318A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				14F54EDC1E12913700BA318A /* Color.h */,
+				14F54EDC1E12913700BA318A /* HyiColor.h */,
+				1464DA331E17B3320066090F /* HyiSize.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -482,6 +487,8 @@
 				14F54F231E15FD6800BA318A /* HyiNormalNewsCell.h */,
 				14F54F241E15FD6800BA318A /* HyiNormalNewsCell.m */,
 				14F54F2A1E1603DE00BA318A /* HyiNewsCellDataSource.h */,
+				1464DA301E17B1F50066090F /* HyiMultiImageNewsCell.h */,
+				1464DA311E17B1F50066090F /* HyiMultiImageNewsCell.m */,
 			);
 			name = NewsCell;
 			sourceTree = "<group>";
@@ -630,6 +637,7 @@
 				14F54EEF1E13670E00BA318A /* HyiSelfViewController.m in Sources */,
 				14F54F1C1E1550F300BA318A /* HyiNewsTableView.m in Sources */,
 				14F1C66C1DE3231D00B91388 /* School.xcdatamodeld in Sources */,
+				1464DA321E17B1F50066090F /* HyiMultiImageNewsCell.m in Sources */,
 				14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */,
 				14F1C63A1DE1B2E100B91388 /* AnimationViewController.m in Sources */,
 				1437ABF81DD98F4D0074393B /* LayoutViewController.m in Sources */,

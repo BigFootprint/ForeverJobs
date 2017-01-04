@@ -11,8 +11,8 @@
 #import "HyiLiveViewController.h"
 #import "HyiTopicViewController.h"
 #import "HyiSelfViewController.h"
+#import "HyiColor.h"
 #import "Masonry.h"
-#import "Color.h"
 
 @interface HyiMainViewController ()
 

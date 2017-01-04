@@ -10,7 +10,8 @@
 #define Color_h
 
 #define TRANSPARENT [UIColor colorWithRed:0 green:0 blue:0 alpha:0]
-#define TRANSPARENT_BLACK [UIColor colorWithRed:0 green:0 blue:0 alpha:0.9]
+#define TRANSPARENT_BLACK [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]
+
 
 #define HYI_RED [UIColor colorWithRed:0xDF/255.0 green:0X30/255.0 blue:0X31/255.0 alpha:1]
 

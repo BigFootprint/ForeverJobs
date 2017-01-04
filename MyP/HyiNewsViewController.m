@@ -17,7 +17,7 @@
 #import "HyiNewsDataSource.h"
 #import "HyiNewsDataMocker.h"
 #import "HyiLiveView.h"
-#import "Color.h"
+#import "HyiColor.h"
 #import "JobsConstants.h"
 
 #import "Masonry.h"

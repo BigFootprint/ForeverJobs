@@ -7,7 +7,7 @@
 //
 
 #import "HyiBaseViewController.h"
-#import "Color.h"
+#import "HyiColor.h"
 
 @interface HyiBaseViewController ()
 

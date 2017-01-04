@@ -7,7 +7,7 @@
 //
 
 #import "HyiBaseTabBarController.h"
-#import "Color.h"
+#import "HyiColor.h"
 
 @interface HyiBaseTabBarController ()
 

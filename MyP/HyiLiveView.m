@@ -7,7 +7,7 @@
 //
 
 #import "HyiLiveView.h"
-#import "Color.h"
+#import "HyiColor.h"
 
 @interface HyiLiveView ()
 @property(nonatomic, strong) UIImageView *liveView;
