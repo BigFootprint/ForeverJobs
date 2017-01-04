@@ -9,6 +9,7 @@
 #import "HyiImageFlipperNewsCell.h"
 #import "HyiNews.h"
 #import "HyiColor.h"
+#import "HyiSize.h"
 #import "Masonry.h"
 
 @interface HyiImageFlipperNewsCell ()
@@ -42,9 +43,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        int screenWidth = [[UIScreen mainScreen] bounds].size.width;
-        
-        self.contentImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, [self getCellHeight])];
+        self.contentImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, [self getCellHeight])];
         self.contentImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.contentImageView.clipsToBounds = YES;
         [self.contentView addSubview:self.contentImageView];
@@ -66,18 +65,16 @@
 }
 
 -(void)updateConstraints {
-    int screenWidth = [[UIScreen mainScreen] bounds].size.width;
-    
     [barView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.contentView.mas_left);
         make.top.mas_equalTo(self.contentView.mas_top).offset([self getCellHeight] - 30);
-        make.size.mas_equalTo(CGSizeMake(screenWidth, 30));
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 30));
     }];
     
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.barView.mas_left).offset(10);
         make.top.mas_equalTo(self.barView.mas_top).offset(7.5f);
-        make.size.mas_equalTo(CGSizeMake(screenWidth, 15));
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 15));
     }];
     
     [control mas_makeConstraints:^(MASConstraintMaker *make) {

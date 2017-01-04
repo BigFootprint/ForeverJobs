@@ -9,6 +9,8 @@
 #ifndef Size_h
 #define Size_h
 
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+
 #define LIST_TITLE_SIZE 18
 
 #endif /* Size_h */
