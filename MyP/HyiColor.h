@@ -14,6 +14,7 @@
 
 
 #define HYI_RED [UIColor colorWithRed:0xDF/255.0 green:0X30/255.0 blue:0X31/255.0 alpha:1]
+#define HYI_BLUE [UIColor colorWithRed:0x5B/255.0 green:0X9C/255.0 blue:0XF5/255.0 alpha:1]
 
 #define BG_MAIN [UIColor colorWithRed:0xFD/255.0 green:0xFD/255.0 blue:0xFD/255.0 alpha:1]
 #define BG_BLUE [UIColor colorWithRed:0x5B/255.0 green:0x9C/255.0 blue:0xF5/255.0 alpha:1]

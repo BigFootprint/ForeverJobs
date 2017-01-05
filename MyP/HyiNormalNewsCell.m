@@ -61,6 +61,13 @@
         [self.commentButton setContentEdgeInsets:UIEdgeInsetsMake(3, 5, 3, 5)];
         [self.contentView addSubview:self.commentButton];
         
+        self.tipLabel = [[UILabel alloc] init];
+        self.tipLabel.textColor = [UIColor whiteColor];
+        self.tipLabel.font = [UIFont fontWithName:@"Arial" size:12];
+        self.tipLabel.backgroundColor = HYI_BLUE;
+        self.textLabel.layer.cornerRadius = 2;
+        self.textLabel.clipsToBounds = YES;
+//        [self.contentView addSubview:self.tipLabel];
     }
     return self;
 }
@@ -101,6 +108,13 @@
     self.newsChannelLabel.text = normalNews.channel;
     [self.commentButton setTitle:[NSString stringWithFormat:@"%d跟帖", normalNews.commentCount] forState:UIControlStateNormal];
     [self.commentButton sizeToFit];
+    
+    if(normalNews.tip != nil){
+        [self.tipLabel setText:normalNews.tip];
+        [self.tipLabel sizeToFit];
+    }else{
+        
+    }
 }
 
 -(int)getCellHeight {

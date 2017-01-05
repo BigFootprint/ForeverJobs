@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface HyiRandomUtils : NSObject
+// 随机生成布尔值
 +(BOOL) yesOrNo;
 @end

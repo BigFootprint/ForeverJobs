@@ -43,6 +43,7 @@
     news.channel = @"热门";
     news.newsTitle = @"唐嫣甜美装扮现身机场 获男友罗晋蒙面接机";
     news.commentCount = 435;
+    news.tip = @"置顶";
     [dataArray addObject:news];
 }
 @end

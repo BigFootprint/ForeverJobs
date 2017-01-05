@@ -9,7 +9,6 @@
 #import "HyiRandomUtils.h"
 
 @implementation HyiRandomUtils
-// 随机生成布尔值
 +(BOOL) yesOrNo {
     return arc4random() % 100 <= 49;
 }
