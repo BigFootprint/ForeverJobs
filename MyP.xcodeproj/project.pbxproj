@@ -35,6 +35,8 @@
 		14CBE0AE1DD6116B00F6DB7F /* UIAlertControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0AD1DD6116B00F6DB7F /* UIAlertControllerViewController.m */; };
 		14CBE0B11DD6117C00F6DB7F /* UIImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B01DD6117C00F6DB7F /* UIImageViewViewController.m */; };
 		14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */; };
+		14ECE5CF1E26096E00304CDA /* UIWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE5CE1E26096E00304CDA /* UIWindowViewController.m */; };
+		14ECE5D51E2630FD00304CDA /* UITouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE5D41E2630FD00304CDA /* UITouchViewController.m */; };
 		14F1C63A1DE1B2E100B91388 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C6391DE1B2E100B91388 /* AnimationViewController.m */; };
 		14F1C64F1DE319CF00B91388 /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C64E1DE319CF00B91388 /* CoreDataViewController.m */; };
 		14F1C66C1DE3231D00B91388 /* School.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C66A1DE3231D00B91388 /* School.xcdatamodeld */; };
@@ -121,6 +123,10 @@
 		14CBE0B21DD613C400F6DB7F /* JobsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsConstants.h; sourceTree = "<group>"; };
 		14CBE0B31DD6B81A00F6DB7F /* UITextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldViewController.h; sourceTree = "<group>"; };
 		14CBE0B41DD6B81A00F6DB7F /* UITextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
+		14ECE5CD1E26096E00304CDA /* UIWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWindowViewController.h; sourceTree = "<group>"; };
+		14ECE5CE1E26096E00304CDA /* UIWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWindowViewController.m; sourceTree = "<group>"; };
+		14ECE5D31E2630FD00304CDA /* UITouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchViewController.h; sourceTree = "<group>"; };
+		14ECE5D41E2630FD00304CDA /* UITouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchViewController.m; sourceTree = "<group>"; };
 		14F1C6381DE1B2E100B91388 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		14F1C6391DE1B2E100B91388 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		14F1C64D1DE319CF00B91388 /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
@@ -227,6 +233,8 @@
 				14AC84901DE85BDF0008FEE7 /* UIPickerViewViewController.m */,
 				14F54ECF1E1260C900BA318A /* UIScrollViewViewController.h */,
 				14F54ED01E1260C900BA318A /* UIScrollViewViewController.m */,
+				14ECE5CD1E26096E00304CDA /* UIWindowViewController.h */,
+				14ECE5CE1E26096E00304CDA /* UIWindowViewController.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -362,6 +370,8 @@
 				14F1C6391DE1B2E100B91388 /* AnimationViewController.m */,
 				14F1C64D1DE319CF00B91388 /* CoreDataViewController.h */,
 				14F1C64E1DE319CF00B91388 /* CoreDataViewController.m */,
+				14ECE5D31E2630FD00304CDA /* UITouchViewController.h */,
+				14ECE5D41E2630FD00304CDA /* UITouchViewController.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -662,7 +672,9 @@
 				1437AC061DDB09850074393B /* UIButton+GA.m in Sources */,
 				14F54EDF1E13651B00BA318A /* HyiBaseTabBarController.m in Sources */,
 				14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */,
+				14ECE5D51E2630FD00304CDA /* UITouchViewController.m in Sources */,
 				14F54EE61E1366E400BA318A /* HyiNewsViewController.m in Sources */,
+				14ECE5CF1E26096E00304CDA /* UIWindowViewController.m in Sources */,
 				149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */,
 				14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */,
 				1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */,

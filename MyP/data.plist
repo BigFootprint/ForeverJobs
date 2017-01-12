@@ -11,6 +11,7 @@
 	<key>knowledge</key>
 	<array>
 		<array>
+			<string>UIWindow</string>
 			<string>Layout</string>
 			<string>UIButton</string>
 			<string>UILabel</string>
@@ -30,6 +31,7 @@
 			<string>Animation</string>
 			<string>Network</string>
 			<string>Gesture</string>
+			<string>UITouch</string>
 		</array>
 		<array>
 			<string>SystemService</string>

@@ -24,9 +24,8 @@
     
     // 要在 Hardware -> Keyboard 中设置，才能在模拟器上弹出虚拟键盘
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0,screenSize.width - 20, 50)];
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 70,screenSize.width - 20, 50)];
     _textField = textField;
-    textField.center = CGPointMake(screenSize.width/2, screenSize.height/2);
     [textField setBackgroundColor:[UIColor whiteColor]];
     [textField setClearButtonMode:UITextFieldViewModeWhileEditing];//显示右侧删除按钮
     textField.placeholder = @"【剩】键盘收起，键盘遮挡";

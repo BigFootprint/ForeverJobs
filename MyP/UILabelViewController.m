@@ -8,6 +8,7 @@
 
 #import "UILabelViewController.h"
 #import "JobsConstants.h"
+#import "Masonry.h"
 
 @interface UILabelViewController ()
 
@@ -58,10 +59,23 @@
     testLabelD.backgroundColor = [UIColor blackColor];
     testLabelD.frame = CGRectMake(0, testLabelC.center.y + 40, titleSize.width, titleSize.height);
     
+    UILabel *testLabelE = [[UILabel alloc] init];
+    testLabelE.font = [UIFont fontWithName:@"Arial" size:20];
+    testLabelE.text = @"换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行";
+    testLabelE.numberOfLines = 1;
+    testLabelE.textColor = [UIColor whiteColor];
+    testLabelE.backgroundColor = [UIColor blackColor];
+    
     [self.view addSubview:testLabelA];
     [self.view addSubview:testLabelB];
     [self.view addSubview:testLabelC];
     [self.view addSubview:testLabelD];
+    [self.view addSubview:testLabelE];
+    
+    [testLabelE mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view);
+        make.top.mas_equalTo(testLabelD.mas_bottom).offset(10);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
