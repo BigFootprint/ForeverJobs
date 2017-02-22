@@ -16,13 +16,18 @@
 		1437AC061DDB09850074393B /* UIButton+GA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437AC051DDB09850074393B /* UIButton+GA.m */; };
 		143A13E41E1D02A100D68719 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A13E31E1D02A100D68719 /* UIImage+Tint.m */; };
 		143A13E81E1D03AD00D68719 /* HyiRandomUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A13E71E1D03AD00D68719 /* HyiRandomUtils.m */; };
+		143BCF921E4C6BA6003024E6 /* CALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BCF911E4C6BA6003024E6 /* CALayerViewController.m */; };
+		143BCF951E4C7174003024E6 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BCF941E4C7174003024E6 /* CustomView.m */; };
 		144906B81DD20ECE002183FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906B71DD20ECE002183FC /* main.m */; };
 		144906BB1DD20ECE002183FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BA1DD20ECE002183FC /* AppDelegate.m */; };
 		144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906BD1DD20ECE002183FC /* TrainningViewController.m */; };
 		144906C11DD20ECE002183FC /* OnePieceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906C01DD20ECE002183FC /* OnePieceViewController.m */; };
 		144906C61DD20ECE002183FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144906C51DD20ECE002183FC /* Assets.xcassets */; };
 		144906D21DD21192002183FC /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144906D11DD21192002183FC /* ActionViewController.m */; };
+		144D42421E3733CF006A4251 /* SwiftFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D42411E3733CF006A4251 /* SwiftFly.swift */; };
+		144D42461E374F52006A4251 /* SB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D42451E374F52006A4251 /* SB.swift */; };
 		1464DA321E17B1F50066090F /* HyiMultiImageNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464DA311E17B1F50066090F /* HyiMultiImageNewsCell.m */; };
+		149184B31E52FB9B009B0975 /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149184B21E52FB9B009B0975 /* RunLoopViewController.m */; };
 		149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EDBE01E16519A00F55294 /* HyiLiveView.m */; };
 		14AC84851DE8123A0008FEE7 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC84841DE8123A0008FEE7 /* WKWebViewViewController.m */; };
 		14AC84891DE818CC0008FEE7 /* onepiece.html in Resources */ = {isa = PBXBuildFile; fileRef = 14AC84881DE818CC0008FEE7 /* onepiece.html */; };
@@ -86,6 +91,10 @@
 		143A13E31E1D02A100D68719 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		143A13E61E1D03AD00D68719 /* HyiRandomUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiRandomUtils.h; sourceTree = "<group>"; };
 		143A13E71E1D03AD00D68719 /* HyiRandomUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiRandomUtils.m; sourceTree = "<group>"; };
+		143BCF901E4C6BA6003024E6 /* CALayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerViewController.h; sourceTree = "<group>"; };
+		143BCF911E4C6BA6003024E6 /* CALayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerViewController.m; sourceTree = "<group>"; };
+		143BCF931E4C7174003024E6 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		143BCF941E4C7174003024E6 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		144906B31DD20ECE002183FC /* MyP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144906B71DD20ECE002183FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		144906B91DD20ECE002183FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,9 +107,14 @@
 		144906CA1DD20ECE002183FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144906D01DD21192002183FC /* ActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
 		144906D11DD21192002183FC /* ActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		144D42401E3733CF006A4251 /* MyP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyP-Bridging-Header.h"; sourceTree = "<group>"; };
+		144D42411E3733CF006A4251 /* SwiftFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFly.swift; sourceTree = "<group>"; };
+		144D42451E374F52006A4251 /* SB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SB.swift; sourceTree = "<group>"; };
 		1464DA301E17B1F50066090F /* HyiMultiImageNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiMultiImageNewsCell.h; sourceTree = "<group>"; };
 		1464DA311E17B1F50066090F /* HyiMultiImageNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiMultiImageNewsCell.m; sourceTree = "<group>"; };
 		1464DA331E17B3320066090F /* HyiSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyiSize.h; sourceTree = "<group>"; };
+		149184B11E52FB9B009B0975 /* RunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
+		149184B21E52FB9B009B0975 /* RunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
 		149EDBDF1E16519A00F55294 /* HyiLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyiLiveView.h; sourceTree = "<group>"; };
 		149EDBE01E16519A00F55294 /* HyiLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyiLiveView.m; sourceTree = "<group>"; };
 		14AC84831DE8123A0008FEE7 /* WKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
@@ -267,6 +281,15 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		143BCF961E4C717D003024E6 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				143BCF931E4C7174003024E6 /* CustomView.h */,
+				143BCF941E4C7174003024E6 /* CustomView.m */,
+			);
+			name = help;
+			sourceTree = "<group>";
+		};
 		144906AA1DD20ECE002183FC = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +311,7 @@
 		144906B51DD20ECE002183FC /* MyP */ = {
 			isa = PBXGroup;
 			children = (
+				144D423F1E3733B3006A4251 /* Swift */,
 				14AC84871DE8185F0008FEE7 /* Res */,
 				141B288B1DDCA99700216782 /* Other */,
 				1437ABFF1DDB07060074393B /* OnePiece */,
@@ -314,6 +338,16 @@
 				144906B71DD20ECE002183FC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		144D423F1E3733B3006A4251 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				144D42411E3733CF006A4251 /* SwiftFly.swift */,
+				144D42401E3733CF006A4251 /* MyP-Bridging-Header.h */,
+				144D42451E374F52006A4251 /* SB.swift */,
+			);
+			name = Swift;
 			sourceTree = "<group>";
 		};
 		14AC84871DE8185F0008FEE7 /* Res */ = {
@@ -359,6 +393,7 @@
 		14F30D041DD7F66500AF336C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				143BCF961E4C717D003024E6 /* help */,
 				14F1C64A1DE3197600B91388 /* data */,
 				14F30D051DD7F68600AF336C /* DataViewController.h */,
 				14F30D061DD7F68600AF336C /* DataViewController.m */,
@@ -372,6 +407,10 @@
 				14F1C64E1DE319CF00B91388 /* CoreDataViewController.m */,
 				14ECE5D31E2630FD00304CDA /* UITouchViewController.h */,
 				14ECE5D41E2630FD00304CDA /* UITouchViewController.m */,
+				143BCF901E4C6BA6003024E6 /* CALayerViewController.h */,
+				143BCF911E4C6BA6003024E6 /* CALayerViewController.m */,
+				149184B11E52FB9B009B0975 /* RunLoopViewController.h */,
+				149184B21E52FB9B009B0975 /* RunLoopViewController.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -565,6 +604,7 @@
 					144906B21DD20ECE002183FC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M9H22SZSJS;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -653,7 +693,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149184B31E52FB9B009B0975 /* RunLoopViewController.m in Sources */,
 				14F54F0A1E14FBA700BA318A /* HyiMultiPageScrollView.m in Sources */,
+				144D42421E3733CF006A4251 /* SwiftFly.swift in Sources */,
 				1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */,
 				14F54F1F1E15657500BA318A /* HyiNewsDataSource.m in Sources */,
 				14F54F121E154D7E00BA318A /* HyiNews.m in Sources */,
@@ -674,6 +716,7 @@
 				14F54EF81E13AF0100BA318A /* HyiHorArrangeScrollView.m in Sources */,
 				14ECE5D51E2630FD00304CDA /* UITouchViewController.m in Sources */,
 				14F54EE61E1366E400BA318A /* HyiNewsViewController.m in Sources */,
+				143BCF921E4C6BA6003024E6 /* CALayerViewController.m in Sources */,
 				14ECE5CF1E26096E00304CDA /* UIWindowViewController.m in Sources */,
 				149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */,
 				14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */,
@@ -686,6 +729,7 @@
 				14AC84911DE85BDF0008FEE7 /* UIPickerViewViewController.m in Sources */,
 				14CBE0B51DD6B81A00F6DB7F /* UITextFieldViewController.m in Sources */,
 				1437ABFB1DDAB4FB0074393B /* NetworkViewController.m in Sources */,
+				143BCF951E4C7174003024E6 /* CustomView.m in Sources */,
 				14F54EEC1E13670400BA318A /* HyiTopicViewController.m in Sources */,
 				14F1C67D1DE325E500B91388 /* Teacher+CoreDataClass.m in Sources */,
 				14F54F191E15501500BA318A /* HyiImageFlipperNewsCell.m in Sources */,
@@ -698,6 +742,7 @@
 				14F54F161E154FDC00BA318A /* HyiNewsCellFactory.m in Sources */,
 				141122D21DDDC79800BFEA3E /* CameraAViewController.m in Sources */,
 				14F30D071DD7F68600AF336C /* DataViewController.m in Sources */,
+				144D42461E374F52006A4251 /* SB.swift in Sources */,
 				144906B81DD20ECE002183FC /* main.m in Sources */,
 				14F54EF31E13ADA600BA318A /* HyiNewsCategory.m in Sources */,
 				14F54EE91E1366F700BA318A /* HyiLiveViewController.m in Sources */,
@@ -801,11 +846,15 @@
 			baseConfigurationReference = EBBBB8043E6E0DD88D67D5C8 /* Pods-MyP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = M9H22SZSJS;
 				INFOPLIST_FILE = MyP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.footprint.MyP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyP/MyP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -814,11 +863,14 @@
 			baseConfigurationReference = 0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = M9H22SZSJS;
 				INFOPLIST_FILE = MyP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.footprint.MyP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyP/MyP-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

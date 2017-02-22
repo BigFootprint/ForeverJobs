@@ -11,10 +11,11 @@
 #import "Masonry.h"
 
 @interface LayoutViewController ()
-
+@property (nonatomic, strong) UIButton *testButton;
 @end
 
 @implementation LayoutViewController
+@synthesize testButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -107,6 +108,23 @@
         make.right.mas_equalTo(textLabel.mas_left);
         make.left.mas_equalTo(self.view.mas_left).offset(15);
         make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
+    
+    testButton = [[UIButton alloc] init];
+    testButton.titleLabel.text = @"点击";
+    testButton.backgroundColor = [UIColor redColor];
+    [testButton addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:testButton];
+    [testButton mas_makeConstraints:^(MASConstraintMaker *make){
+        make.top.equalTo(self.view).offset(100);
+        make.left.equalTo(self.view).offset(20);
+        make.size.mas_equalTo(CGSizeMake(200, 50));
+    }];
+}
+
+-(void)click {
+    [testButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(80, 80));
     }];
 }
 

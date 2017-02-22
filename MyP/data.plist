@@ -32,6 +32,8 @@
 			<string>Network</string>
 			<string>Gesture</string>
 			<string>UITouch</string>
+			<string>CALayer</string>
+			<string>RunLoop</string>
 		</array>
 		<array>
 			<string>SystemService</string>

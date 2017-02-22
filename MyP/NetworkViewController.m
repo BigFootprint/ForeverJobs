@@ -12,21 +12,28 @@
 #import "Masonry.h"
 #import "AFNetworking.h"
 
-@interface NetworkViewController ()
+@interface NetworkViewController ()<NSURLConnectionDataDelegate>
 @property(nonatomic, strong) dispatch_queue_t networkQueue;
 @property(nonatomic, strong) dispatch_queue_t mainQueue;
+@property(nonatomic, strong) NSString *downloadFilePath;
+@property(nonatomic) NSUInteger fileSize;
 -(void)sendNSURLSessionRequest:(id)button;
 -(void)sendAFNetworingRequest:(id)button;
+-(NSString *)getDownloadFilePath;
 @end
 
 @implementation NetworkViewController
 
 @synthesize responseLable;
+@synthesize downloadFilePath;
+@synthesize fileSize;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];
+    
+    downloadFilePath = [self getDownloadFilePath];
     
     UIButton *nSURLSessionNetworkButton = [[UIButton alloc] init];
     [nSURLSessionNetworkButton setBackgroundColor:[UIColor blackColor]];
@@ -125,14 +132,41 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSString *)getDownloadFilePath {
+    NSString *path = NSTemporaryDirectory();
+    return [path stringByAppendingString:@"onepiece.jpeg"];
 }
-*/
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"下载开始");
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:self.downloadFilePath];
+    fileSize += (unsigned long)data.length;
+    NSLog(@"数据下载中，新接收数据量：%lu", (unsigned long)data.length);
+    if (fileHandle) {
+        [fileHandle seekToEndOfFile];
+        [fileHandle writeData:data];
+        [fileHandle closeFile];
+    } else {
+        [data writeToFile:self.downloadFilePath atomically:YES];
+    }
+}
+
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"下载完成，总数据量：%lu", fileSize);
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

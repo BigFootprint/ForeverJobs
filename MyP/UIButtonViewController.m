@@ -9,10 +9,12 @@
 #import "UIButtonViewController.h"
 #import "JobsConstants.h"
 #import "UIButton+GA.h"
+#import "MyP-Swift.h"
 
 @interface UIButtonViewController ()
--(void)clickA;
+@property(nonatomic) SwiftFly *swift;
 
+-(void)clickA:(UIButton *)sender;
 @end
 
 @implementation UIButtonViewController
@@ -22,13 +24,15 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];//不设置这句页面就会卡顿
     
+    _swift = [[SwiftFly alloc] init];
+    
     UIButton *testButtonA = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     testButtonA.center = CGPointMake(screenSize.width/2, screenSize.height/2 - 60 * 3);
     testButtonA.backgroundColor = [UIColor orangeColor];
     [testButtonA setTitle:@"按钮基本" forState:UIControlStateNormal];
     [testButtonA setTitle:@"按钮基本-Selected" forState:UIControlStateHighlighted];
-    [testButtonA addTarget:self action:@selector(clickA) forControlEvents:UIControlEventTouchUpInside];
+    [testButtonA addTarget:self action:@selector(clickA:) forControlEvents:UIControlEventTouchUpInside];
     testButtonA.showsTouchWhenHighlighted = YES; //显示一个亮点
     [testButtonA setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
     [testButtonA setGaLabel:@"GA了个喵！"];
@@ -74,7 +78,7 @@
     [self.view addSubview:testButtonF];
 }
 
--(void)clickA{
+-(void)clickA:(UIButton *)sender{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"UIButton学习" message:@"你点击了我！" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:okAction];
