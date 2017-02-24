@@ -9,6 +9,7 @@
 #import "LayoutViewController.h"
 #import "JobsConstants.h"
 #import "Masonry.h"
+#import "ALCustomView.h"
 
 @interface LayoutViewController ()
 @property (nonatomic, strong) UIButton *testButton;
@@ -21,6 +22,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];
+    
+    NSLog(@"SuperView of controller's root view: %@", [self.view superview]);
     
     //创建RedView
     UIView *redView = [[UIView alloc]init];
@@ -115,17 +118,37 @@
     testButton.backgroundColor = [UIColor redColor];
     [testButton addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:testButton];
+    
+    MASAttachKeys(testButton, self.view);
     [testButton mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.equalTo(self.view).offset(100);
         make.left.equalTo(self.view).offset(20);
-        make.size.mas_equalTo(CGSizeMake(200, 50));
+//        make.size.mas_equalTo(CGSizeMake(100, 20));
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(40);
+    }];
+    
+    ALCustomView *customView = [[ALCustomView alloc] init];
+    customView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:customView];
+    [customView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(250, 200));
+        make.left.equalTo(@130);
+        make.top.equalTo(@80);
     }];
 }
 
 -(void)click {
     [testButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(80, 80));
+        make.height.mas_equalTo(60);
+        make.width.mas_equalTo(60);
     }];
+    NSArray<__kindof NSLayoutConstraint *> *cs = testButton.constraints;
+    for(int index = 0; index < [cs count]; index ++) {
+        NSLog(@"## %@", [cs objectAtIndex:index]);
+    }
+    NSLog(@"%@", NSStringFromCGRect(testButton.frame));
+    NSLog(@"-----------------------------");
 }
 
 - (void)didReceiveMemoryWarning {
