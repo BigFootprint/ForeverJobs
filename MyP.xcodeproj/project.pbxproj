@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1404F5731E656D2300B53C4C /* AddOrRemoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404F5721E656D2300B53C4C /* AddOrRemoveView.m */; };
+		1404F5761E656E3300B53C4C /* UIViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404F5751E656E3300B53C4C /* UIViewTestViewController.m */; };
 		141122D21DDDC79800BFEA3E /* CameraAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141122D11DDDC79800BFEA3E /* CameraAViewController.m */; };
 		141B288E1DDCA9B100216782 /* SystemServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141B288D1DDCA9B100216782 /* SystemServiceViewController.m */; };
 		1437ABF41DD88F6F0074393B /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437ABF31DD88F6F0074393B /* ThreadViewController.m */; };
@@ -74,6 +76,10 @@
 
 /* Begin PBXFileReference section */
 		0643CD0EC636108844EA65E2 /* Pods-MyP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyP/Pods-MyP.release.xcconfig"; sourceTree = "<group>"; };
+		1404F5711E656D2300B53C4C /* AddOrRemoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrRemoveView.h; sourceTree = "<group>"; };
+		1404F5721E656D2300B53C4C /* AddOrRemoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrRemoveView.m; sourceTree = "<group>"; };
+		1404F5741E656E3300B53C4C /* UIViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTestViewController.h; sourceTree = "<group>"; };
+		1404F5751E656E3300B53C4C /* UIViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTestViewController.m; sourceTree = "<group>"; };
 		141122D01DDDC79800BFEA3E /* CameraAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraAViewController.h; sourceTree = "<group>"; };
 		141122D11DDDC79800BFEA3E /* CameraAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraAViewController.m; sourceTree = "<group>"; };
 		141B288C1DDCA9B100216782 /* SystemServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServiceViewController.h; sourceTree = "<group>"; };
@@ -231,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				144B0B291E5D2D140033F02A /* Helper */,
+				1404F5741E656E3300B53C4C /* UIViewTestViewController.h */,
+				1404F5751E656E3300B53C4C /* UIViewTestViewController.m */,
 				14CBE0A01DD4C84B00F6DB7F /* UIButtonViewController.h */,
 				14CBE0A11DD4C84B00F6DB7F /* UIButtonViewController.m */,
 				14CBE0A51DD60A5300F6DB7F /* UILabelViewController.h */,
@@ -349,6 +357,8 @@
 			children = (
 				144B0B2A1E5D2D2B0033F02A /* ALCustomView.h */,
 				144B0B2B1E5D2D2B0033F02A /* ALCustomView.m */,
+				1404F5711E656D2300B53C4C /* AddOrRemoveView.h */,
+				1404F5721E656D2300B53C4C /* AddOrRemoveView.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -733,10 +743,12 @@
 				143BCF921E4C6BA6003024E6 /* CALayerViewController.m in Sources */,
 				14ECE5CF1E26096E00304CDA /* UIWindowViewController.m in Sources */,
 				149EDBE11E16519A00F55294 /* HyiLiveView.m in Sources */,
+				1404F5731E656D2300B53C4C /* AddOrRemoveView.m in Sources */,
 				14F54ED51E128C6400BA318A /* HyiMainViewController.m in Sources */,
 				1437AC031DDB072F0074393B /* UIResponder+GA.m in Sources */,
 				14F54ED11E1260C900BA318A /* UIScrollViewViewController.m in Sources */,
 				14CBE0A21DD4C84B00F6DB7F /* UIButtonViewController.m in Sources */,
+				1404F5761E656E3300B53C4C /* UIViewTestViewController.m in Sources */,
 				144906D21DD21192002183FC /* ActionViewController.m in Sources */,
 				144906BE1DD20ECE002183FC /* TrainningViewController.m in Sources */,
 				14F54EDA1E128FD300BA318A /* HyiBaseViewController.m in Sources */,

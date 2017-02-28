@@ -11,6 +11,7 @@
 	<key>knowledge</key>
 	<array>
 		<array>
+			<string>UIViewTest</string>
 			<string>UIWindow</string>
 			<string>Layout</string>
 			<string>UIButton</string>
