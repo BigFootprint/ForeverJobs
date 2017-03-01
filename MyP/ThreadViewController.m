@@ -12,7 +12,6 @@
 // ###### 自定义非并发Operation ######
 @interface MyNonConcurrentOperation : NSOperation
 @property (strong) id myData;
-
 -(id)initWithData:(id)data;
 @end
 
@@ -38,13 +37,18 @@
 @end
 
 @interface ThreadViewController ()
+@property (strong, nonatomic) NSRecursiveLock *lock;
+
 -(void)generateTask:(NSString *)data;
 @end
 
 @implementation ThreadViewController
+@synthesize lock;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    lock = [[NSRecursiveLock alloc] init];
+    
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:ANDROID_BLUE];
     
@@ -90,6 +94,26 @@
     // 关于选择哪一个的问题：
     // 1) https://cocoacasts.com/choosing-between-nsoperation-and-grand-central-dispatch/
     // 2) http://stackoverflow.com/questions/10373331/nsoperation-vs-grand-central-dispatch
+    
+    // 锁测试
+    //[self testSynchronized];
+    //[self testLock];
+}
+
+-(void)testSynchronized {
+    @synchronized (self) {
+        NSLog(@"XXXXXX");
+        sleep(2);
+        [self testSynchronized];
+    }
+}
+
+-(void)testLock{
+    [lock lock];
+    NSLog(@"YYYYYYY");
+    sleep(2);
+    [self testLock];
+    [lock unlock];
 }
 
 -(void)generateTask:(NSString *)data{
@@ -99,20 +123,5 @@
     [NSThread sleepUntilDate:date];
     NSLog(@"[%@]I am waked.", data);
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
